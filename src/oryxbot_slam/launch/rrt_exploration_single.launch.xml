@@ -1,0 +1,58 @@
+<!-- Launch file for the rrt-detector and the assigner -->
+
+<launch>
+<arg name="eta" value="1.0"/>
+<arg name="Geta" value="15.0"/>
+
+  <node pkg="rrt_exploration" type="global_rrt_detector" name="global_detector" output="screen">
+  <!-- 该参数控制用于检测边界点的RRT的增长率，单位为米 -->
+  <param name="eta" value="$(arg Geta)"/>
+  <!-- 此参数定义节点将在其上接收地图的主题名称 -->
+  <param name="map_topic" value="/map"/>
+  </node>
+  
+  <node pkg="rrt_exploration" type="local_rrt_detector" name="local_detector" output="screen">
+  <param name="eta" value="$(arg eta)"/>
+  <param name="map_topic" value="/map"/>
+  <param name="robot_frame" value="/base_footprint"/>
+  </node>
+ 
+  
+  <node pkg="rrt_exploration" type="filter.py" name="filter" output="screen">
+  <param name="map_topic" value="/map"/>
+  <!-- 该参数用于计算边界信息增益的信息半径 -->
+  <param name="info_radius" value="1"/> 
+  <!-- 占用率大于此阈值的边界点将被视为无效 -->
+  <param name="costmap_clearing_threshold" value="70"/> 
+  <param name="goals_topic" value="/detected_points"/>
+  <!-- 定义节点接收检测到的边界点的主题 -->
+  <param name="namespace_init_count" value="1"/>
+  <param name="namespace" value=""/> 
+  <!-- 机器人数量 -->
+  <param name="n_robots" value="1"/>
+  <!-- 节点循环速率Hz -->
+  <param name="rate" value="5"/>
+  </node>
+  
+  <node pkg="rrt_exploration" type="assigner.py" name="assigner" output="screen">
+  <param name="map_topic" value="/map"/>
+  <param name="global_frame" value="/map"/>
+  <!-- 用于计算边界信息增益的信息半径 -->
+  <param name="info_radius" value="1"/> 
+  <!-- 到边界点的预期行驶距离 -->
+  <param name="info_multiplier" value="3.0"/> 
+  <!-- 该参数定义了滞后半径 -->
+  <param name="hysteresis_radius" value="3.0"/> 
+  <!-- 该参数定义了滞后增 -->
+  <param name="hysteresis_gain" value="2.0"/> 
+  <!-- 分配器节点接收过滤边界点的主题 -->
+  <param name="frontiers_topic" value="/filtered_points"/> 
+  <param name="n_robots" value="1"/>
+  <param name="namespace_init_count" value="1"/>
+  <param name="namespace" value=""/>
+  <!-- 定义每个机器人分配后的延迟量 -->
+  <param name="delay_after_assignement" value="0.5"/>
+  <param name="rate" value="5"/>
+  </node>
+  
+</launch>

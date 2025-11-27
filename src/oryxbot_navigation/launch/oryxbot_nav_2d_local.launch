@@ -1,0 +1,40 @@
+<!--                                                                            
+  oryxbot navigation共打开以下launch（功能）:
+  - oryxbot
+  - laser sensor
+  - map_server
+  - move_base
+  - amcl
+  - rviz view
+ --> 
+
+<launch>
+	<!--加载oryxbot model description-->
+	<arg name="model" default="$(find xacro)/xacro --inorder '$(find oryxbot_description)/urdf/oryxbot.xacro'" />
+	<param name="robot_description" command="$(arg model)" />
+  	<node
+	    name="joint_state_publisher"
+	    pkg="joint_state_publisher"
+	    type="joint_state_publisher" />
+  	<node
+	    name="robot_state_publisher"
+	    pkg="robot_state_publisher"
+	    type="robot_state_publisher" />
+	<!--oryxbot底盘-->
+	<include file="$(find rei_robot_base)/launch/oryxbot_base.launch"/>
+	<!--laser sensor激光雷达-->
+	<include file="$(find rei_ydlidar_nodelet)/launch/nodelet_2_lidar.launch" />
+
+
+	<!--map_server加载地图-->
+	<include file="$(find oryxbot_navigation)/launch/map_server.launch"/>
+	<!--move_base-->
+	<include file="$(find oryxbot_navigation)/launch/move_base.launch"/>
+	<!--amcl-->
+	<include file="$(find oryxbot_navigation)/launch/amcl.launch"/>
+
+        <!--启动costmap插件-->
+        <!-- Here we load our costmap conversion settings -->
+        <rosparam file="$(find oryxbot_navigation)/param/costmap_converter_params.yaml" command="load" />
+
+</launch>

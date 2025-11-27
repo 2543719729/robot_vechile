@@ -1,0 +1,8 @@
+prefix=/home/liyaxin075/Documents/robot_learning/install
+
+Name: oryxbot_slam
+Description: Description of oryxbot_slam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

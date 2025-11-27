@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="third_pkg" type="third_pkg_node" name="third_pkg_node" output="screen"/>
+  <node pkg="subscribe_pkg" type="subscribe_pkg_node" name="subscribe_pkg_node" output="screen"/>
+</launch>

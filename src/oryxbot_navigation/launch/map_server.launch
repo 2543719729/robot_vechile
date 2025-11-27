@@ -1,0 +1,8 @@
+<launch>
+  <!--  加载的栅格地图的名称和路径（名字即为上一实验中的filename）  --> 
+  <arg name="map_file"  default="$(find oryxbot_navigation)/maps/demo.yaml"/> <!-- demo map -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
+    <param name="frame_id" value="map"/>
+  </node>
+
+</launch>

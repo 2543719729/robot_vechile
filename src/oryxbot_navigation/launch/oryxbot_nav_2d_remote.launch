@@ -1,0 +1,30 @@
+<!--                                                                            
+  oryxbot navigation:
+  - map_server
+  - move_base
+  - amcl
+  - rviz view
+ --> 
+
+<launch>
+	<!--oryxbot model description-->
+  	<param name="robot_description" textfile="$(find oryxbot_description)/urdf/oryxbot_description.urdf" />
+
+  	<node
+	    name="joint_state_publisher"
+	    pkg="joint_state_publisher"
+	    type="joint_state_publisher" />
+  	<node
+	    name="robot_state_publisher"
+	    pkg="robot_state_publisher"
+	    type="state_publisher" />
+	<!--map_server-->
+	<include file="$(find oryxbot_navigation)/launch/map_server.launch"/>
+	<!--move_base-->
+	<include file="$(find oryxbot_navigation)/launch/move_base.launch"/>
+	<!--amcl-->
+	<include file="$(find oryxbot_navigation)/launch/amcl.launch"/>
+	<!--  **************** Visualisation ****************  -->
+  	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find oryxbot_navigation)/rviz/robot_navigation.rviz"/>
+
+</launch>

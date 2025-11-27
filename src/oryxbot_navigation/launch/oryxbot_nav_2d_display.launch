@@ -1,0 +1,16 @@
+<!--                                                                            
+  oryxbot navigation:
+  - oryxbot
+  - laser sensor
+  - map_server
+  - move_base
+  - amcl
+  - rviz view
+ --> 
+
+<launch>
+	<!--oryxbot model description-->
+	<!--  **************** Visualisation ****************  -->
+  	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find oryxbot_navigation)/rviz/robot_navigation.rviz"/>
+
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/liyaxin075/Documents/robot_learning/install
+
+Name: bobac3_msgs
+Description: Description of bobac3_msgs
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

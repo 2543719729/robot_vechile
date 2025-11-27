@@ -1,0 +1,95 @@
+<launch>
+  <arg name="use_map_topic"   default="true"/>
+  <arg name="scan_topic"      default="fuse_scan"/>
+  
+  <arg name="initial_pose_x"  default="0"/>
+  <arg name="initial_pose_y"  default="0"/>
+  <arg name="initial_pose_a"  default="0"/>
+  <arg name="odom_frame_id"   default="odom"/>
+  <arg name="base_frame_id"   default="base_footprint"/>
+  <arg name="global_frame_id" default="map"/>
+
+  <node pkg="amcl" type="amcl" name="amcl">
+    <param name="use_map_topic"             value="$(arg use_map_topic)"/>
+    <!-- Publish scans from best pose at a max of 10 Hz -->
+    <param name="odom_model_type"           value="omni-corrected"/>
+    <param name="gui_publish_rate"          value="10.0"/>
+    <!-- 激光雷达测量中考虑的最大激光束数量 -->
+    <!-- 较大的值可以更全面地利用激光测量数据，但可能会增加计算开销 -->
+    <!-- 较小的值可以减少计算开销，但可能会牺牲一部分激光测量的信息 -->
+    <param name="laser_max_beams"           value="100"/>
+    <param name="laser_max_range"           value="4.0"/>
+    <param name="min_particles"             value="100"/>
+    <param name="max_particles"             value="500"/>
+
+    <!-- 用于衡量当前粒子集合与真实后验概率分布之间的差异。如果根据KLD计算得到的差异值超过了这个阈值，就会触发重采样操作 -->
+    <!-- 较大的kld_err值则表示更宽松的差异要求，允许更大的偏差 -->
+    <!-- 较小的kld_err值表示更严格的差异要求，需要更准确地匹配真实分布 -->
+    <param name="kld_err"                   value="0.05"/>
+    
+    <!-- 用于衡量当前激光雷达测量与粒子集合之间的差异，并根据这种差异进行重采样 -->
+    <!-- 较小的kld_z值表示更严格的差异要求，需要更准确地匹配激光雷达测量数据 -->
+    <!-- 较大的kld_z值则表示更宽松的差异要求，允许更大的偏差 -->
+    <param name="kld_z"                     value="0.99"/>
+    <!-- 旋转的旋转期望噪声 -->
+    <param name="odom_alpha1"               value="0.04"/>
+    <!-- 平移的旋转期望噪声 -->
+    <param name="odom_alpha2"               value="0.01"/>
+    <!-- 平移的平移期望噪声 -->
+    <param name="odom_alpha3"               value="0.02"/>
+    <!-- 旋转的平移期望噪声 -->
+    <param name="odom_alpha4"               value="0.01"/>
+    <param name="odom_alpha5"               value="0.01"/>
+    <!-- 激光雷达测量模型中击中(hit)测量的权重 -->
+    <!-- 较大的laser_z_hit值会增加击中成分的权重,使得AMCL对激光雷达测量与地图的一致性更为敏感 -->
+    <!-- 相反,较小的laser_z_hit值会减小击中成分的权重,使得AMCL对激光雷达测量的一致性更加宽松 -->
+    <param name="laser_z_hit"               value="0.5"/>
+
+    <!-- 激光雷达测量模型中未击中（miss）成分的权重 -->
+    <!-- 较大的值会使AMCL更加关注近距离未击中测量，可能提高对近距离障碍物的感知能力 -->
+    <!-- 较小的值则会降低未击中测量的权重，可能导致AMCL更容易受到近距离测量噪声或误匹配的影响 -->
+    <param name="laser_z_short"             value="0.05"/>
+
+    <!-- 激光雷达用于限制激光雷达测量模型中击中（hit）成分的最大距离值，超过该最大距离的击中测量值将被视为无效，不会对定位结果产生影响 -->
+    <!-- 较大的值则允许更远距离的激光测量被考虑为有效 -->
+    <!-- 较小的值会限制击中成分的最大距离，使得只有在较近的距离内的激光测量被视为有效 -->
+    <param name="laser_z_max"               value="0.05"/>
+
+    <!-- 激光雷达模型调整随机测量成分的权重 -->
+    <!-- 较大的值会使AMCL更加关注随机测量，可能提高对传感器噪声或环境干扰的抵抗能力 -->
+    <!-- 较小的值则会降低随机测量的权重，可能导致AMCL更容易受到随机测量的影响 -->
+    <param name="laser_z_rand"              value="0.5"/>
+    
+    <!-- 用于表示激光雷达测量模型中击中（hit）成分的高斯分布的标准差。 -->
+    <!-- 较大的值会使AMCL对于激光雷达测量的一致性更宽松，允许更大的误差范围，提高对不完美匹配的容忍度 -->
+    <!-- 较小的值会使AMCL对激光雷达测量的一致性更为严格，要求更精确的匹配 -->
+    <param name="laser_sigma_hit"           value="0.2"/>
+
+    <!-- 用于控制激光雷达测量模型中短距离未击中（short-range miss）成分的衰减率 -->
+    <!-- 较大的值则会降低短距离未击中测量的权重，可能导致AMCL更容易受到短距离未击中测量的影响 -->
+    <!-- 较小的值会使AMCL更加关注短距离未击中测量，可能提高对近距离障碍物的感知能力 -->
+    <param name="laser_lambda_short"        value="0.1"/>
+    
+    <param name="laser_model_type"          value="likelihood_field"/>
+    <!-- <param name="laser_model_type" value="beam"/> -->
+    <param name="laser_likelihood_max_dist" value="3.0"/>
+
+    <!-- 控制在进行定位更新时机器人在位移方向上的最小移动距离 -->
+    <param name="update_min_d"              value="0.2"/>
+
+    <!-- 控制在进行定位更新时机器人最小旋转角度 -->
+    <param name="update_min_a"              value="0.1"/>
+    <param name="odom_frame_id"             value="$(arg odom_frame_id)"/> 
+    <param name="base_frame_id"             value="$(arg base_frame_id)"/> 
+    <param name="global_frame_id"           value="$(arg global_frame_id)"/>
+    <param name="resample_interval"         value="1.0"/>
+    <!-- Increase tolerance because the computer can get quite busy -->
+    <param name="transform_tolerance"       value="0.5"/>
+    <param name="recovery_alpha_slow"       value="0.0"/>
+    <param name="recovery_alpha_fast"       value="0.0"/>
+    <param name="initial_pose_x"            value="$(arg initial_pose_x)"/>
+    <param name="initial_pose_y"            value="$(arg initial_pose_y)"/>
+    <param name="initial_pose_a"            value="$(arg initial_pose_a)"/>
+    <remap from="scan"                      to="$(arg scan_topic)"/>
+  </node>
+</launch>

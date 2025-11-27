@@ -1,0 +1,8 @@
+prefix=/home/liyaxin075/Documents/robot_learning/install
+
+Name: subscribe_pkg
+Description: Description of subscribe_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

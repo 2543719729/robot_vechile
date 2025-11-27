@@ -1,0 +1,20 @@
+
+<launch>
+
+  <arg name="odom_topic" default="odom" />
+  <arg name="laser_topic" default="/front_lidar/scan"/>
+  <!-- 打开movebase节点 -->
+  <node pkg="move_base" type="move_base" name="move_base" output="screen">
+    <!-- 加载参数文件 -->
+    <rosparam file="$(find oryxbot_navigation)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find oryxbot_navigation)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />   
+    <rosparam file="$(find oryxbot_navigation)/param/local_costmap_params.yaml" command="load" />   
+    <rosparam file="$(find oryxbot_navigation)/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find oryxbot_navigation)/param/teb_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find oryxbot_navigation)/param/move_base_params.yaml" command="load" />
+    <rosparam file="$(find oryxbot_navigation)/param/navfn_global_planner_params.yaml" command="load"/>
+
+    <remap from="odom" to="$(arg odom_topic)"/>
+    <remap from="scan" to="$(arg laser_topic)"/>
+  </node>
+</launch>
