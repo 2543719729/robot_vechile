@@ -24,11 +24,16 @@ struct Point {
 
 // 预定义的5个导航点（与text_nav.cpp坐标完全相同）
 struct Point m_point[5] = {
-    {1.055, 1.109, -0.012, 1.000, "深圳馆", "深圳是中国的科创中心"},
-    {1.055, 2.120, 0.013, 1.000, "上海馆", "上海是中国的经济中心"},
+    {1.045, 1.109, -0.012, 1.000, "深圳馆", "深圳是中国的科创中心"},
+    {1.045, 2.120, 0.013, 1.000, "上海馆", "上海是中国的经济中心"},
     {2.53, 0.155, 0.03, 0.99, "北京馆", "北京是中国的首都，政治中心"},
     {2.49, 1.150, -0.026, 1.000, "广州馆", "广州自古都是我国的商业之都"},
     {2.48, 2.120, -0.032, 0.999, "吉林馆", "吉林位于我国东北是人参之都"}
+};
+
+// 充电点坐标
+struct Point charging_point = {
+    0.4185, 2.1023, -0.7463, 0.6656, "充电点", "已到达充电点，开始充电"
 };
 
 // 导览顺序：吉林->上海->北京->广州->深圳
@@ -89,6 +94,7 @@ private:
     // 任务函数
     void tourAllMuseums();      // 任务一：参观一圈
     void navigateToMuseum(const string& museum_name);  // 任务二：指定位置导览
+    void navigateToShenzhenWithCharging();  // 任务三：深圳馆+回原点+充电
 };
 
 VoiceNavigation::VoiceNavigation() : has_start_position(false) {
@@ -195,13 +201,13 @@ double VoiceNavigation::normalizeAngle(double angle) {
 }
 
 void VoiceNavigation::saveStartPosition() {
-    // 固定返回起始位置 (0, 0)
-    start_x = 0.0;
-    start_y = 0.0;
+    // 固定返回起始位置
+    start_x = 0.030863063838223354;
+    start_y = 0.012025865218924424;
     start_z = 0.0;
     start_w = 1.0;
     has_start_position = true;
-    ROS_INFO("出发点位置固定为: (%.2f, %.2f)", start_x, start_y);
+    ROS_INFO("出发点位置固定为: (%.6f, %.6f)", start_x, start_y);
 }
 
 bool VoiceNavigation::preciseNavigation(double goal_x, double goal_y, const string& point_name) {
@@ -482,6 +488,52 @@ void VoiceNavigation::navigateToMuseum(const string& museum_name) {
     voiceTTS("抱歉，没有找到您说的场馆");
 }
 
+void VoiceNavigation::navigateToShenzhenWithCharging() {
+    ROS_INFO("========== 深圳馆导览+充电任务 ==========");
+    
+    // 保存出发点（原点）
+    saveStartPosition();
+    
+    // 第一步：导航到深圳馆
+    voiceTTS("好的，这就带您去深圳馆");
+    ROS_INFO("第一步：导航到深圳馆");
+    navigateToPoint(m_point[0], true);  // m_point[0] 是深圳馆，播报介绍
+    
+    // 第二步：返回原点
+    ROS_INFO("第二步：返回原点");
+    voiceTTS("参观结束，返回出发点");
+    navigateToPosition(start_x, start_y, start_z, start_w, "原点");
+    voiceTTS("已返回原点");
+    
+    // 第三步：导航到充电点
+    ROS_INFO("第三步：导航到充电点");
+    voiceTTS("现在前往充电点");
+    ros::Duration(2.0).sleep();  // 等待语音播报完成
+    bool success = navigateToPosition(charging_point.x, charging_point.y, 
+                                       charging_point.z, charging_point.w, 
+                                       charging_point.name);
+    
+    // 到达充电点后停止并播报
+    if (success) {
+        // 确保机器人完全停止
+        geometry_msgs::Twist stop_cmd;
+        stop_cmd.linear.x = 0;
+        stop_cmd.linear.y = 0;
+        stop_cmd.angular.z = 0;
+        cmd_vel_pub.publish(stop_cmd);
+        
+        ROS_INFO("已到达充电点，机器人停止");
+        ros::Duration(0.5).sleep();  // 等待停止稳定
+        voiceTTS(charging_point.present);  // "已到达充电点，开始充电"
+        ros::Duration(3.0).sleep();  // 等待语音播报完成
+    } else {
+        voiceTTS("导航到充电点失败");
+        ros::Duration(2.0).sleep();
+    }
+    
+    ROS_INFO("========== 任务完成 ==========");
+}
+
 void VoiceNavigation::run() {
     ROS_INFO("语音导航系统已启动，等待语音指令...");
     
@@ -502,9 +554,19 @@ void VoiceNavigation::run() {
             continue;
         }
         
-        // 任务二: 指定位置导览 - "我要到XX馆"
+        // 任务二: 深圳馆特殊处理 - 导航+回原点+充电
+        if ((text.find("深圳") != string::npos) && 
+            (text.find("我要到") != string::npos || text.find("我要去") != string::npos ||
+             text.find("带我去") != string::npos || text.find("导航到") != string::npos ||
+             text.find("导航去") != string::npos || text.find("去") != string::npos)) {
+            navigateToShenzhenWithCharging();
+            continue;
+        }
+        
+        // 任务三: 其他场馆导览 - "我要到XX馆"
         if (text.find("我要到") != string::npos || text.find("我要去") != string::npos ||
-            text.find("带我去") != string::npos || text.find("去") != string::npos) {
+            text.find("带我去") != string::npos || text.find("导航到") != string::npos ||
+            text.find("导航去") != string::npos || text.find("去") != string::npos) {
             // 检查是否包含场馆名称
             for (int i = 0; i < 5; i++) {
                 // 匹配 "吉林"、"吉林馆" 等

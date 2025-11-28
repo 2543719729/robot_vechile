@@ -64,7 +64,8 @@ class FaceRecognitionNode:
     def init_direct_camera(self):
         """初始化直接摄像头访问"""
         rospy.loginfo(f"初始化摄像头 (ID: {self.camera_id})...")
-        self.cap = cv2.VideoCapture(self.camera_id)
+        # WSL2 需要使用 V4L2 后端和 MJPEG 格式
+        self.cap = cv2.VideoCapture(self.camera_id, cv2.CAP_V4L2)
         if not self.cap.isOpened():
             rospy.logwarn("无法打开摄像头，将尝试订阅ROS话题")
             self.use_direct_camera = False
@@ -75,9 +76,12 @@ class FaceRecognitionNode:
                 queue_size=1
             )
         else:
+            # 使用 MJPEG 格式 (WSL2 USB/IP 更稳定)
+            self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M','J','P','G'))
             self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
             self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
-            rospy.loginfo("摄像头初始化成功")
+            self.cap.set(cv2.CAP_PROP_FPS, 30)
+            rospy.loginfo("摄像头初始化成功 (MJPEG 模式)")
     
     def load_encodings(self):
         """加载人脸编码数据"""
@@ -121,12 +125,15 @@ class FaceRecognitionNode:
     def capture_frame(self):
         """捕获当前帧"""
         if self.use_direct_camera and self.cap is not None:
-            ret, frame = self.cap.read()
-            if ret:
-                return frame
-            else:
-                rospy.logwarn("从摄像头读取帧失败")
-                return None
+            # WSL2 USB/IP 可能需要多次尝试
+            import time
+            for attempt in range(10):
+                ret, frame = self.cap.read()
+                if ret and frame is not None:
+                    return frame
+                time.sleep(0.1)
+            rospy.logwarn("从摄像头读取帧失败")
+            return None
         else:
             with self.frame_lock:
                 if self.current_frame is not None:

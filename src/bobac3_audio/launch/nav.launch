@@ -1,4 +1,7 @@
 <launch>
+    <!-- 精确导航参数 -->
+    <param name="precise_nav/target_tolerance" value="0.007"/>
+    
     <!-- 语音导航节点 -->
     <node pkg="bobac3_audio" type="voice_nav_node" name="voice_nav" output="screen"/>
     <!-- 打开语音采集节点 -->

@@ -34,13 +34,15 @@ class CameraNode:
         """打开摄像头"""
         rospy.loginfo(f"正在打开摄像头 (ID: {self.camera_id})...")
         
-        self.cap = cv2.VideoCapture(self.camera_id)
+        # WSL2 需要使用 V4L2 后端
+        self.cap = cv2.VideoCapture(self.camera_id, cv2.CAP_V4L2)
         
         if not self.cap.isOpened():
             rospy.logerr("无法打开摄像头!")
             return False
         
-        # 设置摄像头参数
+        # WSL2 使用 MJPEG 格式更稳定
+        self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M','J','P','G'))
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.image_width)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.image_height)
         self.cap.set(cv2.CAP_PROP_FPS, self.frame_rate)
@@ -49,7 +51,7 @@ class CameraNode:
         actual_height = self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
         actual_fps = self.cap.get(cv2.CAP_PROP_FPS)
         
-        rospy.loginfo(f"摄像头已打开: {actual_width}x{actual_height} @ {actual_fps}fps")
+        rospy.loginfo(f"摄像头已打开: {actual_width}x{actual_height} @ {actual_fps}fps (MJPEG模式)")
         return True
     
     def run(self):
