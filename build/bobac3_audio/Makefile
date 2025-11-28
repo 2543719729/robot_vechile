@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/liyaxin075/Documents/robot_learning/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -92,6 +80,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -103,27 +101,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -134,6 +111,29 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,336 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/voice_collect_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_collect_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/voice_collect_node.dir/rule
-
-# Convenience name for target.
-voice_collect_node: bobac3_audio/CMakeFiles/voice_collect_node.dir/rule
-
-.PHONY : voice_collect_node
-
-# fast build rule for target.
-voice_collect_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_collect_node.dir/build.make bobac3_audio/CMakeFiles/voice_collect_node.dir/build
-.PHONY : voice_collect_node/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/voice_control_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_control_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/voice_control_node.dir/rule
-
-# Convenience name for target.
-voice_control_node: bobac3_audio/CMakeFiles/voice_control_node.dir/rule
-
-.PHONY : voice_control_node
-
-# fast build rule for target.
-voice_control_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_control_node.dir/build.make bobac3_audio/CMakeFiles/voice_control_node.dir/build
-.PHONY : voice_control_node/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/dictation_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/dictation_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/dictation_node.dir/rule
-
-# Convenience name for target.
-dictation_node: bobac3_audio/CMakeFiles/dictation_node.dir/rule
-
-.PHONY : dictation_node
-
-# fast build rule for target.
-dictation_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/dictation_node.dir/build.make bobac3_audio/CMakeFiles/dictation_node.dir/build
-.PHONY : dictation_node/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/collect_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/collect_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/collect_node.dir/rule
-
-# Convenience name for target.
-collect_node: bobac3_audio/CMakeFiles/collect_node.dir/rule
-
-.PHONY : collect_node
-
-# fast build rule for target.
-collect_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/collect_node.dir/build.make bobac3_audio/CMakeFiles/collect_node.dir/build
-.PHONY : collect_node/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/voice_awake_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_awake_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/voice_awake_node.dir/rule
-
-# Convenience name for target.
-voice_awake_node: bobac3_audio/CMakeFiles/voice_awake_node.dir/rule
-
-.PHONY : voice_awake_node
-
-# fast build rule for target.
-voice_awake_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_awake_node.dir/build.make bobac3_audio/CMakeFiles/voice_awake_node.dir/build
-.PHONY : voice_awake_node/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/audio_test_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/audio_test_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/audio_test_node.dir/rule
-
-# Convenience name for target.
-audio_test_node: bobac3_audio/CMakeFiles/audio_test_node.dir/rule
-
-.PHONY : audio_test_node
-
-# fast build rule for target.
-audio_test_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/audio_test_node.dir/build.make bobac3_audio/CMakeFiles/audio_test_node.dir/build
-.PHONY : audio_test_node/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/reinovo_voice.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/reinovo_voice.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/reinovo_voice.dir/rule
-
-# Convenience name for target.
-reinovo_voice: bobac3_audio/CMakeFiles/reinovo_voice.dir/rule
-
-.PHONY : reinovo_voice
-
-# fast build rule for target.
-reinovo_voice/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/reinovo_voice.dir/build.make bobac3_audio/CMakeFiles/reinovo_voice.dir/build
-.PHONY : reinovo_voice/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/semanteme_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/semanteme_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/semanteme_node.dir/rule
-
-# Convenience name for target.
-semanteme_node: bobac3_audio/CMakeFiles/semanteme_node.dir/rule
-
-.PHONY : semanteme_node
-
-# fast build rule for target.
-semanteme_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/semanteme_node.dir/build.make bobac3_audio/CMakeFiles/semanteme_node.dir/build
-.PHONY : semanteme_node/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/rule
-
-# Convenience name for target.
-bobac3_audio_genpy: bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/rule
-
-.PHONY : bobac3_audio_genpy
-
-# fast build rule for target.
-bobac3_audio_genpy/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/build
-.PHONY : bobac3_audio_genpy/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/voice_aiui_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_aiui_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/voice_aiui_node.dir/rule
-
-# Convenience name for target.
-voice_aiui_node: bobac3_audio/CMakeFiles/voice_aiui_node.dir/rule
-
-.PHONY : voice_aiui_node
-
-# fast build rule for target.
-voice_aiui_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_aiui_node.dir/build.make bobac3_audio/CMakeFiles/voice_aiui_node.dir/build
-.PHONY : voice_aiui_node/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/rule
-
-# Convenience name for target.
-bobac3_audio_generate_messages_py: bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/rule
-
-.PHONY : bobac3_audio_generate_messages_py
-
-# fast build rule for target.
-bobac3_audio_generate_messages_py/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/build
-.PHONY : bobac3_audio_generate_messages_py/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/rule
-
-# Convenience name for target.
-bobac3_audio_gennodejs: bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/rule
-
-.PHONY : bobac3_audio_gennodejs
-
-# fast build rule for target.
-bobac3_audio_gennodejs/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/build
-.PHONY : bobac3_audio_gennodejs/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/rule
-
-# Convenience name for target.
-bobac3_audio_genlisp: bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/rule
-
-.PHONY : bobac3_audio_genlisp
-
-# fast build rule for target.
-bobac3_audio_genlisp/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/build
-.PHONY : bobac3_audio_genlisp/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-bobac3_audio_generate_messages_lisp: bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/rule
-
-.PHONY : bobac3_audio_generate_messages_lisp
-
-# fast build rule for target.
-bobac3_audio_generate_messages_lisp/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/build
-.PHONY : bobac3_audio_generate_messages_lisp/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_cpp: bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_cpp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_cpp/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
-.PHONY : move_base_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_lisp: bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_lisp/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
-.PHONY : actionlib_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_lisp: bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_lisp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_lisp/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
-.PHONY : move_base_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/voice_interaction_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_interaction_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/voice_interaction_node.dir/rule
-
-# Convenience name for target.
-voice_interaction_node: bobac3_audio/CMakeFiles/voice_interaction_node.dir/rule
-
-.PHONY : voice_interaction_node
-
-# fast build rule for target.
-voice_interaction_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_interaction_node.dir/build.make bobac3_audio/CMakeFiles/voice_interaction_node.dir/build
-.PHONY : voice_interaction_node/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-bobac3_audio_generate_messages_nodejs: bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/rule
-
-.PHONY : bobac3_audio_generate_messages_nodejs
-
-# fast build rule for target.
-bobac3_audio_generate_messages_nodejs/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/build
-.PHONY : bobac3_audio_generate_messages_nodejs/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_eus: bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_eus
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_eus/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
-.PHONY : actionlib_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_nodejs: bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-move_base_msgs_generate_messages_nodejs/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
-.PHONY : move_base_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_nodejs: bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-.PHONY : actionlib_generate_messages_nodejs
-
-# fast build rule for target.
-actionlib_generate_messages_nodejs/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-.PHONY : actionlib_generate_messages_nodejs/fast
-
-# Convenience name for target.
 bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule:
 	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
 .PHONY : bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
@@ -513,139 +183,34 @@ move_base_msgs_generate_messages_eus/fast:
 .PHONY : move_base_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/rule
+bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-_bobac3_audio_generate_messages_check_deps_Awake: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/rule
+sensor_msgs_generate_messages_cpp: bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : _bobac3_audio_generate_messages_check_deps_Awake
+.PHONY : sensor_msgs_generate_messages_cpp
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_Awake/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_Awake/fast
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+bobac3_audio/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-actionlib_generate_messages_lisp: bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+tf_generate_messages_nodejs: bobac3_audio/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
-.PHONY : actionlib_generate_messages_lisp
+.PHONY : tf_generate_messages_nodejs
 
 # fast build rule for target.
-actionlib_generate_messages_lisp/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-.PHONY : actionlib_generate_messages_lisp/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_cpp: bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_cpp/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
-.PHONY : actionlib_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_eus: bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_generate_messages_eus
-
-# fast build rule for target.
-actionlib_generate_messages_eus/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/build
-.PHONY : actionlib_generate_messages_eus/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/rule
-
-# Convenience name for target.
-_bobac3_audio_generate_messages_check_deps_Control: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/rule
-
-.PHONY : _bobac3_audio_generate_messages_check_deps_Control
-
-# fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_Control/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_Control/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_py: bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_py
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_py/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
-.PHONY : actionlib_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_cpp: bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-.PHONY : actionlib_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/Copy_config.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/Copy_config.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/Copy_config.dir/rule
-
-# Convenience name for target.
-Copy_config: bobac3_audio/CMakeFiles/Copy_config.dir/rule
-
-.PHONY : Copy_config
-
-# fast build rule for target.
-Copy_config/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/Copy_config.dir/build.make bobac3_audio/CMakeFiles/Copy_config.dir/build
-.PHONY : Copy_config/fast
-
-# Convenience name for target.
-bobac3_audio/CMakeFiles/voice_nav_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_nav_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/voice_nav_node.dir/rule
-
-# Convenience name for target.
-voice_nav_node: bobac3_audio/CMakeFiles/voice_nav_node.dir/rule
-
-.PHONY : voice_nav_node
-
-# fast build rule for target.
-voice_nav_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_nav_node.dir/build.make bobac3_audio/CMakeFiles/voice_nav_node.dir/build
-.PHONY : voice_nav_node/fast
+tf_generate_messages_nodejs/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tf_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/tf_generate_messages_nodejs.dir/build
+.PHONY : tf_generate_messages_nodejs/fast
 
 # Convenience name for target.
 bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule:
@@ -663,34 +228,244 @@ move_base_msgs_generate_messages_py/fast:
 .PHONY : move_base_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/tts_node.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tts_node.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/tts_node.dir/rule
+bobac3_audio/CMakeFiles/Copy_config.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/Copy_config.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/Copy_config.dir/rule
 
 # Convenience name for target.
-tts_node: bobac3_audio/CMakeFiles/tts_node.dir/rule
+Copy_config: bobac3_audio/CMakeFiles/Copy_config.dir/rule
 
-.PHONY : tts_node
+.PHONY : Copy_config
 
 # fast build rule for target.
-tts_node/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tts_node.dir/build.make bobac3_audio/CMakeFiles/tts_node.dir/build
-.PHONY : tts_node/fast
+Copy_config/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/Copy_config.dir/build.make bobac3_audio/CMakeFiles/Copy_config.dir/build
+.PHONY : Copy_config/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/rule
+bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-bobac3_audio_generate_messages: bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/rule
+actionlib_generate_messages_cpp: bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
-.PHONY : bobac3_audio_generate_messages
+.PHONY : actionlib_generate_messages_cpp
 
 # fast build rule for target.
-bobac3_audio_generate_messages/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/build
-.PHONY : bobac3_audio_generate_messages/fast
+actionlib_generate_messages_cpp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_py: bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_py
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_py/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/rule
+
+# Convenience name for target.
+_bobac3_audio_generate_messages_check_deps_Control: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/rule
+
+.PHONY : _bobac3_audio_generate_messages_check_deps_Control
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_Control/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_Control/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_eus: bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_generate_messages_eus
+
+# fast build rule for target.
+actionlib_generate_messages_eus/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_cpp: bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_cpp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_lisp: bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/voice_interaction_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_interaction_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/voice_interaction_node.dir/rule
+
+# Convenience name for target.
+voice_interaction_node: bobac3_audio/CMakeFiles/voice_interaction_node.dir/rule
+
+.PHONY : voice_interaction_node
+
+# fast build rule for target.
+voice_interaction_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_interaction_node.dir/build.make bobac3_audio/CMakeFiles/voice_interaction_node.dir/build
+.PHONY : voice_interaction_node/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tf_generate_messages_cpp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_cpp: bobac3_audio/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+.PHONY : tf_generate_messages_cpp
+
+# fast build rule for target.
+tf_generate_messages_cpp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tf_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_nodejs: bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_generate_messages_nodejs/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_cpp: bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_cpp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_cpp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/rule
+
+# Convenience name for target.
+bobac3_audio_gennodejs: bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/rule
+
+.PHONY : bobac3_audio_gennodejs
+
+# fast build rule for target.
+bobac3_audio_gennodejs/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/build
+.PHONY : bobac3_audio_gennodejs/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_nodejs: bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+move_base_msgs_generate_messages_nodejs/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
+.PHONY : move_base_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_lisp: bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_lisp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_lisp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_semanteme.dir/rule:
@@ -708,94 +483,139 @@ _bobac3_audio_generate_messages_check_deps_robot_semanteme/fast:
 .PHONY : _bobac3_audio_generate_messages_check_deps_robot_semanteme/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/rule
+bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-_bobac3_audio_generate_messages_check_deps_up_sync: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/rule
+tf2_msgs_generate_messages_eus: bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
-.PHONY : _bobac3_audio_generate_messages_check_deps_up_sync
+.PHONY : tf2_msgs_generate_messages_eus
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_up_sync/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_up_sync/fast
+tf2_msgs_generate_messages_eus/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/rule
+bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-_bobac3_audio_generate_messages_check_deps_robot_tts: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/rule
+sensor_msgs_generate_messages_py: bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
-.PHONY : _bobac3_audio_generate_messages_check_deps_robot_tts
+.PHONY : sensor_msgs_generate_messages_py
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_robot_tts/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_robot_tts/fast
+sensor_msgs_generate_messages_py/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/rule
+bobac3_audio/CMakeFiles/reinovo_voice.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/reinovo_voice.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/reinovo_voice.dir/rule
 
 # Convenience name for target.
-_bobac3_audio_generate_messages_check_deps_Collect: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/rule
+reinovo_voice: bobac3_audio/CMakeFiles/reinovo_voice.dir/rule
 
-.PHONY : _bobac3_audio_generate_messages_check_deps_Collect
+.PHONY : reinovo_voice
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_Collect/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_Collect/fast
+reinovo_voice/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/reinovo_voice.dir/build.make bobac3_audio/CMakeFiles/reinovo_voice.dir/build
+.PHONY : reinovo_voice/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/rule
+bobac3_audio/CMakeFiles/tf_generate_messages_lisp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tf_generate_messages_lisp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tf_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-_bobac3_audio_generate_messages_check_deps_robot_iat: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/rule
+tf_generate_messages_lisp: bobac3_audio/CMakeFiles/tf_generate_messages_lisp.dir/rule
 
-.PHONY : _bobac3_audio_generate_messages_check_deps_robot_iat
+.PHONY : tf_generate_messages_lisp
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_robot_iat/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_robot_iat/fast
+tf_generate_messages_lisp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tf_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/rule
+bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-_bobac3_audio_generate_messages_check_deps_Nav: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/rule
+actionlib_msgs_generate_messages_eus: bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
-.PHONY : _bobac3_audio_generate_messages_check_deps_Nav
+.PHONY : actionlib_msgs_generate_messages_eus
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_Nav/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_Nav/fast
+actionlib_msgs_generate_messages_eus/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+.PHONY : actionlib_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/rule
+bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-actionlib_generate_messages_py: bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/rule
+bobac3_audio_generate_messages_nodejs: bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/rule
 
-.PHONY : actionlib_generate_messages_py
+.PHONY : bobac3_audio_generate_messages_nodejs
 
 # fast build rule for target.
-actionlib_generate_messages_py/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/build
-.PHONY : actionlib_generate_messages_py/fast
+bobac3_audio_generate_messages_nodejs/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/build
+.PHONY : bobac3_audio_generate_messages_nodejs/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/voice_nav_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_nav_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/voice_nav_node.dir/rule
+
+# Convenience name for target.
+voice_nav_node: bobac3_audio/CMakeFiles/voice_nav_node.dir/rule
+
+.PHONY : voice_nav_node
+
+# fast build rule for target.
+voice_nav_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_nav_node.dir/build.make bobac3_audio/CMakeFiles/voice_nav_node.dir/build
+.PHONY : voice_nav_node/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_lisp: bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_lisp
+
+# fast build rule for target.
+move_base_msgs_generate_messages_lisp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
+.PHONY : move_base_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: bobac3_audio/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tf_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
 bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
@@ -813,6 +633,36 @@ actionlib_msgs_generate_messages_nodejs/fast:
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_lisp: bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_lisp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_nodejs: bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+tf2_msgs_generate_messages_nodejs/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
 bobac3_audio/CMakeFiles/bobac3_audio_gencpp.dir/rule:
 	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_gencpp.dir/rule
 .PHONY : bobac3_audio/CMakeFiles/bobac3_audio_gencpp.dir/rule
@@ -828,19 +678,139 @@ bobac3_audio_gencpp/fast:
 .PHONY : bobac3_audio_gencpp/fast
 
 # Convenience name for target.
-bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/rule:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/rule
-.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/rule
+bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-bobac3_audio_generate_messages_eus: bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/rule
+tf2_msgs_generate_messages_py: bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
-.PHONY : bobac3_audio_generate_messages_eus
+.PHONY : tf2_msgs_generate_messages_py
 
 # fast build rule for target.
-bobac3_audio_generate_messages_eus/fast:
-	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/build
-.PHONY : bobac3_audio_generate_messages_eus/fast
+tf2_msgs_generate_messages_py/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/rule
+
+# Convenience name for target.
+bobac3_audio_generate_messages: bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/rule
+
+.PHONY : bobac3_audio_generate_messages
+
+# fast build rule for target.
+bobac3_audio_generate_messages/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/build
+.PHONY : bobac3_audio_generate_messages/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/tts_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tts_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tts_node.dir/rule
+
+# Convenience name for target.
+tts_node: bobac3_audio/CMakeFiles/tts_node.dir/rule
+
+.PHONY : tts_node
+
+# fast build rule for target.
+tts_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tts_node.dir/build.make bobac3_audio/CMakeFiles/tts_node.dir/build
+.PHONY : tts_node/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/rule
+
+# Convenience name for target.
+_bobac3_audio_generate_messages_check_deps_Awake: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/rule
+
+.PHONY : _bobac3_audio_generate_messages_check_deps_Awake
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_Awake/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_Awake/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/rule
+
+# Convenience name for target.
+_bobac3_audio_generate_messages_check_deps_Nav: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/rule
+
+.PHONY : _bobac3_audio_generate_messages_check_deps_Nav
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_Nav/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_Nav/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/rule
+
+# Convenience name for target.
+_bobac3_audio_generate_messages_check_deps_robot_iat: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/rule
+
+.PHONY : _bobac3_audio_generate_messages_check_deps_robot_iat
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_robot_iat/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_robot_iat/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/rule
+
+# Convenience name for target.
+_bobac3_audio_generate_messages_check_deps_robot_tts: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/rule
+
+.PHONY : _bobac3_audio_generate_messages_check_deps_robot_tts
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_robot_tts/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_robot_tts/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/rule
+
+# Convenience name for target.
+_bobac3_audio_generate_messages_check_deps_up_sync: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/rule
+
+.PHONY : _bobac3_audio_generate_messages_check_deps_up_sync
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_up_sync/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_up_sync/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/rule
+
+# Convenience name for target.
+_bobac3_audio_generate_messages_check_deps_Collect: bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/rule
+
+.PHONY : _bobac3_audio_generate_messages_check_deps_Collect
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_Collect/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_Collect/fast
 
 # Convenience name for target.
 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_cpp.dir/rule:
@@ -871,6 +841,261 @@ bobac3_audio_geneus: bobac3_audio/CMakeFiles/bobac3_audio_geneus.dir/rule
 bobac3_audio_geneus/fast:
 	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_geneus.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_geneus.dir/build
 .PHONY : bobac3_audio_geneus/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+bobac3_audio_generate_messages_lisp: bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/rule
+
+.PHONY : bobac3_audio_generate_messages_lisp
+
+# fast build rule for target.
+bobac3_audio_generate_messages_lisp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/build
+.PHONY : bobac3_audio_generate_messages_lisp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/collect_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/collect_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/collect_node.dir/rule
+
+# Convenience name for target.
+collect_node: bobac3_audio/CMakeFiles/collect_node.dir/rule
+
+.PHONY : collect_node
+
+# fast build rule for target.
+collect_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/collect_node.dir/build.make bobac3_audio/CMakeFiles/collect_node.dir/build
+.PHONY : collect_node/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/rule
+
+# Convenience name for target.
+bobac3_audio_genlisp: bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/rule
+
+.PHONY : bobac3_audio_genlisp
+
+# fast build rule for target.
+bobac3_audio_genlisp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/build
+.PHONY : bobac3_audio_genlisp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/rule
+
+# Convenience name for target.
+bobac3_audio_generate_messages_py: bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/rule
+
+.PHONY : bobac3_audio_generate_messages_py
+
+# fast build rule for target.
+bobac3_audio_generate_messages_py/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/build
+.PHONY : bobac3_audio_generate_messages_py/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/voice_aiui_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_aiui_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/voice_aiui_node.dir/rule
+
+# Convenience name for target.
+voice_aiui_node: bobac3_audio/CMakeFiles/voice_aiui_node.dir/rule
+
+.PHONY : voice_aiui_node
+
+# fast build rule for target.
+voice_aiui_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_aiui_node.dir/build.make bobac3_audio/CMakeFiles/voice_aiui_node.dir/build
+.PHONY : voice_aiui_node/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+bobac3_audio_generate_messages_eus: bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/rule
+
+.PHONY : bobac3_audio_generate_messages_eus
+
+# fast build rule for target.
+bobac3_audio_generate_messages_eus/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/build
+.PHONY : bobac3_audio_generate_messages_eus/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/rule
+
+# Convenience name for target.
+bobac3_audio_genpy: bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/rule
+
+.PHONY : bobac3_audio_genpy
+
+# fast build rule for target.
+bobac3_audio_genpy/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/build
+.PHONY : bobac3_audio_genpy/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/semanteme_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/semanteme_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/semanteme_node.dir/rule
+
+# Convenience name for target.
+semanteme_node: bobac3_audio/CMakeFiles/semanteme_node.dir/rule
+
+.PHONY : semanteme_node
+
+# fast build rule for target.
+semanteme_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/semanteme_node.dir/build.make bobac3_audio/CMakeFiles/semanteme_node.dir/build
+.PHONY : semanteme_node/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/tf_generate_messages_eus.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/tf_generate_messages_eus.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_eus: bobac3_audio/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/tf_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/audio_test_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/audio_test_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/audio_test_node.dir/rule
+
+# Convenience name for target.
+audio_test_node: bobac3_audio/CMakeFiles/audio_test_node.dir/rule
+
+.PHONY : audio_test_node
+
+# fast build rule for target.
+audio_test_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/audio_test_node.dir/build.make bobac3_audio/CMakeFiles/audio_test_node.dir/build
+.PHONY : audio_test_node/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_cpp: bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_cpp
+
+# fast build rule for target.
+move_base_msgs_generate_messages_cpp/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
+.PHONY : move_base_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/voice_awake_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_awake_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/voice_awake_node.dir/rule
+
+# Convenience name for target.
+voice_awake_node: bobac3_audio/CMakeFiles/voice_awake_node.dir/rule
+
+.PHONY : voice_awake_node
+
+# fast build rule for target.
+voice_awake_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_awake_node.dir/build.make bobac3_audio/CMakeFiles/voice_awake_node.dir/build
+.PHONY : voice_awake_node/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/dictation_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/dictation_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/dictation_node.dir/rule
+
+# Convenience name for target.
+dictation_node: bobac3_audio/CMakeFiles/dictation_node.dir/rule
+
+.PHONY : dictation_node
+
+# fast build rule for target.
+dictation_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/dictation_node.dir/build.make bobac3_audio/CMakeFiles/dictation_node.dir/build
+.PHONY : dictation_node/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/voice_control_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_control_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/voice_control_node.dir/rule
+
+# Convenience name for target.
+voice_control_node: bobac3_audio/CMakeFiles/voice_control_node.dir/rule
+
+.PHONY : voice_control_node
+
+# fast build rule for target.
+voice_control_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_control_node.dir/build.make bobac3_audio/CMakeFiles/voice_control_node.dir/build
+.PHONY : voice_control_node/fast
+
+# Convenience name for target.
+bobac3_audio/CMakeFiles/voice_collect_node.dir/rule:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f CMakeFiles/Makefile2 bobac3_audio/CMakeFiles/voice_collect_node.dir/rule
+.PHONY : bobac3_audio/CMakeFiles/voice_collect_node.dir/rule
+
+# Convenience name for target.
+voice_collect_node: bobac3_audio/CMakeFiles/voice_collect_node.dir/rule
+
+.PHONY : voice_collect_node
+
+# fast build rule for target.
+voice_collect_node/fast:
+	cd /home/liyaxin075/Documents/robot_learning/build && $(MAKE) -f bobac3_audio/CMakeFiles/voice_collect_node.dir/build.make bobac3_audio/CMakeFiles/voice_collect_node.dir/build
+.PHONY : voice_collect_node/fast
 
 src/audio_test_client.o: src/audio_test_client.cpp.o
 
@@ -1391,60 +1616,75 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... voice_collect_node"
-	@echo "... voice_control_node"
-	@echo "... dictation_node"
-	@echo "... collect_node"
-	@echo "... voice_awake_node"
-	@echo "... audio_test_node"
-	@echo "... reinovo_voice"
-	@echo "... semanteme_node"
-	@echo "... bobac3_audio_genpy"
 	@echo "... list_install_components"
-	@echo "... voice_aiui_node"
-	@echo "... bobac3_audio_generate_messages_py"
-	@echo "... bobac3_audio_gennodejs"
-	@echo "... bobac3_audio_genlisp"
+	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... bobac3_audio_generate_messages_lisp"
-	@echo "... move_base_msgs_generate_messages_cpp"
-	@echo "... actionlib_msgs_generate_messages_lisp"
-	@echo "... move_base_msgs_generate_messages_lisp"
-	@echo "... voice_interaction_node"
-	@echo "... bobac3_audio_generate_messages_nodejs"
-	@echo "... actionlib_msgs_generate_messages_eus"
-	@echo "... move_base_msgs_generate_messages_nodejs"
-	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... move_base_msgs_generate_messages_eus"
-	@echo "... _bobac3_audio_generate_messages_check_deps_Awake"
-	@echo "... actionlib_generate_messages_lisp"
-	@echo "... actionlib_msgs_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_eus"
-	@echo "... _bobac3_audio_generate_messages_check_deps_Control"
-	@echo "... actionlib_msgs_generate_messages_py"
-	@echo "... actionlib_generate_messages_cpp"
-	@echo "... Copy_config"
-	@echo "... voice_nav_node"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... tf_generate_messages_nodejs"
+	@echo "... install/strip"
 	@echo "... move_base_msgs_generate_messages_py"
-	@echo "... tts_node"
-	@echo "... bobac3_audio_generate_messages"
+	@echo "... Copy_config"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... _bobac3_audio_generate_messages_check_deps_Control"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... voice_interaction_node"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... bobac3_audio_gennodejs"
+	@echo "... move_base_msgs_generate_messages_nodejs"
+	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... _bobac3_audio_generate_messages_check_deps_robot_semanteme"
-	@echo "... _bobac3_audio_generate_messages_check_deps_up_sync"
-	@echo "... _bobac3_audio_generate_messages_check_deps_robot_tts"
-	@echo "... _bobac3_audio_generate_messages_check_deps_Collect"
-	@echo "... _bobac3_audio_generate_messages_check_deps_robot_iat"
-	@echo "... _bobac3_audio_generate_messages_check_deps_Nav"
-	@echo "... actionlib_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... reinovo_voice"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... bobac3_audio_generate_messages_nodejs"
+	@echo "... voice_nav_node"
+	@echo "... move_base_msgs_generate_messages_lisp"
+	@echo "... tf_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... bobac3_audio_gencpp"
-	@echo "... bobac3_audio_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... bobac3_audio_generate_messages"
+	@echo "... tts_node"
+	@echo "... _bobac3_audio_generate_messages_check_deps_Awake"
+	@echo "... _bobac3_audio_generate_messages_check_deps_Nav"
+	@echo "... _bobac3_audio_generate_messages_check_deps_robot_iat"
+	@echo "... _bobac3_audio_generate_messages_check_deps_robot_tts"
+	@echo "... _bobac3_audio_generate_messages_check_deps_up_sync"
+	@echo "... _bobac3_audio_generate_messages_check_deps_Collect"
 	@echo "... bobac3_audio_generate_messages_cpp"
 	@echo "... bobac3_audio_geneus"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... bobac3_audio_generate_messages_lisp"
+	@echo "... collect_node"
+	@echo "... bobac3_audio_genlisp"
+	@echo "... bobac3_audio_generate_messages_py"
+	@echo "... voice_aiui_node"
+	@echo "... edit_cache"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... bobac3_audio_generate_messages_eus"
+	@echo "... bobac3_audio_genpy"
+	@echo "... semanteme_node"
+	@echo "... tf_generate_messages_eus"
+	@echo "... audio_test_node"
+	@echo "... move_base_msgs_generate_messages_cpp"
+	@echo "... voice_awake_node"
+	@echo "... dictation_node"
+	@echo "... voice_control_node"
+	@echo "... voice_collect_node"
 	@echo "... src/audio_test_client.o"
 	@echo "... src/audio_test_client.i"
 	@echo "... src/audio_test_client.s"

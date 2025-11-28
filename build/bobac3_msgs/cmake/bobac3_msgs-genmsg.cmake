@@ -34,7 +34,7 @@ add_custom_target(_bobac3_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg" NAME_WE)
 add_custom_target(_bobac3_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bobac3_msgs" "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg" "std_msgs/Header:bobac3_msgs/joint:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bobac3_msgs" "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg" "bobac3_msgs/joint:std_msgs/Header:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/ar_pose.msg" NAME_WE)
@@ -94,7 +94,7 @@ _generate_msg_cpp(bobac3_msgs
 _generate_msg_cpp(bobac3_msgs
   "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bobac3_msgs
 )
 _generate_msg_cpp(bobac3_msgs
@@ -199,7 +199,7 @@ _generate_msg_eus(bobac3_msgs
 _generate_msg_eus(bobac3_msgs
   "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bobac3_msgs
 )
 _generate_msg_eus(bobac3_msgs
@@ -304,7 +304,7 @@ _generate_msg_lisp(bobac3_msgs
 _generate_msg_lisp(bobac3_msgs
   "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bobac3_msgs
 )
 _generate_msg_lisp(bobac3_msgs
@@ -409,7 +409,7 @@ _generate_msg_nodejs(bobac3_msgs
 _generate_msg_nodejs(bobac3_msgs
   "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bobac3_msgs
 )
 _generate_msg_nodejs(bobac3_msgs
@@ -514,7 +514,7 @@ _generate_msg_py(bobac3_msgs
 _generate_msg_py(bobac3_msgs
   "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bobac3_msgs
 )
 _generate_msg_py(bobac3_msgs

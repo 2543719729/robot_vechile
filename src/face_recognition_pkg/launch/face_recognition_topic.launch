@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 人脸识别节点 - ROS话题模式 -->
+    <!-- 订阅 /camera/image_raw 话题，不直接打开摄像头 -->
+    <!-- 适用于摄像头已被其他节点（如 demo_nav_2d.launch）启动的情况 -->
+    
+    <!-- 参数 -->
+    <arg name="tolerance" default="0.5" doc="人脸匹配容差 (0.4-0.6)"/>
+    <arg name="camera_topic" default="/camera/image_raw"/>
+    
+    <!-- 人脸识别节点 -->
+    <node pkg="face_recognition_pkg" type="face_recognition_node.py" name="face_recognition_node" output="screen">
+        <param name="use_direct_camera" value="false"/>
+        <param name="camera_topic" value="$(arg camera_topic)"/>
+        <param name="tolerance" value="$(arg tolerance)"/>
+    </node>
+</launch>

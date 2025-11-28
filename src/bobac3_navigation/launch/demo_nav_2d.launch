@@ -1,12 +1,23 @@
 <launch>
   <arg name="open_nav_rviz" default="true"/>
   <arg name="map_file_name" default="reicom"/>
+  <arg name="enable_camera" default="true"/>
 	<arg name="location_method" default="amcl_sim" 
 				doc="location type [amcl_sim, fake]"/>
 	<!--bobac3 model description-->
   <include file="$(find bobac3_description)/launch/gazebo.launch">
     <arg name="open_rviz" value="false"/>
   </include>
+  
+  <!-- 本机摄像头节点 (WSL2兼容) -->
+  <group if="$(arg enable_camera)">
+    <node pkg="face_recognition_pkg" type="camera_node.py" name="camera_node" output="screen">
+      <param name="camera_id" value="0"/>
+      <param name="frame_rate" value="15"/>
+      <param name="image_width" value="640"/>
+      <param name="image_height" value="480"/>
+    </node>
+  </group>
 	<!--map_server-->
 	<include file="$(find bobac3_navigation)/launch/map_server.launch">
 		<arg name="map_file" value="$(arg map_file_name)"/>

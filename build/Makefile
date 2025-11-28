@@ -1065,292 +1065,6 @@ subscribe_pkg_node/fast:
 .PHONY : subscribe_pkg_node/fast
 
 #=============================================================================
-# Target rules for targets named voice_collect_node
-
-# Build rule for target.
-voice_collect_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 voice_collect_node
-.PHONY : voice_collect_node
-
-# fast build rule for target.
-voice_collect_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/voice_collect_node.dir/build.make bobac3_audio/CMakeFiles/voice_collect_node.dir/build
-.PHONY : voice_collect_node/fast
-
-#=============================================================================
-# Target rules for targets named voice_control_node
-
-# Build rule for target.
-voice_control_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 voice_control_node
-.PHONY : voice_control_node
-
-# fast build rule for target.
-voice_control_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/voice_control_node.dir/build.make bobac3_audio/CMakeFiles/voice_control_node.dir/build
-.PHONY : voice_control_node/fast
-
-#=============================================================================
-# Target rules for targets named dictation_node
-
-# Build rule for target.
-dictation_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dictation_node
-.PHONY : dictation_node
-
-# fast build rule for target.
-dictation_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/dictation_node.dir/build.make bobac3_audio/CMakeFiles/dictation_node.dir/build
-.PHONY : dictation_node/fast
-
-#=============================================================================
-# Target rules for targets named collect_node
-
-# Build rule for target.
-collect_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 collect_node
-.PHONY : collect_node
-
-# fast build rule for target.
-collect_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/collect_node.dir/build.make bobac3_audio/CMakeFiles/collect_node.dir/build
-.PHONY : collect_node/fast
-
-#=============================================================================
-# Target rules for targets named voice_awake_node
-
-# Build rule for target.
-voice_awake_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 voice_awake_node
-.PHONY : voice_awake_node
-
-# fast build rule for target.
-voice_awake_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/voice_awake_node.dir/build.make bobac3_audio/CMakeFiles/voice_awake_node.dir/build
-.PHONY : voice_awake_node/fast
-
-#=============================================================================
-# Target rules for targets named audio_test_node
-
-# Build rule for target.
-audio_test_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 audio_test_node
-.PHONY : audio_test_node
-
-# fast build rule for target.
-audio_test_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/audio_test_node.dir/build.make bobac3_audio/CMakeFiles/audio_test_node.dir/build
-.PHONY : audio_test_node/fast
-
-#=============================================================================
-# Target rules for targets named reinovo_voice
-
-# Build rule for target.
-reinovo_voice: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 reinovo_voice
-.PHONY : reinovo_voice
-
-# fast build rule for target.
-reinovo_voice/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/reinovo_voice.dir/build.make bobac3_audio/CMakeFiles/reinovo_voice.dir/build
-.PHONY : reinovo_voice/fast
-
-#=============================================================================
-# Target rules for targets named semanteme_node
-
-# Build rule for target.
-semanteme_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 semanteme_node
-.PHONY : semanteme_node
-
-# fast build rule for target.
-semanteme_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/semanteme_node.dir/build.make bobac3_audio/CMakeFiles/semanteme_node.dir/build
-.PHONY : semanteme_node/fast
-
-#=============================================================================
-# Target rules for targets named bobac3_audio_genpy
-
-# Build rule for target.
-bobac3_audio_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_genpy
-.PHONY : bobac3_audio_genpy
-
-# fast build rule for target.
-bobac3_audio_genpy/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/build
-.PHONY : bobac3_audio_genpy/fast
-
-#=============================================================================
-# Target rules for targets named voice_aiui_node
-
-# Build rule for target.
-voice_aiui_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 voice_aiui_node
-.PHONY : voice_aiui_node
-
-# fast build rule for target.
-voice_aiui_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/voice_aiui_node.dir/build.make bobac3_audio/CMakeFiles/voice_aiui_node.dir/build
-.PHONY : voice_aiui_node/fast
-
-#=============================================================================
-# Target rules for targets named bobac3_audio_generate_messages_py
-
-# Build rule for target.
-bobac3_audio_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_generate_messages_py
-.PHONY : bobac3_audio_generate_messages_py
-
-# fast build rule for target.
-bobac3_audio_generate_messages_py/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/build
-.PHONY : bobac3_audio_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named bobac3_audio_gennodejs
-
-# Build rule for target.
-bobac3_audio_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_gennodejs
-.PHONY : bobac3_audio_gennodejs
-
-# fast build rule for target.
-bobac3_audio_gennodejs/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/build
-.PHONY : bobac3_audio_gennodejs/fast
-
-#=============================================================================
-# Target rules for targets named bobac3_audio_genlisp
-
-# Build rule for target.
-bobac3_audio_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_genlisp
-.PHONY : bobac3_audio_genlisp
-
-# fast build rule for target.
-bobac3_audio_genlisp/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/build
-.PHONY : bobac3_audio_genlisp/fast
-
-#=============================================================================
-# Target rules for targets named bobac3_audio_generate_messages_lisp
-
-# Build rule for target.
-bobac3_audio_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_generate_messages_lisp
-.PHONY : bobac3_audio_generate_messages_lisp
-
-# fast build rule for target.
-bobac3_audio_generate_messages_lisp/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/build
-.PHONY : bobac3_audio_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named move_base_msgs_generate_messages_cpp
-
-# Build rule for target.
-move_base_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_cpp
-.PHONY : move_base_msgs_generate_messages_cpp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
-.PHONY : move_base_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named actionlib_msgs_generate_messages_lisp
-
-# Build rule for target.
-actionlib_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_lisp
-.PHONY : actionlib_msgs_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
-.PHONY : actionlib_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named move_base_msgs_generate_messages_lisp
-
-# Build rule for target.
-move_base_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_lisp
-.PHONY : move_base_msgs_generate_messages_lisp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
-.PHONY : move_base_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named voice_interaction_node
-
-# Build rule for target.
-voice_interaction_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 voice_interaction_node
-.PHONY : voice_interaction_node
-
-# fast build rule for target.
-voice_interaction_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/voice_interaction_node.dir/build.make bobac3_audio/CMakeFiles/voice_interaction_node.dir/build
-.PHONY : voice_interaction_node/fast
-
-#=============================================================================
-# Target rules for targets named bobac3_audio_generate_messages_nodejs
-
-# Build rule for target.
-bobac3_audio_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_generate_messages_nodejs
-.PHONY : bobac3_audio_generate_messages_nodejs
-
-# fast build rule for target.
-bobac3_audio_generate_messages_nodejs/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/build
-.PHONY : bobac3_audio_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named actionlib_msgs_generate_messages_eus
-
-# Build rule for target.
-actionlib_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_eus
-.PHONY : actionlib_msgs_generate_messages_eus
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_eus/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
-.PHONY : actionlib_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named move_base_msgs_generate_messages_nodejs
-
-# Build rule for target.
-move_base_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_nodejs
-.PHONY : move_base_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-move_base_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
-.PHONY : move_base_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named actionlib_generate_messages_nodejs
-
-# Build rule for target.
-actionlib_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_nodejs
-.PHONY : actionlib_generate_messages_nodejs
-
-# fast build rule for target.
-actionlib_generate_messages_nodejs/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-.PHONY : actionlib_generate_messages_nodejs/fast
-
-#=============================================================================
 # Target rules for targets named move_base_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -1364,121 +1078,30 @@ move_base_msgs_generate_messages_eus/fast:
 .PHONY : move_base_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named _bobac3_audio_generate_messages_check_deps_Awake
+# Target rules for targets named sensor_msgs_generate_messages_cpp
 
 # Build rule for target.
-_bobac3_audio_generate_messages_check_deps_Awake: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_Awake
-.PHONY : _bobac3_audio_generate_messages_check_deps_Awake
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_Awake/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_Awake/fast
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named actionlib_generate_messages_lisp
+# Target rules for targets named tf_generate_messages_nodejs
 
 # Build rule for target.
-actionlib_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_lisp
-.PHONY : actionlib_generate_messages_lisp
+tf_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_nodejs
+.PHONY : tf_generate_messages_nodejs
 
 # fast build rule for target.
-actionlib_generate_messages_lisp/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-.PHONY : actionlib_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named actionlib_msgs_generate_messages_cpp
-
-# Build rule for target.
-actionlib_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_cpp
-.PHONY : actionlib_msgs_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
-.PHONY : actionlib_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named actionlib_generate_messages_eus
-
-# Build rule for target.
-actionlib_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_eus
-.PHONY : actionlib_generate_messages_eus
-
-# fast build rule for target.
-actionlib_generate_messages_eus/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/build
-.PHONY : actionlib_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named _bobac3_audio_generate_messages_check_deps_Control
-
-# Build rule for target.
-_bobac3_audio_generate_messages_check_deps_Control: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_Control
-.PHONY : _bobac3_audio_generate_messages_check_deps_Control
-
-# fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_Control/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_Control/fast
-
-#=============================================================================
-# Target rules for targets named actionlib_msgs_generate_messages_py
-
-# Build rule for target.
-actionlib_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_py
-.PHONY : actionlib_msgs_generate_messages_py
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_py/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
-.PHONY : actionlib_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named actionlib_generate_messages_cpp
-
-# Build rule for target.
-actionlib_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_cpp
-.PHONY : actionlib_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named Copy_config
-
-# Build rule for target.
-Copy_config: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Copy_config
-.PHONY : Copy_config
-
-# fast build rule for target.
-Copy_config/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/Copy_config.dir/build.make bobac3_audio/CMakeFiles/Copy_config.dir/build
-.PHONY : Copy_config/fast
-
-#=============================================================================
-# Target rules for targets named voice_nav_node
-
-# Build rule for target.
-voice_nav_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 voice_nav_node
-.PHONY : voice_nav_node
-
-# fast build rule for target.
-voice_nav_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/voice_nav_node.dir/build.make bobac3_audio/CMakeFiles/voice_nav_node.dir/build
-.PHONY : voice_nav_node/fast
+tf_generate_messages_nodejs/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tf_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/tf_generate_messages_nodejs.dir/build
+.PHONY : tf_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named move_base_msgs_generate_messages_py
@@ -1494,30 +1117,212 @@ move_base_msgs_generate_messages_py/fast:
 .PHONY : move_base_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named tts_node
+# Target rules for targets named Copy_config
 
 # Build rule for target.
-tts_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tts_node
-.PHONY : tts_node
+Copy_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Copy_config
+.PHONY : Copy_config
 
 # fast build rule for target.
-tts_node/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/tts_node.dir/build.make bobac3_audio/CMakeFiles/tts_node.dir/build
-.PHONY : tts_node/fast
+Copy_config/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/Copy_config.dir/build.make bobac3_audio/CMakeFiles/Copy_config.dir/build
+.PHONY : Copy_config/fast
 
 #=============================================================================
-# Target rules for targets named bobac3_audio_generate_messages
+# Target rules for targets named actionlib_generate_messages_cpp
 
 # Build rule for target.
-bobac3_audio_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_generate_messages
-.PHONY : bobac3_audio_generate_messages
+actionlib_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_cpp
+.PHONY : actionlib_generate_messages_cpp
 
 # fast build rule for target.
-bobac3_audio_generate_messages/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/build
-.PHONY : bobac3_audio_generate_messages/fast
+actionlib_generate_messages_cpp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_py
+
+# Build rule for target.
+actionlib_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_py
+.PHONY : actionlib_msgs_generate_messages_py
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_py/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _bobac3_audio_generate_messages_check_deps_Control
+
+# Build rule for target.
+_bobac3_audio_generate_messages_check_deps_Control: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_Control
+.PHONY : _bobac3_audio_generate_messages_check_deps_Control
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_Control/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Control.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_Control/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_eus
+
+# Build rule for target.
+actionlib_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_eus
+.PHONY : actionlib_generate_messages_eus
+
+# fast build rule for target.
+actionlib_generate_messages_eus/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_cpp
+
+# Build rule for target.
+actionlib_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_cpp
+.PHONY : actionlib_msgs_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_lisp
+
+# Build rule for target.
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_eus
+
+# Build rule for target.
+sensor_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_lisp
+
+# Build rule for target.
+actionlib_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_lisp
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named voice_interaction_node
+
+# Build rule for target.
+voice_interaction_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 voice_interaction_node
+.PHONY : voice_interaction_node
+
+# fast build rule for target.
+voice_interaction_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/voice_interaction_node.dir/build.make bobac3_audio/CMakeFiles/voice_interaction_node.dir/build
+.PHONY : voice_interaction_node/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_cpp
+
+# Build rule for target.
+tf_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_cpp
+.PHONY : tf_generate_messages_cpp
+
+# fast build rule for target.
+tf_generate_messages_cpp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tf_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_nodejs
+
+# Build rule for target.
+actionlib_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_nodejs
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_generate_messages_nodejs/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_cpp
+
+# Build rule for target.
+tf2_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_cpp
+.PHONY : tf2_msgs_generate_messages_cpp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named bobac3_audio_gennodejs
+
+# Build rule for target.
+bobac3_audio_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_gennodejs
+.PHONY : bobac3_audio_gennodejs
+
+# fast build rule for target.
+bobac3_audio_gennodejs/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_gennodejs.dir/build
+.PHONY : bobac3_audio_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named move_base_msgs_generate_messages_nodejs
+
+# Build rule for target.
+move_base_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_nodejs
+.PHONY : move_base_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+move_base_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
+.PHONY : move_base_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_lisp
+
+# Build rule for target.
+tf2_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_lisp
+.PHONY : tf2_msgs_generate_messages_lisp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named _bobac3_audio_generate_messages_check_deps_robot_semanteme
@@ -1533,82 +1338,121 @@ _bobac3_audio_generate_messages_check_deps_robot_semanteme/fast:
 .PHONY : _bobac3_audio_generate_messages_check_deps_robot_semanteme/fast
 
 #=============================================================================
-# Target rules for targets named _bobac3_audio_generate_messages_check_deps_up_sync
+# Target rules for targets named tf2_msgs_generate_messages_eus
 
 # Build rule for target.
-_bobac3_audio_generate_messages_check_deps_up_sync: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_up_sync
-.PHONY : _bobac3_audio_generate_messages_check_deps_up_sync
+tf2_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_eus
+.PHONY : tf2_msgs_generate_messages_eus
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_up_sync/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_up_sync/fast
+tf2_msgs_generate_messages_eus/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named _bobac3_audio_generate_messages_check_deps_robot_tts
+# Target rules for targets named sensor_msgs_generate_messages_py
 
 # Build rule for target.
-_bobac3_audio_generate_messages_check_deps_robot_tts: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_robot_tts
-.PHONY : _bobac3_audio_generate_messages_check_deps_robot_tts
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_robot_tts/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_robot_tts/fast
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named _bobac3_audio_generate_messages_check_deps_Collect
+# Target rules for targets named reinovo_voice
 
 # Build rule for target.
-_bobac3_audio_generate_messages_check_deps_Collect: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_Collect
-.PHONY : _bobac3_audio_generate_messages_check_deps_Collect
+reinovo_voice: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 reinovo_voice
+.PHONY : reinovo_voice
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_Collect/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_Collect/fast
+reinovo_voice/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/reinovo_voice.dir/build.make bobac3_audio/CMakeFiles/reinovo_voice.dir/build
+.PHONY : reinovo_voice/fast
 
 #=============================================================================
-# Target rules for targets named _bobac3_audio_generate_messages_check_deps_robot_iat
+# Target rules for targets named tf_generate_messages_lisp
 
 # Build rule for target.
-_bobac3_audio_generate_messages_check_deps_robot_iat: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_robot_iat
-.PHONY : _bobac3_audio_generate_messages_check_deps_robot_iat
+tf_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_lisp
+.PHONY : tf_generate_messages_lisp
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_robot_iat/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_robot_iat/fast
+tf_generate_messages_lisp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tf_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named _bobac3_audio_generate_messages_check_deps_Nav
+# Target rules for targets named actionlib_msgs_generate_messages_eus
 
 # Build rule for target.
-_bobac3_audio_generate_messages_check_deps_Nav: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_Nav
-.PHONY : _bobac3_audio_generate_messages_check_deps_Nav
+actionlib_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_eus
+.PHONY : actionlib_msgs_generate_messages_eus
 
 # fast build rule for target.
-_bobac3_audio_generate_messages_check_deps_Nav/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/build
-.PHONY : _bobac3_audio_generate_messages_check_deps_Nav/fast
+actionlib_msgs_generate_messages_eus/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+.PHONY : actionlib_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named actionlib_generate_messages_py
+# Target rules for targets named bobac3_audio_generate_messages_nodejs
 
 # Build rule for target.
-actionlib_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_py
-.PHONY : actionlib_generate_messages_py
+bobac3_audio_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_generate_messages_nodejs
+.PHONY : bobac3_audio_generate_messages_nodejs
 
 # fast build rule for target.
-actionlib_generate_messages_py/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/build
-.PHONY : actionlib_generate_messages_py/fast
+bobac3_audio_generate_messages_nodejs/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_nodejs.dir/build
+.PHONY : bobac3_audio_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named voice_nav_node
+
+# Build rule for target.
+voice_nav_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 voice_nav_node
+.PHONY : voice_nav_node
+
+# fast build rule for target.
+voice_nav_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/voice_nav_node.dir/build.make bobac3_audio/CMakeFiles/voice_nav_node.dir/build
+.PHONY : voice_nav_node/fast
+
+#=============================================================================
+# Target rules for targets named move_base_msgs_generate_messages_lisp
+
+# Build rule for target.
+move_base_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_lisp
+.PHONY : move_base_msgs_generate_messages_lisp
+
+# fast build rule for target.
+move_base_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
+.PHONY : move_base_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_py
+
+# Build rule for target.
+tf_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_py
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tf_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_nodejs
@@ -1624,6 +1468,32 @@ actionlib_msgs_generate_messages_nodejs/fast:
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_lisp
+
+# Build rule for target.
+actionlib_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_lisp
+.PHONY : actionlib_msgs_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_nodejs
+
+# Build rule for target.
+tf2_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_nodejs
+.PHONY : tf2_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+tf2_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
 # Target rules for targets named bobac3_audio_gencpp
 
 # Build rule for target.
@@ -1637,17 +1507,121 @@ bobac3_audio_gencpp/fast:
 .PHONY : bobac3_audio_gencpp/fast
 
 #=============================================================================
-# Target rules for targets named bobac3_audio_generate_messages_eus
+# Target rules for targets named tf2_msgs_generate_messages_py
 
 # Build rule for target.
-bobac3_audio_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_generate_messages_eus
-.PHONY : bobac3_audio_generate_messages_eus
+tf2_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_py
+.PHONY : tf2_msgs_generate_messages_py
 
 # fast build rule for target.
-bobac3_audio_generate_messages_eus/fast:
-	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/build
-.PHONY : bobac3_audio_generate_messages_eus/fast
+tf2_msgs_generate_messages_py/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named bobac3_audio_generate_messages
+
+# Build rule for target.
+bobac3_audio_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_generate_messages
+.PHONY : bobac3_audio_generate_messages
+
+# fast build rule for target.
+bobac3_audio_generate_messages/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages.dir/build
+.PHONY : bobac3_audio_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named tts_node
+
+# Build rule for target.
+tts_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tts_node
+.PHONY : tts_node
+
+# fast build rule for target.
+tts_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tts_node.dir/build.make bobac3_audio/CMakeFiles/tts_node.dir/build
+.PHONY : tts_node/fast
+
+#=============================================================================
+# Target rules for targets named _bobac3_audio_generate_messages_check_deps_Awake
+
+# Build rule for target.
+_bobac3_audio_generate_messages_check_deps_Awake: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_Awake
+.PHONY : _bobac3_audio_generate_messages_check_deps_Awake
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_Awake/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Awake.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_Awake/fast
+
+#=============================================================================
+# Target rules for targets named _bobac3_audio_generate_messages_check_deps_Nav
+
+# Build rule for target.
+_bobac3_audio_generate_messages_check_deps_Nav: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_Nav
+.PHONY : _bobac3_audio_generate_messages_check_deps_Nav
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_Nav/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Nav.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_Nav/fast
+
+#=============================================================================
+# Target rules for targets named _bobac3_audio_generate_messages_check_deps_robot_iat
+
+# Build rule for target.
+_bobac3_audio_generate_messages_check_deps_robot_iat: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_robot_iat
+.PHONY : _bobac3_audio_generate_messages_check_deps_robot_iat
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_robot_iat/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_iat.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_robot_iat/fast
+
+#=============================================================================
+# Target rules for targets named _bobac3_audio_generate_messages_check_deps_robot_tts
+
+# Build rule for target.
+_bobac3_audio_generate_messages_check_deps_robot_tts: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_robot_tts
+.PHONY : _bobac3_audio_generate_messages_check_deps_robot_tts
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_robot_tts/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_robot_tts.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_robot_tts/fast
+
+#=============================================================================
+# Target rules for targets named _bobac3_audio_generate_messages_check_deps_up_sync
+
+# Build rule for target.
+_bobac3_audio_generate_messages_check_deps_up_sync: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_up_sync
+.PHONY : _bobac3_audio_generate_messages_check_deps_up_sync
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_up_sync/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_up_sync.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_up_sync/fast
+
+#=============================================================================
+# Target rules for targets named _bobac3_audio_generate_messages_check_deps_Collect
+
+# Build rule for target.
+_bobac3_audio_generate_messages_check_deps_Collect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _bobac3_audio_generate_messages_check_deps_Collect
+.PHONY : _bobac3_audio_generate_messages_check_deps_Collect
+
+# fast build rule for target.
+_bobac3_audio_generate_messages_check_deps_Collect/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/build.make bobac3_audio/CMakeFiles/_bobac3_audio_generate_messages_check_deps_Collect.dir/build
+.PHONY : _bobac3_audio_generate_messages_check_deps_Collect/fast
 
 #=============================================================================
 # Target rules for targets named bobac3_audio_generate_messages_cpp
@@ -1676,121 +1650,82 @@ bobac3_audio_geneus/fast:
 .PHONY : bobac3_audio_geneus/fast
 
 #=============================================================================
-# Target rules for targets named nav_goal_node
+# Target rules for targets named actionlib_generate_messages_py
 
 # Build rule for target.
-nav_goal_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nav_goal_node
-.PHONY : nav_goal_node
+actionlib_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_py
+.PHONY : actionlib_generate_messages_py
 
 # fast build rule for target.
-nav_goal_node/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/nav_goal_node.dir/build.make nav_goal/CMakeFiles/nav_goal_node.dir/build
-.PHONY : nav_goal_node/fast
+actionlib_generate_messages_py/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named tf2_msgs_generate_messages_py
+# Target rules for targets named bobac3_audio_generate_messages_lisp
 
 # Build rule for target.
-tf2_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_py
-.PHONY : tf2_msgs_generate_messages_py
+bobac3_audio_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_generate_messages_lisp
+.PHONY : bobac3_audio_generate_messages_lisp
 
 # fast build rule for target.
-tf2_msgs_generate_messages_py/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make nav_goal/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-.PHONY : tf2_msgs_generate_messages_py/fast
+bobac3_audio_generate_messages_lisp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_lisp.dir/build
+.PHONY : bobac3_audio_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named tf2_msgs_generate_messages_nodejs
+# Target rules for targets named collect_node
 
 # Build rule for target.
-tf2_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_nodejs
-.PHONY : tf2_msgs_generate_messages_nodejs
+collect_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 collect_node
+.PHONY : collect_node
 
 # fast build rule for target.
-tf2_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make nav_goal/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
-.PHONY : tf2_msgs_generate_messages_nodejs/fast
+collect_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/collect_node.dir/build.make bobac3_audio/CMakeFiles/collect_node.dir/build
+.PHONY : collect_node/fast
 
 #=============================================================================
-# Target rules for targets named tf_generate_messages_cpp
+# Target rules for targets named bobac3_audio_genlisp
 
 # Build rule for target.
-tf_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_cpp
-.PHONY : tf_generate_messages_cpp
+bobac3_audio_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_genlisp
+.PHONY : bobac3_audio_genlisp
 
 # fast build rule for target.
-tf_generate_messages_cpp/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/tf_generate_messages_cpp.dir/build.make nav_goal/CMakeFiles/tf_generate_messages_cpp.dir/build
-.PHONY : tf_generate_messages_cpp/fast
+bobac3_audio_genlisp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_genlisp.dir/build
+.PHONY : bobac3_audio_genlisp/fast
 
 #=============================================================================
-# Target rules for targets named tf_generate_messages_nodejs
+# Target rules for targets named bobac3_audio_generate_messages_py
 
 # Build rule for target.
-tf_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_nodejs
-.PHONY : tf_generate_messages_nodejs
+bobac3_audio_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_generate_messages_py
+.PHONY : bobac3_audio_generate_messages_py
 
 # fast build rule for target.
-tf_generate_messages_nodejs/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/tf_generate_messages_nodejs.dir/build.make nav_goal/CMakeFiles/tf_generate_messages_nodejs.dir/build
-.PHONY : tf_generate_messages_nodejs/fast
+bobac3_audio_generate_messages_py/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_py.dir/build
+.PHONY : bobac3_audio_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_cpp
+# Target rules for targets named voice_aiui_node
 
 # Build rule for target.
-sensor_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
-.PHONY : sensor_msgs_generate_messages_cpp
+voice_aiui_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 voice_aiui_node
+.PHONY : voice_aiui_node
 
 # fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make nav_goal/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named tf_generate_messages_eus
-
-# Build rule for target.
-tf_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_eus
-.PHONY : tf_generate_messages_eus
-
-# fast build rule for target.
-tf_generate_messages_eus/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/tf_generate_messages_eus.dir/build.make nav_goal/CMakeFiles/tf_generate_messages_eus.dir/build
-.PHONY : tf_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named tf_generate_messages_py
-
-# Build rule for target.
-tf_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_py
-.PHONY : tf_generate_messages_py
-
-# fast build rule for target.
-tf_generate_messages_py/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/tf_generate_messages_py.dir/build.make nav_goal/CMakeFiles/tf_generate_messages_py.dir/build
-.PHONY : tf_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_lisp
-
-# Build rule for target.
-sensor_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make nav_goal/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
+voice_aiui_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/voice_aiui_node.dir/build.make bobac3_audio/CMakeFiles/voice_aiui_node.dir/build
+.PHONY : voice_aiui_node/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_nodejs
@@ -1802,21 +1737,138 @@ sensor_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make nav_goal/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make bobac3_audio/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_eus
+# Target rules for targets named bobac3_audio_generate_messages_eus
 
 # Build rule for target.
-sensor_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
-.PHONY : sensor_msgs_generate_messages_eus
+bobac3_audio_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_generate_messages_eus
+.PHONY : bobac3_audio_generate_messages_eus
 
 # fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make nav_goal/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
+bobac3_audio_generate_messages_eus/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_generate_messages_eus.dir/build
+.PHONY : bobac3_audio_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named bobac3_audio_genpy
+
+# Build rule for target.
+bobac3_audio_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bobac3_audio_genpy
+.PHONY : bobac3_audio_genpy
+
+# fast build rule for target.
+bobac3_audio_genpy/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/build.make bobac3_audio/CMakeFiles/bobac3_audio_genpy.dir/build
+.PHONY : bobac3_audio_genpy/fast
+
+#=============================================================================
+# Target rules for targets named semanteme_node
+
+# Build rule for target.
+semanteme_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 semanteme_node
+.PHONY : semanteme_node
+
+# fast build rule for target.
+semanteme_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/semanteme_node.dir/build.make bobac3_audio/CMakeFiles/semanteme_node.dir/build
+.PHONY : semanteme_node/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_eus
+
+# Build rule for target.
+tf_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_eus
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/tf_generate_messages_eus.dir/build.make bobac3_audio/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named audio_test_node
+
+# Build rule for target.
+audio_test_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_test_node
+.PHONY : audio_test_node
+
+# fast build rule for target.
+audio_test_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/audio_test_node.dir/build.make bobac3_audio/CMakeFiles/audio_test_node.dir/build
+.PHONY : audio_test_node/fast
+
+#=============================================================================
+# Target rules for targets named move_base_msgs_generate_messages_cpp
+
+# Build rule for target.
+move_base_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_cpp
+.PHONY : move_base_msgs_generate_messages_cpp
+
+# fast build rule for target.
+move_base_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make bobac3_audio/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
+.PHONY : move_base_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named voice_awake_node
+
+# Build rule for target.
+voice_awake_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 voice_awake_node
+.PHONY : voice_awake_node
+
+# fast build rule for target.
+voice_awake_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/voice_awake_node.dir/build.make bobac3_audio/CMakeFiles/voice_awake_node.dir/build
+.PHONY : voice_awake_node/fast
+
+#=============================================================================
+# Target rules for targets named dictation_node
+
+# Build rule for target.
+dictation_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dictation_node
+.PHONY : dictation_node
+
+# fast build rule for target.
+dictation_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/dictation_node.dir/build.make bobac3_audio/CMakeFiles/dictation_node.dir/build
+.PHONY : dictation_node/fast
+
+#=============================================================================
+# Target rules for targets named voice_control_node
+
+# Build rule for target.
+voice_control_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 voice_control_node
+.PHONY : voice_control_node
+
+# fast build rule for target.
+voice_control_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/voice_control_node.dir/build.make bobac3_audio/CMakeFiles/voice_control_node.dir/build
+.PHONY : voice_control_node/fast
+
+#=============================================================================
+# Target rules for targets named voice_collect_node
+
+# Build rule for target.
+voice_collect_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 voice_collect_node
+.PHONY : voice_collect_node
+
+# fast build rule for target.
+voice_collect_node/fast:
+	$(MAKE) -f bobac3_audio/CMakeFiles/voice_collect_node.dir/build.make bobac3_audio/CMakeFiles/voice_collect_node.dir/build
+.PHONY : voice_collect_node/fast
 
 #=============================================================================
 # Target rules for targets named text_nav_node
@@ -1832,19 +1884,6 @@ text_nav_node/fast:
 .PHONY : text_nav_node/fast
 
 #=============================================================================
-# Target rules for targets named tf2_msgs_generate_messages_cpp
-
-# Build rule for target.
-tf2_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_cpp
-.PHONY : tf2_msgs_generate_messages_cpp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make nav_goal/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-.PHONY : tf2_msgs_generate_messages_cpp/fast
-
-#=============================================================================
 # Target rules for targets named nav_multigoal_node
 
 # Build rule for target.
@@ -1858,56 +1897,17 @@ nav_multigoal_node/fast:
 .PHONY : nav_multigoal_node/fast
 
 #=============================================================================
-# Target rules for targets named tf2_msgs_generate_messages_eus
+# Target rules for targets named nav_goal_node
 
 # Build rule for target.
-tf2_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_eus
-.PHONY : tf2_msgs_generate_messages_eus
+nav_goal_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_goal_node
+.PHONY : nav_goal_node
 
 # fast build rule for target.
-tf2_msgs_generate_messages_eus/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make nav_goal/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
-.PHONY : tf2_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named tf_generate_messages_lisp
-
-# Build rule for target.
-tf_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_lisp
-.PHONY : tf_generate_messages_lisp
-
-# fast build rule for target.
-tf_generate_messages_lisp/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/tf_generate_messages_lisp.dir/build.make nav_goal/CMakeFiles/tf_generate_messages_lisp.dir/build
-.PHONY : tf_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_py
-
-# Build rule for target.
-sensor_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make nav_goal/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named tf2_msgs_generate_messages_lisp
-
-# Build rule for target.
-tf2_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_lisp
-.PHONY : tf2_msgs_generate_messages_lisp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f nav_goal/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make nav_goal/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
-.PHONY : tf2_msgs_generate_messages_lisp/fast
+nav_goal_node/fast:
+	$(MAKE) -f nav_goal/CMakeFiles/nav_goal_node.dir/build.make nav_goal/CMakeFiles/nav_goal_node.dir/build
+.PHONY : nav_goal_node/fast
 
 #=============================================================================
 # Target rules for targets named std_srvs_generate_messages_py
@@ -2498,71 +2498,71 @@ help:
 	@echo "... third_pkg_generate_messages_py"
 	@echo "... third_pkg_genpy"
 	@echo "... subscribe_pkg_node"
-	@echo "... voice_collect_node"
-	@echo "... voice_control_node"
-	@echo "... dictation_node"
-	@echo "... collect_node"
-	@echo "... voice_awake_node"
-	@echo "... audio_test_node"
-	@echo "... reinovo_voice"
-	@echo "... semanteme_node"
-	@echo "... bobac3_audio_genpy"
-	@echo "... voice_aiui_node"
-	@echo "... bobac3_audio_generate_messages_py"
-	@echo "... bobac3_audio_gennodejs"
-	@echo "... bobac3_audio_genlisp"
-	@echo "... bobac3_audio_generate_messages_lisp"
-	@echo "... move_base_msgs_generate_messages_cpp"
-	@echo "... actionlib_msgs_generate_messages_lisp"
-	@echo "... move_base_msgs_generate_messages_lisp"
-	@echo "... voice_interaction_node"
-	@echo "... bobac3_audio_generate_messages_nodejs"
-	@echo "... actionlib_msgs_generate_messages_eus"
-	@echo "... move_base_msgs_generate_messages_nodejs"
-	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... move_base_msgs_generate_messages_eus"
-	@echo "... _bobac3_audio_generate_messages_check_deps_Awake"
-	@echo "... actionlib_generate_messages_lisp"
-	@echo "... actionlib_msgs_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_eus"
-	@echo "... _bobac3_audio_generate_messages_check_deps_Control"
-	@echo "... actionlib_msgs_generate_messages_py"
-	@echo "... actionlib_generate_messages_cpp"
-	@echo "... Copy_config"
-	@echo "... voice_nav_node"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... tf_generate_messages_nodejs"
 	@echo "... move_base_msgs_generate_messages_py"
-	@echo "... tts_node"
-	@echo "... bobac3_audio_generate_messages"
+	@echo "... Copy_config"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... _bobac3_audio_generate_messages_check_deps_Control"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... voice_interaction_node"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... bobac3_audio_gennodejs"
+	@echo "... move_base_msgs_generate_messages_nodejs"
+	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... _bobac3_audio_generate_messages_check_deps_robot_semanteme"
-	@echo "... _bobac3_audio_generate_messages_check_deps_up_sync"
-	@echo "... _bobac3_audio_generate_messages_check_deps_robot_tts"
-	@echo "... _bobac3_audio_generate_messages_check_deps_Collect"
-	@echo "... _bobac3_audio_generate_messages_check_deps_robot_iat"
-	@echo "... _bobac3_audio_generate_messages_check_deps_Nav"
-	@echo "... actionlib_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... reinovo_voice"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... bobac3_audio_generate_messages_nodejs"
+	@echo "... voice_nav_node"
+	@echo "... move_base_msgs_generate_messages_lisp"
+	@echo "... tf_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... bobac3_audio_gencpp"
-	@echo "... bobac3_audio_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... bobac3_audio_generate_messages"
+	@echo "... tts_node"
+	@echo "... _bobac3_audio_generate_messages_check_deps_Awake"
+	@echo "... _bobac3_audio_generate_messages_check_deps_Nav"
+	@echo "... _bobac3_audio_generate_messages_check_deps_robot_iat"
+	@echo "... _bobac3_audio_generate_messages_check_deps_robot_tts"
+	@echo "... _bobac3_audio_generate_messages_check_deps_up_sync"
+	@echo "... _bobac3_audio_generate_messages_check_deps_Collect"
 	@echo "... bobac3_audio_generate_messages_cpp"
 	@echo "... bobac3_audio_geneus"
-	@echo "... nav_goal_node"
-	@echo "... tf2_msgs_generate_messages_py"
-	@echo "... tf2_msgs_generate_messages_nodejs"
-	@echo "... tf_generate_messages_cpp"
-	@echo "... tf_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... tf_generate_messages_eus"
-	@echo "... tf_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... bobac3_audio_generate_messages_lisp"
+	@echo "... collect_node"
+	@echo "... bobac3_audio_genlisp"
+	@echo "... bobac3_audio_generate_messages_py"
+	@echo "... voice_aiui_node"
 	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... bobac3_audio_generate_messages_eus"
+	@echo "... bobac3_audio_genpy"
+	@echo "... semanteme_node"
+	@echo "... tf_generate_messages_eus"
+	@echo "... audio_test_node"
+	@echo "... move_base_msgs_generate_messages_cpp"
+	@echo "... voice_awake_node"
+	@echo "... dictation_node"
+	@echo "... voice_control_node"
+	@echo "... voice_collect_node"
 	@echo "... text_nav_node"
-	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... nav_multigoal_node"
-	@echo "... tf2_msgs_generate_messages_eus"
-	@echo "... tf_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... nav_goal_node"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_eus"

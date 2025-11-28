@@ -19,68 +19,40 @@ AudioCollect::AudioCollect():m_cap(new AudioCap("default")), m_vad(new VadAlgori
 
 void AudioCollect::work()
 {
-    m_collect_flag=false;
-    int no_sound_sum=0;
-    int sound_num=0;
-    size_t size = m_cap->get_buffer_size();
-    std::vector<uint8_t> res_vec;
-    while(m_work_flag) {
-        boost::mutex::scoped_lock lock(m_mutex);
-        boost::shared_ptr<char> tem = m_cap->get_current_frames();
-        m_collecter.push_back(tem);
-        if(!m_collect_flag && m_collecter.size()> 2) {
-            m_collecter.erase(m_collecter.begin());
-        }
-        bool res = m_vad->detect(tem, size, 0, 20);
-        if(res)
-            res_vec.push_back(1);
-        else
-            res_vec.push_back(0);
-        std::vector<uint8_t>::reverse_iterator it = res_vec.rbegin();
-        if(res_vec.size()>4) {
-            if((*it)>0 && *(it+1)>0 /*&& *(it+2)>0*/)	{
-                m_collect_flag = true;
-            }
-
-            if((*it)==0 && *(it+1)==0 && *(it+2)==0 /*&& (it+3)==0 && *(it+4)==0*/) {
-                m_collect_flag = false;
-            }
-            res_vec.erase(res_vec.begin());
-            //std::cout << "res_vec.size(): " << res_vec.size() << std::endl;
-        }
-
-        if(m_collect_flag) {
-            printf("record------------\n");
-        } else {
-            //printf("over/no sound=====\n");
-        }
-
-    }
+	m_collect_flag=false;
+	size_t size = m_cap->get_buffer_size();
+	while(m_work_flag) {
+		boost::mutex::scoped_lock lock(m_mutex);
+		boost::shared_ptr<char> tem = m_cap->get_current_frames();
+		// 仅在需要录音时缓存数据，其余时间丢弃，避免无限增长
+		if(m_collect_flag) {
+			m_collecter.push_back(tem);
+		}
+	}
 }
 
 std::vector<boost::shared_ptr<char> > AudioCollect::get_voice()
 {
-    size_t  size = m_cap->get_buffer_size();
-    bool rec_flag = false;
-    m_voice.clear();
-    m_cap->wait_flag = false;
-    while(true) {
-        if(m_collect_flag) {
-            rec_flag = true;
-        }
-        if(rec_flag) {
-            printf("****************************\n");
-            if(!m_collect_flag) {
-                std::cout << "collecter size: " << m_collecter.size() << std::endl;
-                m_voice = m_collecter;
-                break;
-            }
-        }
-        usleep(1000);
-    }
-    m_cap->wait_flag = true;
-    m_collecter.clear();
-    return m_voice;
+	size_t  size = m_cap->get_buffer_size();
+	m_voice.clear();
+	// 每次调用从空缓存开始
+	m_collecter.clear();
+	m_cap->wait_flag = false;
+	// 开始录音
+	m_collect_flag = true;
+	const int RECORD_LOOP = 200;      // 录音循环次数
+	const int SLEEP_US    = 20000;    // 每次循环睡眠 20ms，总计约 4 秒
+	for(int i = 0; i < RECORD_LOOP; ++i) {
+		printf("****************************\n");
+		usleep(SLEEP_US);
+	}
+	// 停止录音
+	m_collect_flag = false;
+	std::cout << "collecter size: " << m_collecter.size() << std::endl;
+	m_voice = m_collecter;
+	m_cap->wait_flag = true;
+	m_collecter.clear();
+	return m_voice;
 }
 
 void AudioCollect::write_wav(std::vector<boost::shared_ptr<char> > voice, std::string fname)

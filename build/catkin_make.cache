@@ -1,2 +1,2 @@
-bobac3_audio:bobac3_description:bobac3_msgs:bobac3_navigation:bobac3_slam:my_pkg:nav_goal:oryxbot_navigation:oryxbot_slam:robot_bringup:robot_control:subscribe_pkg:test_pkg:third_pkg
+bobac3_audio:bobac3_description:bobac3_msgs:bobac3_navigation:bobac3_slam:face_recognition_pkg:my_pkg:nav_goal:oryxbot_navigation:oryxbot_slam:robot_bringup:robot_control:subscribe_pkg:test_pkg:third_pkg
 -DCATKIN_DEVEL_PREFIX=/home/liyaxin075/Documents/robot_learning/devel -DCMAKE_INSTALL_PREFIX=/home/liyaxin075/Documents/robot_learning/install -G Unix Makefiles

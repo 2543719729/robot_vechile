@@ -12,11 +12,10 @@ global_costmap:
   # 膨胀层配置 - 与局部costmap一致
   inflation_layer:
     enabled: true
-    cost_scaling_factor: 3.0         # 较快衰减
+    cost_scaling_factor: 5.0         # 较快衰减
     inflation_radius: 0.05           # 5cm膨胀
 
   plugins:
     - {name: static_layer,           type: "costmap_2d::StaticLayer"}
     - {name: obstacle_layer,         type: "costmap_2d::ObstacleLayer"}
     - {name: inflation_layer,        type: "costmap_2d::InflationLayer"}
-

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 摄像头 + RViz 启动文件 -->
+    
+    <!-- 参数 -->
+    <arg name="camera_id" default="0"/>
+    <arg name="frame_rate" default="15"/>
+    <arg name="image_width" default="640"/>
+    <arg name="image_height" default="480"/>
+    
+    <!-- 摄像头节点 -->
+    <node pkg="face_recognition_pkg" type="camera_node.py" name="camera_node" output="screen">
+        <param name="camera_id" value="$(arg camera_id)"/>
+        <param name="frame_rate" value="$(arg frame_rate)"/>
+        <param name="image_width" value="$(arg image_width)"/>
+        <param name="image_height" value="$(arg image_height)"/>
+    </node>
+    
+    <!-- RViz -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find face_recognition_pkg)/rviz/camera.rviz" output="screen"/>
+</launch>

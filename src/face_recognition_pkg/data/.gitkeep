@@ -1,0 +1,2 @@
+# 此目录用于存放人脸编码数据
+# face_encodings.pkl 文件将在运行 train_faces.py 后生成

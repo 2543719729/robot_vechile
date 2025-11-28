@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 人脸识别系统启动文件 -->
+    
+    <!-- 参数 -->
+    <arg name="camera_id" default="0" doc="摄像头设备ID"/>
+    <arg name="use_direct_camera" default="true" doc="是否直接使用摄像头"/>
+    <arg name="tolerance" default="0.5" doc="人脸匹配容差 (0.4-0.6)"/>
+    
+    <!-- 人脸识别节点 -->
+    <node pkg="face_recognition_pkg" type="face_recognition_node.py" name="face_recognition_node" output="screen">
+        <param name="camera_id" value="$(arg camera_id)"/>
+        <param name="use_direct_camera" value="$(arg use_direct_camera)"/>
+        <param name="tolerance" value="$(arg tolerance)"/>
+        <param name="camera_topic" value="/camera/image_raw"/>
+    </node>
+</launch>

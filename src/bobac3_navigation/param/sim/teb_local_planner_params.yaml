@@ -24,10 +24,10 @@ TebLocalPlannerROS:
   max_vel_x: 0.3                           # 适中速度
   max_vel_x_backwards: 0.2
   max_vel_y: 0.3                           # 全向移动
-  max_vel_theta: 0.6
+  max_vel_theta: 0.5
   acc_lim_x: 0.25
   acc_lim_y: 0.25
-  acc_lim_theta: 0.4
+  acc_lim_theta: 0.35
   min_turning_radius: 0.0                  # 全向机器人
   
   # ========== 足迹模型 ==========
@@ -45,8 +45,8 @@ TebLocalPlannerROS:
   # ========== 障碍物处理 ==========
   # 关键：使用point模型时，min_obstacle_dist需要≥robot_radius
   # 这样TEB规划的轨迹点不会进入costmap的障碍区
-  min_obstacle_dist: 0.19                  # 等于robot_radius→允许贴近目标
-  inflation_dist: 0.20                     # 进一步减小→末端障碍物影响最小化
+  min_obstacle_dist: 0.26                  # 增大安全距离，路径远离障碍物
+  inflation_dist: 0.35                     # 进一步减小→末端障碍物影响最小化
   include_costmap_obstacles: True
   costmap_obstacles_behind_robot_dist: 1.5
   obstacle_poses_affected: 20
@@ -63,7 +63,7 @@ TebLocalPlannerROS:
   optimization_activate: True
   optimization_verbose: False
   penalty_epsilon: 0.05                    # 减小→更严格满足约束边界
-  obstacle_cost_exponent: 1                # 线性代价，更平滑
+  obstacle_cost_exponent: 2                # 稍陡的障碍代价，增强贴墙惩罚
 
   # ========== 权重配置 ==========
   weight_max_vel_x: 2
@@ -75,11 +75,11 @@ TebLocalPlannerROS:
   weight_kinematics_turning_radius: 1
   weight_optimaltime: 0.2                  # 进一步降低→末端不着急
   weight_shortest_path: 0
-  weight_obstacle: 20                        # 大幅降低→核心修改！减少被墙壁“推开”
+  weight_obstacle: 12                        # 大幅降低→核心修改！减少被墙壁“推开”
   weight_inflation: 0.05                   # 降低膌胀层影响
   weight_dynamic_obstacle: 10
   weight_dynamic_obstacle_inflation: 0.05
-  weight_viapoint: 15                      # 大幅提升→目标吸引力压制障碑物推力
+  weight_viapoint: 8.0                     # 全局路径仅作为参考，允许局部轨迹明显偏离
   weight_adapt_factor: 2
   
   # ========== 多拓扑路径规划 ==========
@@ -106,9 +106,9 @@ TebLocalPlannerROS:
   
   # ========== 恢复行为 ==========
   shrink_horizon_backup: True
-  shrink_horizon_min_duration: 10
+  shrink_horizon_min_duration: 5
   oscillation_recovery: True
   oscillation_v_eps: 0.1
   oscillation_omega_eps: 0.1
-  oscillation_recovery_min_duration: 10
-  oscillation_filter_duration: 10
+  oscillation_recovery_min_duration: 5
+  oscillation_filter_duration: 5

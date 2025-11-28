@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/liyaxin075/Documents/robot_learning/build
 include bobac3_msgs/CMakeFiles/_bobac3_msgs_generate_messages_check_deps_skeleton.dir/progress.make
 
 bobac3_msgs/CMakeFiles/_bobac3_msgs_generate_messages_check_deps_skeleton:
-	cd /home/liyaxin075/Documents/robot_learning/build/bobac3_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py bobac3_msgs /home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg std_msgs/Header:bobac3_msgs/joint:geometry_msgs/Point
+	cd /home/liyaxin075/Documents/robot_learning/build/bobac3_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py bobac3_msgs /home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg bobac3_msgs/joint:std_msgs/Header:geometry_msgs/Point
 
 _bobac3_msgs_generate_messages_check_deps_skeleton: bobac3_msgs/CMakeFiles/_bobac3_msgs_generate_messages_check_deps_skeleton
 _bobac3_msgs_generate_messages_check_deps_skeleton: bobac3_msgs/CMakeFiles/_bobac3_msgs_generate_messages_check_deps_skeleton.dir/build.make

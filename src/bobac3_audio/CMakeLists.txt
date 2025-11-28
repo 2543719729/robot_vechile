@@ -19,6 +19,8 @@ find_package(catkin REQUIRED COMPONENTS
   bobac3_msgs
   actionlib
   move_base_msgs
+  tf
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions

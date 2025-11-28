@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 完整人脸识别系统启动文件 (包含摄像头节点) -->
+    
+    <!-- 参数 -->
+    <arg name="camera_id" default="0" doc="摄像头设备ID"/>
+    <arg name="tolerance" default="0.5" doc="人脸匹配容差"/>
+    
+    <!-- 摄像头节点 -->
+    <include file="$(find face_recognition_pkg)/launch/camera.launch">
+        <arg name="camera_id" value="$(arg camera_id)"/>
+    </include>
+    
+    <!-- 人脸识别节点 (使用ROS话题获取图像) -->
+    <node pkg="face_recognition_pkg" type="face_recognition_node.py" name="face_recognition_node" output="screen" launch-prefix="xterm -e">
+        <param name="camera_id" value="$(arg camera_id)"/>
+        <param name="use_direct_camera" value="false"/>
+        <param name="tolerance" value="$(arg tolerance)"/>
+        <param name="camera_topic" value="/camera/image_raw"/>
+    </node>
+</launch>

@@ -14,10 +14,9 @@ local_costmap:
   transform_tolerance: 0.5
   
   # 膨胀层配置
-  # 关键：inflation_radius < xy_goal_tolerance (0.08m)
   inflation_layer:
     enabled: true
-    cost_scaling_factor: 3.0         # 较快衰减，减少高代价区域
+    cost_scaling_factor: 5.0         # 较快衰减，减少高代价区域
     inflation_radius: 0.05           # 5cm膨胀，小于xy_goal_tolerance
 
   plugins:
