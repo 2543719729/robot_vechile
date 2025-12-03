@@ -1,0 +1,10 @@
+best_params:
+  goal_distance_bias: 26.756016207352534
+  inflation_radius: 0.15460994729301053
+  max_vel_x: 0.25919495251145436
+  max_vel_y: 0.3187943321526947
+  path_distance_bias: 24.09836775412487
+  xy_goal_tolerance: 0.09931263989143034
+best_score: 0.8753230842630549
+n_trials: 10
+test_time: '2025-11-29 15:38:33'

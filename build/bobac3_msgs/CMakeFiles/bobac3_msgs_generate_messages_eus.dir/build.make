@@ -84,9 +84,9 @@ bobac3_msgs/CMakeFiles/bobac3_msgs_generate_messages_eus: /home/liyaxin075/Docum
 
 /home/liyaxin075/Documents/robot_learning/devel/share/roseus/ros/bobac3_msgs/msg/skeleton.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/liyaxin075/Documents/robot_learning/devel/share/roseus/ros/bobac3_msgs/msg/skeleton.l: /home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg
-/home/liyaxin075/Documents/robot_learning/devel/share/roseus/ros/bobac3_msgs/msg/skeleton.l: /home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg
 /home/liyaxin075/Documents/robot_learning/devel/share/roseus/ros/bobac3_msgs/msg/skeleton.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/liyaxin075/Documents/robot_learning/devel/share/roseus/ros/bobac3_msgs/msg/skeleton.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/liyaxin075/Documents/robot_learning/devel/share/roseus/ros/bobac3_msgs/msg/skeleton.l: /home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/joint.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/liyaxin075/Documents/robot_learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from bobac3_msgs/skeleton.msg"
 	cd /home/liyaxin075/Documents/robot_learning/build/bobac3_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg/skeleton.msg -Ibobac3_msgs:/home/liyaxin075/Documents/robot_learning/src/bobac3_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p bobac3_msgs -o /home/liyaxin075/Documents/robot_learning/devel/share/roseus/ros/bobac3_msgs/msg
 

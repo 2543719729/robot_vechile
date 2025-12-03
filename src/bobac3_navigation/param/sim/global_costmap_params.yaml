@@ -1,21 +1,17 @@
 global_costmap:
-# ============================================================
-# 全局代价地图 - 全面优化版
-# 与局部costmap保持一致
-# ============================================================
   global_frame: map
-  robot_base_frame: base_footprint
-  update_frequency: 2.0
-  publish_frequency: 1.0
-  transform_tolerance: 0.5
-  
-  # 膨胀层配置 - 与局部costmap一致
   inflation_layer:
+    cost_scaling_factor: 6.045767169762518
     enabled: true
-    cost_scaling_factor: 5.0         # 较快衰减
-    inflation_radius: 0.05           # 5cm膨胀
-
+    inflation_radius: 0.12479621640520763
   plugins:
-    - {name: static_layer,           type: "costmap_2d::StaticLayer"}
-    - {name: obstacle_layer,         type: "costmap_2d::ObstacleLayer"}
-    - {name: inflation_layer,        type: "costmap_2d::InflationLayer"}
+  - name: static_layer
+    type: costmap_2d::StaticLayer
+  - name: obstacle_layer
+    type: costmap_2d::ObstacleLayer
+  - name: inflation_layer
+    type: costmap_2d::InflationLayer
+  publish_frequency: 1.0
+  robot_base_frame: base_footprint
+  transform_tolerance: 0.5
+  update_frequency: 2.1533566916562115

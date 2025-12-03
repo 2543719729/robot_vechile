@@ -1,0 +1,40 @@
+params:
+  controller_frequency: 10.737738947090655
+  cost_scaling_factor: 5.475236553031469
+  dwa_acc_lim_theta: 0.6198653673336828
+  dwa_acc_lim_x: 0.45044660188926744
+  dwa_acc_lim_y: 0.2888431241882921
+  dwa_goal_distance_bias: 49.012372895233625
+  dwa_max_vel_theta: 0.5048664913718335
+  dwa_max_vel_x: 0.5272059063689972
+  dwa_max_vel_y: 0.458219174976903
+  dwa_min_vel_trans: 0.05596725723198092
+  dwa_occdist_scale: 0.08411909465645724
+  dwa_path_distance_bias: 20.90888807137882
+  dwa_sim_time: 0.9848043980311328
+  dwa_vtheta_samples: 33
+  dwa_vx_samples: 13
+  dwa_xy_goal_tolerance: 0.023504606856145117
+  dwa_yaw_goal_tolerance: 0.19143645558687788
+  inflation_radius: 0.11294557395634104
+  obstacle_range: 2.101756619633539
+  planner_frequency: 3.243039502909536
+  raytrace_range: 2.5696809887549352
+score: !!python/object/apply:numpy.core.multiarray.scalar
+- !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  kgbWUB/36T8=
+timestamp: '20251129_162406'

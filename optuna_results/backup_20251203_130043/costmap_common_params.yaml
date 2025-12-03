@@ -1,0 +1,24 @@
+obstacle_layer:
+  combination_method: 1
+  enabled: true
+  footprint_clearing_enabled: true
+  max_obstacle_height: 1.0
+  observation_sources: scan
+  obstacle_range: 3.2583845696357314
+  raytrace_range: 3.29660951102349
+  scan:
+    clearing: true
+    data_type: LaserScan
+    expected_update_rate: 0
+    inf_is_valid: false
+    marking: true
+    max_obstacle_height: 0.5
+    min_obstacle_height: 0.05
+    observation_persistence: 0
+    obstacle_range: 2.0
+    raytrace_range: 3.0
+    topic: scan
+  track_unknown_space: false
+robot_radius: 0.19
+static_layer:
+  enabled: true

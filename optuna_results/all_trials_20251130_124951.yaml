@@ -1,0 +1,1859 @@
+- params:
+    controller_frequency: 12.557861855309373
+    cost_scaling_factor: 5.648559873736287
+    global_update_frequency: 1.785586096034029
+    inflation_radius: 0.073963421195243
+    local_height: 2.7150897038028767
+    local_update_frequency: 7.146901982034297
+    local_width: 1.5929008254399954
+    obstacle_range: 3.070351922786027
+    planner_frequency: 0.6626289824631988
+    raytrace_range: 2.3993475643167193
+    teb_acc_lim_theta: 0.2232334448672798
+    teb_acc_lim_x: 0.20460652415485278
+    teb_acc_lim_y: 0.20459808211767092
+    teb_dt_ref: 0.32701814444901134
+    teb_global_plan_viapoint_sep: 0.2939819704323988
+    teb_inflation_dist: 0.26370173320348284
+    teb_max_global_plan_lookahead_dist: 2.0617534828874073
+    teb_max_vel_theta: 0.5993292420985183
+    teb_max_vel_x: 0.3123620356542087
+    teb_max_vel_x_backwards: 0.2901428612819832
+    teb_max_vel_y: 0.4195981825434215
+    teb_min_obstacle_dist: 0.3164885281600843
+    teb_no_inner_iterations: 5
+    teb_no_outer_iterations: 4
+    teb_obstacle_poses_affected: 17
+    teb_weight_acc_lim_theta: 2.1685785941408726
+    teb_weight_acc_lim_x: 1.5579754426081673
+    teb_weight_inflation: 0.092069553542002
+    teb_weight_obstacle: 28.614039423450702
+    teb_weight_optimaltime: 0.6506676052501416
+    teb_weight_viapoint: 5.077207962772587
+    teb_xy_goal_tolerance: 0.07197056874649611
+    teb_yaw_goal_tolerance: 0.18218955199634548
+  results:
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - error: 0.08863893783664807
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - &id001 !!python/object/apply:numpy.dtype
+      args:
+      - f8
+      - 0
+      - 1
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 0
+    - !!binary |
+      QrvQKCDK4z8=
+    success: true
+    time: 15.503
+    type: normal
+    weight: 1.2
+  - error: 0.08091176211406438
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      0Mw3l+z86T8=
+    success: true
+    time: 8.766
+    type: normal
+    weight: 1.0
+  - error: 0.047797167588396035
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      /wfLffIH6j8=
+    success: true
+    time: 9.16
+    type: narrow
+    weight: 1.3
+  - error: 0.02782684051313171
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      mi/OsLEO5j8=
+    success: true
+    time: 20.388
+    type: normal
+    weight: 1.5
+  - error: 0.015577549490757405
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      24ZhU+Hx6z8=
+    success: true
+    time: 10.276
+    type: normal
+    weight: 0.8
+  - error: 0.08936752911108772
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      h6YFeuoF4T8=
+    success: true
+    time: 20.311
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    81zeY2qt4j8=
+  success_rate: 0.75
+  trial: 0
+- params:
+    controller_frequency: 14.214017645310712
+    cost_scaling_factor: 3.5678628993531616
+    global_update_frequency: 1.471693224223705
+    inflation_radius: 0.04061910024623034
+    local_height: 2.213506653387179
+    local_update_frequency: 4.899443222417272
+    local_width: 3.1574750183038587
+    obstacle_range: 1.5904545778210761
+    planner_frequency: 1.8567402078956212
+    raytrace_range: 2.650660661526529
+    teb_acc_lim_theta: 0.37606099749584054
+    teb_acc_lim_x: 0.18418523990223434
+    teb_acc_lim_y: 0.3894815592792549
+    teb_dt_ref: 0.1585971302788046
+    teb_global_plan_viapoint_sep: 0.1517559963200034
+    teb_inflation_dist: 0.2935133228268233
+    teb_max_global_plan_lookahead_dist: 4.727961206236346
+    teb_max_vel_theta: 0.45230688458668533
+    teb_max_vel_x: 0.48466566117599996
+    teb_max_vel_x_backwards: 0.29312640661491185
+    teb_max_vel_y: 0.4425192044349383
+    teb_min_obstacle_dist: 0.2825044568707964
+    teb_no_inner_iterations: 7
+    teb_no_outer_iterations: 4
+    teb_obstacle_poses_affected: 23
+    teb_weight_acc_lim_theta: 4.687496940092467
+    teb_weight_acc_lim_x: 3.3915999152443406
+    teb_weight_inflation: 0.15727523643861177
+    teb_weight_obstacle: 48.63130824940514
+    teb_weight_optimaltime: 0.905344615384884
+    teb_weight_viapoint: 14.152985181898648
+    teb_xy_goal_tolerance: 0.02732229409068673
+    teb_yaw_goal_tolerance: 0.16418007471891594
+  results:
+  - error: 0.06649383543185221
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      VKQy9nN83T8=
+    success: true
+    time: 16.407
+    type: normal
+    weight: 1.0
+  - error: 0.061544983883217
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      TmA4JmG26T8=
+    success: true
+    time: 8.603
+    type: normal
+    weight: 1.0
+  - error: 0.08520111378888083
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      5ifKAbyR4T8=
+    success: true
+    time: 17.442
+    type: normal
+    weight: 1.2
+  - error: 0.06895963770367164
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ILcVjbZ66j8=
+    success: true
+    time: 8.605
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: narrow
+    weight: 1.3
+  - error: 0.06424367040224986
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      OtUVl1fN4j8=
+    success: true
+    time: 14.032
+    type: normal
+    weight: 1.5
+  - error: 0.014381497626775257
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      YvXrH0bI6z8=
+    success: true
+    time: 10.435
+    type: normal
+    weight: 0.8
+  - error: 0.07250990640873407
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      y2Z0usQq4j8=
+    success: true
+    time: 20.149
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    mrlGx+3R4j8=
+  success_rate: 0.875
+  trial: 1
+- params:
+    controller_frequency: 16.413115275378246
+    cost_scaling_factor: 2.9567539675064136
+    global_update_frequency: 1.9031929939237406
+    inflation_radius: 0.08666579101943392
+    local_height: 2.5454656587639883
+    local_update_frequency: 8.396770259681926
+    local_width: 2.4875911927287815
+    obstacle_range: 2.92648957444599
+    planner_frequency: 0.5635478168602379
+    raytrace_range: 3.521570097233795
+    teb_acc_lim_theta: 0.20220884684944096
+    teb_acc_lim_x: 0.42028566925383004
+    teb_acc_lim_y: 0.21955048853696033
+    teb_dt_ref: 0.3322517920102468
+    teb_global_plan_viapoint_sep: 0.11480893034681808
+    teb_inflation_dist: 0.23476071785753894
+    teb_max_global_plan_lookahead_dist: 4.313811040057837
+    teb_max_vel_theta: 0.7934434683002587
+    teb_max_vel_x: 0.2422772674924288
+    teb_max_vel_x_backwards: 0.2604393961508079
+    teb_max_vel_y: 0.22236519310393127
+    teb_min_obstacle_dist: 0.2216931457088545
+    teb_no_inner_iterations: 8
+    teb_no_outer_iterations: 4
+    teb_obstacle_poses_affected: 28
+    teb_weight_acc_lim_theta: 4.548850970305306
+    teb_weight_acc_lim_x: 3.5502298854208525
+    teb_weight_inflation: 0.06908664112597582
+    teb_weight_obstacle: 7.860125762871064
+    teb_weight_optimaltime: 0.7566455605042577
+    teb_weight_viapoint: 5.552566508374459
+    teb_xy_goal_tolerance: 0.06892768570729005
+    teb_yaw_goal_tolerance: 0.2001657484540949
+  results:
+  - error: 0.057826438140469394
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      /6NErITd3j8=
+    success: true
+    time: 16.168
+    type: normal
+    weight: 1.0
+  - error: 0.06774041733612236
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      auZlwFf56D8=
+    success: true
+    time: 9.001
+    type: normal
+    weight: 1.0
+  - error: 0.0844382399139998
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      jzwhEwEI4j8=
+    success: true
+    time: 16.485
+    type: normal
+    weight: 1.2
+  - error: 0.052628236688716856
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      QCCK6fr36j8=
+    success: true
+    time: 9.319
+    type: normal
+    weight: 1.0
+  - error: 0.06500158430279304
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      x4CJ5yen5T8=
+    success: true
+    time: 8.682
+    type: narrow
+    weight: 1.3
+  - error: 0.04757554256069964
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      cyY95D3c5D8=
+    success: true
+    time: 20.229
+    type: normal
+    weight: 1.5
+  - error: 0.024610370850709745
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      wPnK+dv86j8=
+    success: true
+    time: 10.431
+    type: normal
+    weight: 0.8
+  - score: 0.0
+    success: false
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    VIwuyOOI4z8=
+  success_rate: 0.875
+  trial: 2
+- params:
+    controller_frequency: 16.261165047231685
+    cost_scaling_factor: 2.880415396221414
+    global_update_frequency: 2.5450369148062326
+    inflation_radius: 0.06816041699662366
+    local_height: 2.5214946051551315
+    local_update_frequency: 9.025114082794405
+    local_width: 1.5139042610623814
+    obstacle_range: 1.9558703250838834
+    planner_frequency: 1.0552695261768257
+    raytrace_range: 2.8542155772525124
+    teb_acc_lim_theta: 0.29971689165954996
+    teb_acc_lim_x: 0.3279997419076459
+    teb_acc_lim_y: 0.46764826587413255
+    teb_dt_ref: 0.2071995413729056
+    teb_global_plan_viapoint_sep: 0.15795029058275362
+    teb_inflation_dist: 0.4789092957027719
+    teb_max_global_plan_lookahead_dist: 2.230939729486379
+    teb_max_vel_theta: 0.4571779905381633
+    teb_max_vel_x: 0.23236742809799135
+    teb_max_vel_x_backwards: 0.10628583713734685
+    teb_max_vel_y: 0.39092312337913415
+    teb_min_obstacle_dist: 0.18224425745080086
+    teb_no_inner_iterations: 8
+    teb_no_outer_iterations: 8
+    teb_obstacle_poses_affected: 27
+    teb_weight_acc_lim_theta: 4.584365199693973
+    teb_weight_acc_lim_x: 4.229760620656251
+    teb_weight_inflation: 0.04544831118834681
+    teb_weight_obstacle: 41.165243460460154
+    teb_weight_optimaltime: 0.5854080177240857
+    teb_weight_viapoint: 13.495825978859688
+    teb_xy_goal_tolerance: 0.04462297538213778
+    teb_yaw_goal_tolerance: 0.2084436935523183
+  results:
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - error: 0.019700838359948108
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      dSUJSzLm5j8=
+    success: true
+    time: 15.894
+    type: normal
+    weight: 1.0
+  - error: 0.06116141259587001
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      53O82DJh4j8=
+    success: true
+    time: 17.762
+    type: normal
+    weight: 1.2
+  - error: 0.050254373650005055
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      UJDpiCJC6z8=
+    success: true
+    time: 8.843
+    type: normal
+    weight: 1.0
+  - error: 0.0037313111625706555
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      d3rivnbl7j8=
+    success: true
+    time: 8.763
+    type: narrow
+    weight: 1.3
+  - error: 0.0459072374112782
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      7PCQrpLg5D8=
+    success: true
+    time: 20.308
+    type: normal
+    weight: 1.5
+  - error: 0.025837839523527015
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      hh/Tr0016z8=
+    success: true
+    time: 10.275
+    type: normal
+    weight: 0.8
+  - error: 0.027960067915202124
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Uv36szEj6D8=
+    success: true
+    time: 19.592
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    CgyS9f0J5T8=
+  success_rate: 0.875
+  trial: 3
+- params:
+    controller_frequency: 18.036620261121378
+    cost_scaling_factor: 7.377084379247028
+    global_update_frequency: 2.3205408715296487
+    inflation_radius: 0.05904663258138004
+    local_height: 2.7670594215217896
+    local_update_frequency: 5.574481929034773
+    local_width: 2.7646116611871587
+    obstacle_range: 3.023239230657435
+    planner_frequency: 0.7257244251360208
+    raytrace_range: 2.4752750879847993
+    teb_acc_lim_theta: 0.3454518409517176
+    teb_acc_lim_x: 0.33157671761017815
+    teb_acc_lim_y: 0.3960566356133122
+    teb_dt_ref: 0.21294557395634103
+    teb_global_plan_viapoint_sep: 0.16017566196335392
+    teb_inflation_dist: 0.21106608420635986
+    teb_max_global_plan_lookahead_dist: 3.491745517677156
+    teb_max_vel_theta: 0.4616014660103776
+    teb_max_vel_x: 0.23595961020010486
+    teb_max_vel_x_backwards: 0.1675230342807256
+    teb_max_vel_y: 0.48287291117375575
+    teb_min_obstacle_dist: 0.2069680988754935
+    teb_no_inner_iterations: 7
+    teb_no_outer_iterations: 3
+    teb_obstacle_poses_affected: 24
+    teb_weight_acc_lim_theta: 4.942601816442403
+    teb_weight_acc_lim_x: 2.957811041110252
+    teb_weight_inflation: 0.18257051833366422
+    teb_weight_obstacle: 17.539090890647515
+    teb_weight_optimaltime: 0.2304053848821008
+    teb_weight_viapoint: 4.353866469337614
+    teb_xy_goal_tolerance: 0.07830692496325764
+    teb_yaw_goal_tolerance: 0.24361604014015892
+  results:
+  - error: 0.05540021821040029
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      LbxSGGsP3z8=
+    success: true
+    time: 16.328
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - error: 0.0793396887512352
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      lYa6TSly4j8=
+    success: true
+    time: 17.407
+    type: normal
+    weight: 1.2
+  - error: 0.05340539302082378
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      jjB1AXVv6j8=
+    success: true
+    time: 9.718
+    type: normal
+    weight: 1.0
+  - error: 0.09195254663534215
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      yUx3JfqY4z8=
+    success: true
+    time: 11.074
+    type: narrow
+    weight: 1.3
+  - error: 0.009012684177235046
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      4JzLB85G5z8=
+    success: true
+    time: 20.629
+    type: normal
+    weight: 1.5
+  - error: 0.03564046434683425
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      9j6JM7Dd6T8=
+    success: true
+    time: 10.358
+    type: normal
+    weight: 0.8
+  - error: 0.06785289809838894
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      7MWwyByo4j8=
+    success: true
+    time: 19.192
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    LDn7Z8kO4z8=
+  success_rate: 0.875
+  trial: 4
+- params:
+    controller_frequency: 20.88933518305359
+    cost_scaling_factor: 3.9348183272036135
+    global_update_frequency: 2.751045142908326
+    inflation_radius: 0.09355806940272078
+    local_height: 2.198419149225322
+    local_update_frequency: 7.4317102009128755
+    local_width: 2.1780595820974016
+    obstacle_range: 1.6862055356117984
+    planner_frequency: 2.742775649881443
+    raytrace_range: 3.7944315159066537
+    teb_acc_lim_theta: 0.20663513157114247
+    teb_acc_lim_x: 0.35681253011588465
+    teb_acc_lim_y: 0.3871475266447988
+    teb_dt_ref: 0.31129319760236246
+    teb_global_plan_viapoint_sep: 0.23818754762049318
+    teb_inflation_dist: 0.4810189966210204
+    teb_max_global_plan_lookahead_dist: 2.523099287014974
+    teb_max_vel_theta: 0.32038757077738195
+    teb_max_vel_x: 0.4505907486767714
+    teb_max_vel_x_backwards: 0.16415601299434718
+    teb_max_vel_y: 0.25595555311995627
+    teb_min_obstacle_dist: 0.22734706926010748
+    teb_no_inner_iterations: 6
+    teb_no_outer_iterations: 3
+    teb_obstacle_poses_affected: 17
+    teb_weight_acc_lim_theta: 3.2208032463978493
+    teb_weight_acc_lim_x: 4.268888800804863
+    teb_weight_inflation: 0.1766944771423864
+    teb_weight_obstacle: 46.61121282253532
+    teb_weight_optimaltime: 0.6939856414307611
+    teb_weight_viapoint: 4.6111827880121785
+    teb_xy_goal_tolerance: 0.05072558349795686
+    teb_yaw_goal_tolerance: 0.11850428178364944
+  results:
+  - error: 0.05404860020713394
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      tOvgK3Ms3z8=
+    success: true
+    time: 16.25
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - error: 0.0935812489387083
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      r9dzAWEJ4j8=
+    success: true
+    time: 16.49
+    type: normal
+    weight: 1.2
+  - error: 0.028511719590166167
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      GOPPXC4P7j8=
+    success: true
+    time: 8.845
+    type: normal
+    weight: 1.0
+  - error: 0.045865774295620054
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      d4OknEbC5T8=
+    success: true
+    time: 45.243
+    type: narrow
+    weight: 1.3
+  - error: 0.03320588642137843
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      NLQITODe5D8=
+    success: true
+    time: 20.393
+    type: normal
+    weight: 1.5
+  - error: 0.057153432735963024
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Skx6ZM0k6D8=
+    success: true
+    time: 10.276
+    type: normal
+    weight: 0.8
+  - error: 0.07587225414745027
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      uPyrfaAx4j8=
+    success: true
+    time: 18.879
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    K20LJ5wZ4z8=
+  success_rate: 0.875
+  trial: 5
+- params:
+    controller_frequency: 19.467079389958943
+    cost_scaling_factor: 2.74939814262474
+    global_update_frequency: 1.1099741084477088
+    inflation_radius: 0.0981970324002566
+    local_height: 3.2840931103542266
+    local_update_frequency: 9.81107388326712
+    local_width: 2.286195449333521
+    obstacle_range: 2.2354316061188673
+    planner_frequency: 2.487028258854121
+    raytrace_range: 2.530404735363451
+    teb_acc_lim_theta: 0.442571623863836
+    teb_acc_lim_x: 0.2065700499331148
+    teb_acc_lim_y: 0.4644939659844777
+    teb_dt_ref: 0.3158754422770139
+    teb_global_plan_viapoint_sep: 0.13216161028349974
+    teb_inflation_dist: 0.407568559307808
+    teb_max_global_plan_lookahead_dist: 2.015184751538656
+    teb_max_vel_theta: 0.3420699824975244
+    teb_max_vel_x: 0.46612592727953517
+    teb_max_vel_x_backwards: 0.2559751091715248
+    teb_max_vel_y: 0.3926094938462863
+    teb_min_obstacle_dist: 0.2597467578733172
+    teb_no_inner_iterations: 5
+    teb_no_outer_iterations: 7
+    teb_obstacle_poses_affected: 25
+    teb_weight_acc_lim_theta: 3.6304515692013735
+    teb_weight_acc_lim_x: 4.396893641976712
+    teb_weight_inflation: 0.07182594265026086
+    teb_weight_obstacle: 15.676208937356003
+    teb_weight_optimaltime: 0.6846696091424932
+    teb_weight_viapoint: 11.450879671652338
+    teb_xy_goal_tolerance: 0.020551823096997778
+    teb_yaw_goal_tolerance: 0.09725016228722545
+  results:
+  - error: 0.06406189502441778
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      sFLMX1tT3j8=
+    success: true
+    time: 16.335
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - error: 0.0673082286789791
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ex4K6MgD4z8=
+    success: true
+    time: 16.523
+    type: normal
+    weight: 1.2
+  - error: 0.05237547181427889
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      wn8fNKgS6j8=
+    success: true
+    time: 10.037
+    type: normal
+    weight: 1.0
+  - error: 0.02470785358977852
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      bWdESnRv7D8=
+    success: true
+    time: 8.692
+    type: narrow
+    weight: 1.3
+  - error: 0.025159207299045586
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      jBPYs04a5j8=
+    success: true
+    time: 20.473
+    type: normal
+    weight: 1.5
+  - error: 0.013306621533678903
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      CpCo3kna6z8=
+    success: true
+    time: 10.355
+    type: normal
+    weight: 0.8
+  - error: 0.08141471539854413
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      8t0ykbid4T8=
+    success: true
+    time: 20.155
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    3gNEND3Y4z8=
+  success_rate: 0.875
+  trial: 6
+- params:
+    controller_frequency: 12.101260228547861
+    cost_scaling_factor: 6.454410099666801
+    global_update_frequency: 1.9251529252234123
+    inflation_radius: 0.0503391296023311
+    local_height: 3.4801077002085266
+    local_update_frequency: 3.68023545639538
+    local_width: 2.7300144533983395
+    obstacle_range: 3.372309548321562
+    planner_frequency: 1.795824130909342
+    raytrace_range: 3.392059593349946
+    teb_acc_lim_theta: 0.20972638657258155
+    teb_acc_lim_x: 0.40285824034152684
+    teb_acc_lim_y: 0.2482703268542995
+    teb_dt_ref: 0.38511464608822854
+    teb_global_plan_viapoint_sep: 0.28297287804408966
+    teb_inflation_dist: 0.20463698495866023
+    teb_max_global_plan_lookahead_dist: 4.861785731007762
+    teb_max_vel_theta: 0.39762149389902224
+    teb_max_vel_x: 0.35079112793155764
+    teb_max_vel_x_backwards: 0.2153807769252718
+    teb_max_vel_y: 0.34775530814565914
+    teb_min_obstacle_dist: 0.22403174005108886
+    teb_no_inner_iterations: 6
+    teb_no_outer_iterations: 8
+    teb_obstacle_poses_affected: 29
+    teb_weight_acc_lim_theta: 2.2676880206251107
+    teb_weight_acc_lim_x: 4.404546686067428
+    teb_weight_inflation: 0.17207179653879842
+    teb_weight_obstacle: 48.36289896901638
+    teb_weight_optimaltime: 0.4465879557417327
+    teb_weight_viapoint: 5.122284488974199
+    teb_xy_goal_tolerance: 0.058728337754430066
+    teb_yaw_goal_tolerance: 0.11010881549919832
+  results:
+  - error: 0.07598620112009663
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      caaIfrl23T8=
+    success: true
+    time: 16.095
+    type: normal
+    weight: 1.0
+  - error: 0.07329041731018812
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      aB2IOUXt6D8=
+    success: true
+    time: 8.847
+    type: normal
+    weight: 1.0
+  - error: 0.08682302558100549
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      RPw8Fafl4T8=
+    success: true
+    time: 16.568
+    type: normal
+    weight: 1.2
+  - error: 0.026134468394205315
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Lvf4uQ8U7j8=
+    success: true
+    time: 8.764
+    type: normal
+    weight: 1.0
+  - error: 0.008946840215013617
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      741lwh/e7j8=
+    success: true
+    time: 9.169
+    type: narrow
+    weight: 1.3
+  - error: 0.04734233230016432
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Whc/cM7l5D8=
+    success: true
+    time: 20.229
+    type: normal
+    weight: 1.5
+  - error: 0.018710451006087977
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      alSl8Obt6z8=
+    success: true
+    time: 10.359
+    type: normal
+    weight: 0.8
+  - error: 0.058236327316932734
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      jfE6VnW24j8=
+    success: true
+    time: 24.214
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    MpjzZkPk5T8=
+  success_rate: 1.0
+  trial: 7
+- params:
+    controller_frequency: 17.833648900822066
+    cost_scaling_factor: 4.292330017026275
+    global_update_frequency: 0.593370471873036
+    inflation_radius: 0.0951173561649092
+    local_height: 1.7541210253037696
+    local_update_frequency: 8.758203924617607
+    local_width: 2.220381282822526
+    obstacle_range: 2.6816665211380215
+    planner_frequency: 2.424983882746527
+    raytrace_range: 2.061000499878099
+    teb_acc_lim_theta: 0.5237444621914054
+    teb_acc_lim_x: 0.27582190292691433
+    teb_acc_lim_y: 0.25275714549257267
+    teb_dt_ref: 0.37831013813911785
+    teb_global_plan_viapoint_sep: 0.20030325893743992
+    teb_inflation_dist: 0.39498917923332955
+    teb_max_global_plan_lookahead_dist: 3.534027196582813
+    teb_max_vel_theta: 0.6512420419935546
+    teb_max_vel_x: 0.46321192157838664
+    teb_max_vel_x_backwards: 0.2481537235508409
+    teb_max_vel_y: 0.4091047222985804
+    teb_min_obstacle_dist: 0.309659035793355
+    teb_no_inner_iterations: 9
+    teb_no_outer_iterations: 8
+    teb_obstacle_poses_affected: 26
+    teb_weight_acc_lim_theta: 2.8623920725298406
+    teb_weight_acc_lim_x: 1.1437690951869683
+    teb_weight_inflation: 0.08136076100158936
+    teb_weight_obstacle: 20.209782058319114
+    teb_weight_optimaltime: 0.6204521268965566
+    teb_weight_viapoint: 2.315747157772166
+    teb_xy_goal_tolerance: 0.06860680368075084
+    teb_yaw_goal_tolerance: 0.22740229415861762
+  results:
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - error: 0.08071977267141266
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      iGO4Iwwz5j8=
+    success: true
+    time: 12.782
+    type: normal
+    weight: 1.2
+  - error: 0.04725559778163613
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ALRl3U4+7D8=
+    success: true
+    time: 9.642
+    type: normal
+    weight: 1.0
+  - error: 0.09857794632179366
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      3lyWd1z14j8=
+    success: true
+    time: 8.923
+    type: narrow
+    weight: 1.3
+  - error: 0.054978173166018184
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      IDowX0kV4z8=
+    success: true
+    time: 20.414
+    type: normal
+    weight: 1.5
+  - error: 0.012354207119833826
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      aK08tyXK6z8=
+    success: true
+    time: 10.437
+    type: normal
+    weight: 0.8
+  - error: 0.03048108670943811
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      A/5ThB1D5j8=
+    success: true
+    time: 19.6
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    BST6aMJg4j8=
+  success_rate: 0.75
+  trial: 8
+- params:
+    controller_frequency: 16.29400093641685
+    cost_scaling_factor: 7.716767381600499
+    global_update_frequency: 2.887163201657985
+    inflation_radius: 0.09590719976473445
+    local_height: 2.7234414924687043
+    local_update_frequency: 8.165278416870379
+    local_width: 2.608708105022801
+    obstacle_range: 2.8203947534354628
+    planner_frequency: 1.1193274737528935
+    raytrace_range: 2.5598677938918857
+    teb_acc_lim_theta: 0.45497196059928263
+    teb_acc_lim_x: 0.33597412104885177
+    teb_acc_lim_y: 0.33922229256353725
+    teb_dt_ref: 0.2790750870752988
+    teb_global_plan_viapoint_sep: 0.25903723895374076
+    teb_inflation_dist: 0.33169142621169084
+    teb_max_global_plan_lookahead_dist: 2.968869418823738
+    teb_max_vel_theta: 0.32584086058430384
+    teb_max_vel_x: 0.264746308249053
+    teb_max_vel_x_backwards: 0.22457809516380006
+    teb_max_vel_y: 0.2256042394981304
+    teb_min_obstacle_dist: 0.20416645025241484
+    teb_no_inner_iterations: 4
+    teb_no_outer_iterations: 8
+    teb_obstacle_poses_affected: 16
+    teb_weight_acc_lim_theta: 2.0009715926583813
+    teb_weight_acc_lim_x: 1.6257481706843442
+    teb_weight_inflation: 0.14223509915780264
+    teb_weight_obstacle: 42.61910542304926
+    teb_weight_optimaltime: 0.2559648880637612
+    teb_weight_viapoint: 6.725341221799779
+    teb_xy_goal_tolerance: 0.0635654800233597
+    teb_yaw_goal_tolerance: 0.24589485350863088
+  results:
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - error: 0.1007970448444583
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      3vCCnD4e4j8=
+    success: true
+    time: 19.118
+    type: normal
+    weight: 1.2
+  - error: 0.03996501539277972
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      PgrtGJnY7D8=
+    success: true
+    time: 8.703
+    type: normal
+    weight: 1.0
+  - error: 0.029247781675324894
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      OZupwhFx7D8=
+    success: true
+    time: 9.003
+    type: narrow
+    weight: 1.3
+  - error: 0.05448014440593119
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      7M8ObbAZ4z8=
+    success: true
+    time: 20.79
+    type: normal
+    weight: 1.5
+  - error: 0.02094398344724642
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      AjfAxkQ46z8=
+    success: true
+    time: 10.281
+    type: normal
+    weight: 0.8
+  - score: 0.0
+    success: false
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    B2uahmej4T8=
+  success_rate: 0.625
+  trial: 9
+- params:
+    controller_frequency: 10.070807240238624
+    cost_scaling_factor: 9.770937470127276
+    global_update_frequency: 2.1846603723512557
+    inflation_radius: 0.1346184947875591
+    local_height: 3.4987248772831023
+    local_update_frequency: 3.5492366947674636
+    local_width: 3.4643885628437845
+    obstacle_range: 3.4808269766110485
+    planner_frequency: 1.7422416576972666
+    raytrace_range: 3.2538006190670554
+    teb_acc_lim_theta: 0.5839082983781679
+    teb_acc_lim_x: 0.49152045929961413
+    teb_acc_lim_y: 0.16355381998641402
+    teb_dt_ref: 0.3980906663650843
+    teb_global_plan_viapoint_sep: 0.2891619439947426
+    teb_inflation_dist: 0.319406244825301
+    teb_max_global_plan_lookahead_dist: 4.977202136557073
+    teb_max_vel_theta: 0.52171316527269
+    teb_max_vel_x: 0.3865782958169455
+    teb_max_vel_x_backwards: 0.1851348809890218
+    teb_max_vel_y: 0.3106186318163292
+    teb_min_obstacle_dist: 0.15944140872218746
+    teb_no_inner_iterations: 10
+    teb_no_outer_iterations: 6
+    teb_obstacle_poses_affected: 30
+    teb_weight_acc_lim_theta: 1.227489460634938
+    teb_weight_acc_lim_x: 4.99478001860501
+    teb_weight_inflation: 0.12809205987515884
+    teb_weight_obstacle: 33.037789618066164
+    teb_weight_optimaltime: 0.42954147813139026
+    teb_weight_viapoint: 9.911468957179737
+    teb_xy_goal_tolerance: 0.05084933853656007
+    teb_yaw_goal_tolerance: 0.13691517995795016
+  results:
+  - error: 0.08422829154327048
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      IPEBqhgY2z8=
+    success: true
+    time: 20.792
+    type: normal
+    weight: 1.0
+  - error: 0.03716756152586847
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      RPJ3mLSr6D8=
+    success: true
+    time: 11.715
+    type: normal
+    weight: 1.0
+  - error: 0.10148087867603732
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      uyq7S8ft4D8=
+    success: true
+    time: 17.282
+    type: normal
+    weight: 1.2
+  - error: 0.02560032514197446
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      1P/XsJkX7j8=
+    success: true
+    time: 8.842
+    type: normal
+    weight: 1.0
+  - error: 0.05361050098597322
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      HnpdhyxI4j8=
+    success: true
+    time: 45.176
+    type: narrow
+    weight: 1.3
+  - error: 0.06258940486151779
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      JhgqGH/F4j8=
+    success: true
+    time: 20.153
+    type: normal
+    weight: 1.5
+  - error: 0.030696490844505177
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Rate/Pb26T8=
+    success: true
+    time: 10.35
+    type: normal
+    weight: 0.8
+  - error: 0.04426134389023813
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      7/0z8zDe5T8=
+    success: true
+    time: 23.657
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    3LpjfnZ95D8=
+  success_rate: 1.0
+  trial: 10
+- params:
+    controller_frequency: 11.052869565568963
+    cost_scaling_factor: 2.095527545067425
+    global_update_frequency: 1.412754086074101
+    inflation_radius: 0.062318749809232896
+    local_height: 3.049193050268125
+    local_update_frequency: 4.569840010574049
+    local_width: 2.9314023838112186
+    obstacle_range: 3.414675842833442
+    planner_frequency: 1.9682680151842344
+    raytrace_range: 2.8820663236617245
+    teb_acc_lim_theta: 0.28115668609001243
+    teb_acc_lim_x: 0.490700199359972
+    teb_acc_lim_y: 0.3085320259779876
+    teb_dt_ref: 0.16537663570513217
+    teb_global_plan_viapoint_sep: 0.23319727972087512
+    teb_inflation_dist: 0.46356314242692115
+    teb_max_global_plan_lookahead_dist: 3.88154628059696
+    teb_max_vel_theta: 0.5447439543868675
+    teb_max_vel_x: 0.20019507329621056
+    teb_max_vel_x_backwards: 0.14615144725656676
+    teb_max_vel_y: 0.2920205640102997
+    teb_min_obstacle_dist: 0.24967999115910014
+    teb_no_inner_iterations: 8
+    teb_no_outer_iterations: 8
+    teb_obstacle_poses_affected: 27
+    teb_weight_acc_lim_theta: 1.397670014526668
+    teb_weight_acc_lim_x: 4.99717390833509
+    teb_weight_inflation: 0.11828204036965069
+    teb_weight_obstacle: 48.66709122058123
+    teb_weight_optimaltime: 0.4962053701194221
+    teb_weight_viapoint: 12.146562531103873
+    teb_xy_goal_tolerance: 0.05895291136995012
+    teb_yaw_goal_tolerance: 0.20940371456761686
+  results:
+  - error: 0.05739464285488773
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      g+sTAz784z8=
+    success: true
+    time: 11.871
+    type: normal
+    weight: 1.0
+  - error: 0.006967007659792774
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ldZb9WVa7D8=
+    success: true
+    time: 10.284
+    type: normal
+    weight: 1.0
+  - error: 0.07995971767297189
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      HyIbvlue4T8=
+    success: true
+    time: 17.762
+    type: normal
+    weight: 1.2
+  - error: 0.058403123240283045
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Nv+wVy/v6j8=
+    success: true
+    time: 9.166
+    type: normal
+    weight: 1.0
+  - error: 0.05938972893829219
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      V4TnamIf5j8=
+    success: true
+    time: 8.686
+    type: narrow
+    weight: 1.3
+  - error: 0.030056681859055058
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      6IULc83f5D8=
+    success: true
+    time: 20.308
+    type: normal
+    weight: 1.5
+  - error: 0.018232369433662143
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      mSQOJT/o6z8=
+    success: true
+    time: 10.361
+    type: normal
+    weight: 0.8
+  - error: 0.05254279229381228
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      1xFLJ2B34z8=
+    success: true
+    time: 19.751
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    IiKdk9mE5T8=
+  success_rate: 1.0
+  trial: 13
+- params:
+    controller_frequency: 10.050352384348512
+    cost_scaling_factor: 8.662540797846178
+    global_update_frequency: 1.370204906006742
+    inflation_radius: 0.04294739575504612
+    local_height: 3.081190432505782
+    local_update_frequency: 4.0673703748428895
+    local_width: 2.951686303984141
+    obstacle_range: 3.442591279176823
+    planner_frequency: 2.050753155003849
+    raytrace_range: 3.937882945289666
+    teb_acc_lim_theta: 0.2591752420037447
+    teb_acc_lim_x: 0.48580656005493805
+    teb_acc_lim_y: 0.3100416062052651
+    teb_dt_ref: 0.15347438954475423
+    teb_global_plan_viapoint_sep: 0.25135266107545906
+    teb_inflation_dist: 0.4353612305666737
+    teb_max_global_plan_lookahead_dist: 4.362392264608228
+    teb_max_vel_theta: 0.69556755727801
+    teb_max_vel_x: 0.39669691598927376
+    teb_max_vel_x_backwards: 0.14796095624545805
+    teb_max_vel_y: 0.2863589636110429
+    teb_min_obstacle_dist: 0.25460798840919685
+    teb_no_inner_iterations: 10
+    teb_no_outer_iterations: 6
+    teb_obstacle_poses_affected: 21
+    teb_weight_acc_lim_theta: 1.0405977806626987
+    teb_weight_acc_lim_x: 4.967536218516203
+    teb_weight_inflation: 0.11300445307343428
+    teb_weight_obstacle: 49.59399487040692
+    teb_weight_optimaltime: 0.3246546856001381
+    teb_weight_viapoint: 1.3546003339046324
+    teb_xy_goal_tolerance: 0.058907268753474844
+    teb_yaw_goal_tolerance: 0.12082430823009906
+  results:
+  - error: 0.07695128316345924
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      LNtxO39d3T8=
+    success: true
+    time: 16.092
+    type: normal
+    weight: 1.0
+  - error: 0.04859330026541178
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      KjhRvZPg6z8=
+    success: true
+    time: 8.525
+    type: normal
+    weight: 1.0
+  - error: 0.08123565897260487
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      zCn6OQ074j8=
+    success: true
+    time: 16.25
+    type: normal
+    weight: 1.2
+  - error: 0.02274850978679742
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      PPw6BJ8R7j8=
+    success: true
+    time: 8.763
+    type: normal
+    weight: 1.0
+  - error: 0.028477657470926364
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Z6GXbth+7D8=
+    success: true
+    time: 9.004
+    type: narrow
+    weight: 1.3
+  - error: 0.01373899227467874
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      7pcMMSnf5j8=
+    success: true
+    time: 20.867
+    type: normal
+    weight: 1.5
+  - error: 0.024437025498111904
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      9KYFkHZX6z8=
+    success: true
+    time: 10.118
+    type: normal
+    weight: 0.8
+  - error: 0.05816667801170968
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      gAPmoVlm4z8=
+    success: true
+    time: 18.402
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    vpJVul0f5j8=
+  success_rate: 1.0
+  trial: 14
+- params:
+    controller_frequency: 11.320205043246396
+    cost_scaling_factor: 8.843840762518541
+    global_update_frequency: 1.4589739134221833
+    inflation_radius: 0.11806374275197412
+    local_height: 2.9719246515810838
+    local_update_frequency: 5.54253788446442
+    local_width: 3.295428381620458
+    obstacle_range: 3.2213010390136145
+    planner_frequency: 2.9825921705246303
+    raytrace_range: 3.662550658191451
+    teb_acc_lim_theta: 0.3311704241671044
+    teb_acc_lim_x: 0.45874207754737695
+    teb_acc_lim_y: 0.33923431297812423
+    teb_dt_ref: 0.36266238505863874
+    teb_global_plan_viapoint_sep: 0.2721221564440534
+    teb_inflation_dist: 0.36049055243136896
+    teb_max_global_plan_lookahead_dist: 4.967479169133163
+    teb_max_vel_theta: 0.6678037365194898
+    teb_max_vel_x: 0.42189579701855756
+    teb_max_vel_x_backwards: 0.1377023847786802
+    teb_max_vel_y: 0.3327377540824118
+    teb_min_obstacle_dist: 0.24866294171257683
+    teb_no_inner_iterations: 6
+    teb_no_outer_iterations: 5
+    teb_obstacle_poses_affected: 20
+    teb_weight_acc_lim_theta: 2.6507231553815855
+    teb_weight_acc_lim_x: 4.6564322407918715
+    teb_weight_inflation: 0.15755016554205925
+    teb_weight_obstacle: 24.712469564011904
+    teb_weight_optimaltime: 0.3189705294301429
+    teb_weight_viapoint: 2.924049632434839
+    teb_xy_goal_tolerance: 0.05807469483406852
+    teb_yaw_goal_tolerance: 0.12846876081792405
+  results:
+  - error: 0.04982673329537483
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      fP6tJY224T8=
+    success: true
+    time: 16.409
+    type: normal
+    weight: 1.0
+  - error: 0.0647820150331669
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      AEy+xo9z6T8=
+    success: true
+    time: 8.689
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.2
+  - error: 0.027545712759680555
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      vgi2nu4i6z8=
+    success: true
+    time: 11.398
+    type: normal
+    weight: 1.0
+  - error: 0.03354051836582485
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      S4l3cYcN6j8=
+    success: true
+    time: 8.687
+    type: narrow
+    weight: 1.3
+  - error: 0.04692198447697826
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      blrKrXTg5D8=
+    success: true
+    time: 20.223
+    type: normal
+    weight: 1.5
+  - error: 0.01699088886069131
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      oKppVjHN6z8=
+    success: true
+    time: 10.444
+    type: normal
+    weight: 0.8
+  - error: 0.07919610174638525
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      MDXiznjz4T8=
+    success: true
+    time: 18.94
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    4TtRovY25D8=
+  success_rate: 0.875
+  trial: 16
+- params:
+    controller_frequency: 10.63976272442034
+    cost_scaling_factor: 6.1598141461383955
+    global_update_frequency: 1.1095043579189312
+    inflation_radius: 0.030637008133391215
+    local_height: 2.9225774381890366
+    local_update_frequency: 3.085164642414747
+    local_width: 2.5658489376618565
+    obstacle_range: 2.3978932871754663
+    planner_frequency: 2.295792699608061
+    raytrace_range: 3.400559633536034
+    teb_acc_lim_theta: 0.40706776370133757
+    teb_acc_lim_x: 0.2672617249960526
+    teb_acc_lim_y: 0.24548870681611482
+    teb_dt_ref: 0.18045261252148403
+    teb_global_plan_viapoint_sep: 0.264569890282498
+    teb_inflation_dist: 0.28304164551597194
+    teb_max_global_plan_lookahead_dist: 3.9310606186174617
+    teb_max_vel_theta: 0.7368567014191483
+    teb_max_vel_x: 0.34857370861925685
+    teb_max_vel_x_backwards: 0.21835675118443948
+    teb_max_vel_y: 0.25998798051610683
+    teb_min_obstacle_dist: 0.23180917018261246
+    teb_no_inner_iterations: 4
+    teb_no_outer_iterations: 6
+    teb_obstacle_poses_affected: 19
+    teb_weight_acc_lim_theta: 1.059202522570125
+    teb_weight_acc_lim_x: 3.8253239026326415
+    teb_weight_inflation: 0.133883932852653
+    teb_weight_obstacle: 34.820863981661724
+    teb_weight_optimaltime: 0.11940355212801021
+    teb_weight_viapoint: 3.4969060980135396
+    teb_xy_goal_tolerance: 0.03323970127144216
+    teb_yaw_goal_tolerance: 0.08042537897635701
+  results:
+  - error: 0.06337589477643536
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      gvqNYqaI3z8=
+    success: true
+    time: 15.850999999999999
+    type: normal
+    weight: 1.0
+  - error: 0.08039267910143585
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      xrkz7VDc6D8=
+    success: true
+    time: 8.689
+    type: normal
+    weight: 1.0
+  - error: 0.07530582313237377
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      uraXz4Fr4j8=
+    success: true
+    time: 16.422
+    type: normal
+    weight: 1.2
+  - error: 0.07095965085278975
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Itf/BGM46j8=
+    success: true
+    time: 9.323
+    type: normal
+    weight: 1.0
+  - error: 0.06556729572592387
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      AW+7jJOg5T8=
+    success: true
+    time: 8.526
+    type: narrow
+    weight: 1.3
+  - error: 0.05128498528813416
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      fiG3AR434z8=
+    success: true
+    time: 20.152
+    type: normal
+    weight: 1.5
+  - error: 0.009752355394841145
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      //schco27D8=
+    success: true
+    time: 10.44
+    type: normal
+    weight: 0.8
+  - error: 0.032280565541018984
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      /iHGoVgy5j8=
+    success: true
+    time: 19.84
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    OlT2JNn/5D8=
+  success_rate: 1.0
+  trial: 18
+- params:
+    controller_frequency: 12.307241397847507
+    cost_scaling_factor: 6.3693465891440475
+    global_update_frequency: 1.66586400561187
+    inflation_radius: 0.07877033688382183
+    local_height: 3.3181491345103042
+    local_update_frequency: 6.2629231641111955
+    local_width: 3.0543075887182174
+    obstacle_range: 3.168440569499217
+    planner_frequency: 2.093874981051671
+    raytrace_range: 3.6385837467653523
+    teb_acc_lim_theta: 0.34306331006063817
+    teb_acc_lim_x: 0.4549181125060847
+    teb_acc_lim_y: 0.2846180538944841
+    teb_dt_ref: 0.28712105192139653
+    teb_global_plan_viapoint_sep: 0.29368158311097803
+    teb_inflation_dist: 0.35476785620157153
+    teb_max_global_plan_lookahead_dist: 4.632650769033165
+    teb_max_vel_theta: 0.3764779065133137
+    teb_max_vel_x: 0.3804052118809961
+    teb_max_vel_x_backwards: 0.13768728335193903
+    teb_max_vel_y: 0.20278495333797505
+    teb_min_obstacle_dist: 0.28409670926060976
+    teb_no_inner_iterations: 5
+    teb_no_outer_iterations: 7
+    teb_obstacle_poses_affected: 23
+    teb_weight_acc_lim_theta: 3.246714952535325
+    teb_weight_acc_lim_x: 4.628925524705115
+    teb_weight_inflation: 0.15872746680992855
+    teb_weight_obstacle: 28.3863750498857
+    teb_weight_optimaltime: 0.9941339819934423
+    teb_weight_viapoint: 6.924987196250285
+    teb_xy_goal_tolerance: 0.05327522738586724
+    teb_yaw_goal_tolerance: 0.158380507633104
+  results:
+  - error: 0.04538080543309622
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      JI0TJXlP4T8=
+    success: true
+    time: 16.335
+    type: normal
+    weight: 1.0
+  - error: 0.0708535071887881
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      9rFIxGPu6D8=
+    success: true
+    time: 8.922
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.2
+  - error: 0.06549701294996568
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Fye6ro724T8=
+    success: true
+    time: 27.58
+    type: normal
+    weight: 1.0
+  - error: 0.09098956495894606
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ZU8LBoMP4z8=
+    success: true
+    time: 13.862
+    type: narrow
+    weight: 1.3
+  - error: 0.020934685410735246
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      UHmDgRsP5j8=
+    success: true
+    time: 20.314
+    type: normal
+    weight: 1.5
+  - error: 0.03212002752722542
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Jkalbr3r6T8=
+    success: true
+    time: 10.359
+    type: normal
+    weight: 0.8
+  - error: 0.06207423288117557
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      eWcL0NUY4z8=
+    success: true
+    time: 18.96
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    Ro5resvP4j8=
+  success_rate: 0.875
+  trial: 19
+- params:
+    controller_frequency: 10.06780615537348
+    cost_scaling_factor: 2.1933101842363105
+    global_update_frequency: 1.2476817434825624
+    inflation_radius: 0.059482314983808945
+    local_height: 3.1525199713447862
+    local_update_frequency: 4.031967520731627
+    local_width: 2.879818070261416
+    obstacle_range: 3.3667046599986237
+    planner_frequency: 1.9539200979204814
+    raytrace_range: 2.905803413670663
+    teb_acc_lim_theta: 0.31259267225882664
+    teb_acc_lim_x: 0.47772953887019237
+    teb_acc_lim_y: 0.31970995451510553
+    teb_dt_ref: 0.18459645757925858
+    teb_global_plan_viapoint_sep: 0.21197385943427238
+    teb_inflation_dist: 0.40726696451834016
+    teb_max_global_plan_lookahead_dist: 4.228343571158638
+    teb_max_vel_theta: 0.6094202822049031
+    teb_max_vel_x: 0.20456551333477213
+    teb_max_vel_x_backwards: 0.13141928896811392
+    teb_max_vel_y: 0.267312640605086
+    teb_min_obstacle_dist: 0.2642180773706992
+    teb_no_inner_iterations: 7
+    teb_no_outer_iterations: 7
+    teb_obstacle_poses_affected: 29
+    teb_weight_acc_lim_theta: 1.08569103563315
+    teb_weight_acc_lim_x: 4.91463481652707
+    teb_weight_inflation: 0.1419439453116159
+    teb_weight_obstacle: 49.734405799460006
+    teb_weight_optimaltime: 0.37940584067628547
+    teb_weight_viapoint: 9.398457443199216
+    teb_xy_goal_tolerance: 0.06289222446664303
+    teb_yaw_goal_tolerance: 0.12542014924008987
+  results:
+  - error: 0.07013417588760289
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ZmAVNngk3z8=
+    success: true
+    time: 15.534
+    type: normal
+    weight: 1.0
+  - error: 0.05355329145328492
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      4iZlbO7s6T8=
+    success: true
+    time: 8.685
+    type: normal
+    weight: 1.0
+  - error: 0.11718334047429116
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      tefY9vvU4D8=
+    success: true
+    time: 16.173
+    type: normal
+    weight: 1.2
+  - error: 0.06800886141903338
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      TP0MwNaE6j8=
+    success: true
+    time: 8.656
+    type: normal
+    weight: 1.0
+  - error: 0.05592024283615365
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      i3p0JgFg5j8=
+    success: true
+    time: 9.25
+    type: narrow
+    weight: 1.3
+  - error: 0.03388766158258194
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      /j3BQS/k5D8=
+    success: true
+    time: 20.468
+    type: normal
+    weight: 1.5
+  - error: 0.011297157117513074
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      a0FLekD16z8=
+    success: true
+    time: 10.287
+    type: normal
+    weight: 0.8
+  - error: 0.008209620786788972
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Kdv5p81C6j8=
+    success: true
+    time: 18.878
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    yfC+1C9z5T8=
+  success_rate: 1.0
+  trial: 22

@@ -1,0 +1,17 @@
+global_costmap:
+  global_frame: map
+  inflation_layer:
+    cost_scaling_factor: 3.8371597215681117
+    enabled: true
+    inflation_radius: 0.24444298503238984
+  plugins:
+  - name: static_layer
+    type: costmap_2d::StaticLayer
+  - name: obstacle_layer
+    type: costmap_2d::ObstacleLayer
+  - name: inflation_layer
+    type: costmap_2d::InflationLayer
+  publish_frequency: 1.0
+  robot_base_frame: base_footprint
+  transform_tolerance: 0.5
+  update_frequency: 1.9031929939237406

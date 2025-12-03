@@ -1,20 +1,19 @@
 local_costmap:
-   global_frame: odom
-   robot_base_frame: base_footprint
-   update_frequency: 5.0
-   publish_frequency: 2.0
-   rolling_window: true
-   width: 2.0   # 保持原始大小
-   height: 2.0
-   resolution: 0.05
-   transform_tolerance: 0.5
-   #cost_scaling_factor and inflation_radius were now moved to the inflation_layer ns
-   inflation_layer:
-      enabled: true
-      cost_scaling_factor:  5.0  # 高衰减因子，代价快速衰减
-      inflation_radius:     0.10  # 减小膨胀，避免通道堵死
-
-   plugins:
-   ## - {name: obstacle_layer,      type: "costmap_2d::VoxelLayer"}
-    - {name: obstacle_layer,          type: "costmap_2d::ObstacleLayer"}
-    - {name: inflation_layer,     type: "costmap_2d::InflationLayer"}
+  global_frame: odom
+  height: 2.7150897038028767
+  inflation_layer:
+    cost_scaling_factor: 5.648559873736287
+    enabled: true
+    inflation_radius: 0.073963421195243
+  plugins:
+  - name: obstacle_layer
+    type: costmap_2d::ObstacleLayer
+  - name: inflation_layer
+    type: costmap_2d::InflationLayer
+  publish_frequency: 8.281407691144109
+  resolution: 0.05
+  robot_base_frame: base_footprint
+  rolling_window: true
+  transform_tolerance: 0.5
+  update_frequency: 7.146901982034297
+  width: 1.5929008254399954

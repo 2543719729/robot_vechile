@@ -1,0 +1,40 @@
+params:
+  controller_frequency: 16.415601299434716
+  cost_scaling_factor: 5.821972156672826
+  dwa_acc_lim_theta: 0.989452760277563
+  dwa_acc_lim_x: 0.3437371344001835
+  dwa_acc_lim_y: 0.25795794883648926
+  dwa_goal_distance_bias: 27.87240964517386
+  dwa_max_vel_theta: 0.695052524965628
+  dwa_max_vel_x: 0.4010716092915446
+  dwa_max_vel_y: 0.2154436253749968
+  dwa_min_vel_trans: 0.09174392973699884
+  dwa_occdist_scale: 0.018391267498289014
+  dwa_path_distance_bias: 31.846490458355788
+  dwa_sim_time: 1.5082033211088177
+  dwa_vtheta_samples: 21
+  dwa_vx_samples: 17
+  dwa_xy_goal_tolerance: 0.04942601816442403
+  dwa_yaw_goal_tolerance: 0.08630829072672508
+  inflation_radius: 0.2083824276902237
+  obstacle_range: 1.6805795401088166
+  planner_frequency: 1.339333296799344
+  raytrace_range: 3.670604991178476
+score: !!python/object/apply:numpy.core.multiarray.scalar
+- !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  RC+jeryQ6j8=
+timestamp: '20251129_162638'

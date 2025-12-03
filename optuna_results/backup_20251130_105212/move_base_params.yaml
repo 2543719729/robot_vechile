@@ -1,0 +1,40 @@
+# ============================================================
+# Move Base 参数 - 全面优化版
+# ============================================================
+shutdown_costmaps: false
+
+# ========== 控制频率设置 ==========
+controller_frequency: 10.0     # TEB推荐10Hz
+controller_patience: 20.0      # 增加耐心，给更多时间到达目标
+
+# ========== 规划频率设置 ==========
+planner_frequency: 1.0         # 全局规划频率
+planner_patience: 15.0         # 增加规划耐心
+
+# ========== 振荡检测 ==========
+# 放宽阈值，避免在目标附近误判为振荡
+oscillation_timeout: 20.0      # 振荡超时
+oscillation_distance: 0.3      # 放宽振荡距离阈值
+
+# ========== 规划器配置 ==========
+base_local_planner: "teb_local_planner/TebLocalPlannerROS"
+base_global_planner: "navfn/NavfnROS"
+
+# ========== 恢复行为配置 ==========
+recovery_behavior_enabled: true
+
+recovery_behaviors:
+  - name: 'clear_costmap_recovery'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+  - name: 'rotate_recovery'
+    type: 'rotate_recovery/RotateRecovery'
+  - name: 'aggressive_clear'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+
+clear_costmap_recovery:
+  reset_distance: 3.0          # 清除3米外的障碍物
+  
+aggressive_clear:
+  reset_distance: 0.0          # 清除所有
+
+clearing_rotation_allowed: true

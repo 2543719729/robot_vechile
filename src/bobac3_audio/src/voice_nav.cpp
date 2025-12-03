@@ -31,8 +31,11 @@ struct Point m_point[5] = {
     {2.48, 2.120, -0.032, 0.999, "吉林馆", "吉林位于我国东北是人参之都"}
 };
 
-// 导览顺序：吉林->上海->北京->广州->深圳
-int tour_order[5] = {4, 1, 2, 3, 0};  // 对应 吉林馆、上海馆、北京馆、广州馆、深圳馆
+// 导览顺序：北京->深圳->吉林->上海->广州
+int tour_order[5] = {2, 0, 4, 1, 3};  // 对应 北京馆、深圳馆、吉林馆、上海馆、广州馆
+
+// 充电点位置（假设与初始点相同，如需修改请更新坐标）
+struct Point charge_point = {0.0, 0.0, 0.0, 1.0, "充电点", "正在前往充电点"};
 
 // 精确导航参数配置
 struct PreciseNavConfig {
@@ -134,8 +137,10 @@ string VoiceNavigation::voiceCollect() {
     robot_audio::Collect srv;
     srv.request.collect_flag = 1;
     if (collect_client.call(srv)) {
+        ROS_INFO("音频文件: %s", srv.response.voice_filename.c_str());
         return srv.response.voice_filename;
     }
+    ROS_WARN("语音采集服务调用失败");
     return "";
 }
 
@@ -144,8 +149,14 @@ string VoiceNavigation::voiceDictation(const string& filename) {
     robot_audio::robot_iat srv;
     srv.request.audiopath = filename;
     if (dictation_client.call(srv)) {
+        if (srv.response.text.empty()) {
+            ROS_WARN("语音识别返回空结果，请重新说话");
+        } else {
+            ROS_INFO("识别成功: %s", srv.response.text.c_str());
+        }
         return srv.response.text;
     }
+    ROS_ERROR("语音识别服务调用失败");
     return "";
 }
 
@@ -446,9 +457,23 @@ void VoiceNavigation::tourAllMuseums() {
     // 保存当前位置为出发点
     saveStartPosition();
     
-    // 按顺序参观所有场馆: 吉林->上海->北京->广州->深圳
+    // 按顺序参观所有场馆: 北京->深圳->吉林->上海->广州
     for (int i = 0; i < 5; i++) {
         int idx = tour_order[i];
+        
+        // 当要导航到吉林馆时，需要先到初始点，再到充电点
+        if (idx == 4) {  // 4 是吉林馆的索引
+            ROS_INFO("前往吉林馆前，先返回初始点");
+            voiceTTS("前往吉林馆前，先返回初始点");
+            navigateToPosition(start_x, start_y, start_z, start_w, "初始点");
+            
+            ROS_INFO("从初始点前往充电点");
+            voiceTTS("正在前往充电点");
+            navigateToPosition(charge_point.x, charge_point.y, charge_point.z, charge_point.w, "充电点");
+            
+            ROS_INFO("从充电点前往吉林馆");
+        }
+        
         ROS_INFO("参观第 %d 站: %s", i + 1, m_point[idx].name.c_str());
         navigateToPoint(m_point[idx], true);
     }

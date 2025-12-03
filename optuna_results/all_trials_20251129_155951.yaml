@@ -1,0 +1,685 @@
+- params:
+    controller_frequency: 15.824582803960839
+    cost_scaling_factor: 3.7381801866358395
+    dwa_acc_lim_theta: 0.5580836121681995
+    dwa_acc_lim_x: 0.29361118426546196
+    dwa_acc_lim_y: 0.26239780813448105
+    dwa_goal_distance_bias: 22.431868873739667
+    dwa_max_vel_theta: 1.0123957592679835
+    dwa_max_vel_x: 0.349816047538945
+    dwa_max_vel_y: 0.4852142919229748
+    dwa_min_vel_trans: 0.0638792635777333
+    dwa_occdist_scale: 0.0023102018878452934
+    dwa_path_distance_bias: 34.97327922401266
+    dwa_sim_time: 1.5621088666940683
+    dwa_vtheta_samples: 40
+    dwa_vx_samples: 5
+    dwa_xy_goal_tolerance: 0.08795585311974417
+    dwa_yaw_goal_tolerance: 0.20027875293580222
+    inflation_radius: 0.09585112746335846
+    obstacle_range: 2.549512863264476
+    planner_frequency: 3.2533380262507077
+    raytrace_range: 2.8638900372842313
+  results:
+  - error: 0.015331748475548938
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - &id001 !!python/object/apply:numpy.dtype
+      args:
+      - f8
+      - 0
+      - 1
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 0
+    - !!binary |
+      gMeAWonI6T8=
+    success: true
+    time: 8.406
+    type: normal
+    weight: 1.0
+  - error: 0.04493186402549288
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Ar4otOl/6T8=
+    success: true
+    time: 11.703
+    type: normal
+    weight: 1.0
+  - error: 0.1106118964270569
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      YSFILBBr4T8=
+    success: true
+    time: 22.701999999999998
+    type: normal
+    weight: 1.2
+  - error: 0.006727581811355458
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      lydswU4/7j8=
+    success: true
+    time: 9.802
+    type: normal
+    weight: 1.0
+  - error: 0.01657939118982664
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      urH8scyC7T8=
+    success: true
+    time: 12.006
+    type: narrow
+    weight: 1.3
+  - error: 0.02712274525781753
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      EnsupAd45j8=
+    success: true
+    time: 28.405
+    type: normal
+    weight: 1.5
+  - error: 0.017445936034013496
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      HGVjlOXv5z8=
+    success: true
+    time: 15.502
+    type: normal
+    weight: 0.8
+  - error: 0.03252957239149393
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      +/OjnNKB5D8=
+    success: true
+    time: 28.803
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    QhIrxJqi6j8=
+  success_rate: 1.0
+  trial: 0
+- params:
+    controller_frequency: 12.440764696895577
+    cost_scaling_factor: 1.8790490260574548
+    dwa_acc_lim_theta: 1.0142344384136117
+    dwa_acc_lim_x: 0.6711055768358083
+    dwa_acc_lim_y: 0.2798695128633439
+    dwa_goal_distance_bias: 48.79712115760958
+    dwa_max_vel_theta: 0.7564532903055842
+    dwa_max_vel_x: 0.25579754426081674
+    dwa_max_vel_y: 0.2876433945605654
+    dwa_min_vel_trans: 0.05104629857953324
+    dwa_occdist_scale: 0.041380401125610165
+    dwa_path_distance_bias: 38.466566117599996
+    dwa_sim_time: 1.4113172778521577
+    dwa_vtheta_samples: 16
+    dwa_vx_samples: 7
+    dwa_xy_goal_tolerance: 0.06331731119758383
+    dwa_yaw_goal_tolerance: 0.061612603179999434
+    inflation_radius: 0.1261534422933427
+    obstacle_range: 2.8684660530243136
+    planner_frequency: 2.728296095500716
+    raytrace_range: 2.8803049874792026
+  results:
+  - error: 0.018744961184663348
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      lxO4vn0U4j8=
+    success: true
+    time: 21.701999999999998
+    type: normal
+    weight: 1.0
+  - error: 0.021477256748417658
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      iyiH/pQV6j8=
+    success: true
+    time: 12.204
+    type: normal
+    weight: 1.0
+  - error: 0.07148096681828559
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      bcHAEN3v4j8=
+    success: true
+    time: 22.701
+    type: normal
+    weight: 1.2
+  - error: 0.009246009936598389
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      fCSNGNUk7j8=
+    success: true
+    time: 9.805
+    type: normal
+    weight: 1.0
+  - error: 0.0702527156718116
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Hl1yzhs46j8=
+    success: true
+    time: 12.503
+    type: narrow
+    weight: 1.3
+  - error: 0.07131729052226404
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      yk0JwDW25D8=
+    success: true
+    time: 30.202
+    type: normal
+    weight: 1.5
+  - error: 0.026330937701727616
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      zgz07Nq56D8=
+    success: true
+    time: 13.702
+    type: normal
+    weight: 0.8
+  - error: 0.04237709908229113
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      rqbHQE2P5D8=
+    success: true
+    time: 26.701999999999998
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    XlDYlMK16T8=
+  success_rate: 1.0
+  trial: 1
+- params:
+    controller_frequency: 15.426980635477918
+    cost_scaling_factor: 1.4070456001948426
+    dwa_acc_lim_theta: 1.0467102793432796
+    dwa_acc_lim_x: 0.38702664565364664
+    dwa_acc_lim_y: 0.4080272084711243
+    dwa_goal_distance_bias: 47.265598225809086
+    dwa_max_vel_theta: 0.6811459871200118
+    dwa_max_vel_x: 0.21375540844608737
+    dwa_max_vel_y: 0.47279612062363463
+    dwa_min_vel_trans: 0.06962700559185839
+    dwa_occdist_scale: 0.0015030900645056826
+    dwa_path_distance_bias: 27.936999364332554
+    dwa_sim_time: 1.6626992350416718
+    dwa_vtheta_samples: 38
+    dwa_vx_samples: 20
+    dwa_xy_goal_tolerance: 0.026636900997297437
+    dwa_yaw_goal_tolerance: 0.29239615694113963
+    inflation_radius: 0.0989957156047863
+    obstacle_range: 2.150660661526529
+    planner_frequency: 4.229318791183682
+    raytrace_range: 2.7773545793789642
+  results:
+  - error: 0.06194530831216885
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      DFggo31N4D8=
+    success: true
+    time: 22.803
+    type: normal
+    weight: 1.0
+  - error: 0.04451990128369602
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      GAsXRsQL6T8=
+    success: true
+    time: 12.402
+    type: normal
+    weight: 1.0
+  - error: 0.07799895925851473
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      pitOOO6N4j8=
+    success: true
+    time: 23.504
+    type: normal
+    weight: 1.2
+  - error: 0.04998074682489168
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      oPMx0ibD6z8=
+    success: true
+    time: 10.503
+    type: normal
+    weight: 1.0
+  - error: 0.006186374354089787
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      0GqDSVAp7j8=
+    success: true
+    time: 11.902
+    type: narrow
+    weight: 1.3
+  - error: 0.045698738584389935
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      4KLgOM265T8=
+    success: true
+    time: 29.303
+    type: normal
+    weight: 1.5
+  - error: 0.025356506357884515
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Vnwv20aq6D8=
+    success: true
+    time: 13.704
+    type: normal
+    weight: 0.8
+  - error: 0.025833449010573092
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      f411WEsD5T8=
+    success: true
+    time: 26.803
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    BnasQETS6T8=
+  success_rate: 1.0
+  trial: 2
+- params:
+    controller_frequency: 16.617960497052984
+    cost_scaling_factor: 2.0428215357261674
+    dwa_acc_lim_theta: 1.4868869366005173
+    dwa_acc_lim_x: 0.6813181884524239
+    dwa_acc_lim_y: 0.22982025747190835
+    dwa_goal_distance_bias: 41.9944621340081
+    dwa_max_vel_theta: 0.879887258210774
+    dwa_max_vel_x: 0.3427013306774357
+    dwa_max_vel_y: 0.28428035290621423
+    dwa_min_vel_trans: 0.02268318024772864
+    dwa_occdist_scale: 0.001406336677771817
+    dwa_path_distance_bias: 31.87021504122962
+    dwa_sim_time: 0.5082831756854036
+    dwa_vtheta_samples: 33
+    dwa_vx_samples: 18
+    dwa_xy_goal_tolerance: 0.07950202923669918
+    dwa_yaw_goal_tolerance: 0.0996789203835431
+    inflation_radius: 0.13961643213606817
+    obstacle_range: 3.2262068517511873
+    planner_frequency: 0.7860125762871064
+    raytrace_range: 3.246596253655116
+  results:
+  - error: 0.0444036469454884
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      mY25U6AB4T8=
+    success: true
+    time: 22.303
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - error: 0.06260837882013284
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      rlAvCaWB4j8=
+    success: true
+    time: 27.994
+    type: normal
+    weight: 1.2
+  - error: 0.06114445940769725
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      uBhNC2Gj6z8=
+    success: true
+    time: 10.202
+    type: normal
+    weight: 1.0
+  - error: 0.01955489220324051
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Srh+mNUk7T8=
+    success: true
+    time: 12.402
+    type: narrow
+    weight: 1.3
+  - error: 0.11375137594188721
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Cu0UAuAA4z8=
+    success: true
+    time: 29.402
+    type: normal
+    weight: 1.5
+  - error: 0.027861122347558553
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      2h6XiZyZ6D8=
+    success: true
+    time: 13.602
+    type: normal
+    weight: 0.8
+  - error: 0.027591972743459578
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      NB1Qw8JL5T8=
+    success: true
+    time: 26.202
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    HNfImQAJ6D8=
+  success_rate: 0.875
+  trial: 3
+- params:
+    controller_frequency: 20.171413823294056
+    cost_scaling_factor: 1.2828626711806081
+    dwa_acc_lim_theta: 0.6195942459383017
+    dwa_acc_lim_x: 0.7323276455457961
+    dwa_acc_lim_y: 0.3888859700647797
+    dwa_goal_distance_bias: 29.963935642549238
+    dwa_max_vel_theta: 1.0107243248366449
+    dwa_max_vel_x: 0.3243929286862649
+    dwa_max_vel_y: 0.2975549966080241
+    dwa_min_vel_trans: 0.06738017242196918
+    dwa_occdist_scale: 0.0011241862095793063
+    dwa_path_distance_bias: 25.681984881459822
+    dwa_sim_time: 1.3419157963542443
+    dwa_vtheta_samples: 27
+    dwa_vx_samples: 17
+    dwa_xy_goal_tolerance: 0.07419203085006955
+    dwa_yaw_goal_tolerance: 0.24019626215422435
+    inflation_radius: 0.07697285674832612
+    obstacle_range: 2.772820822527561
+    planner_frequency: 4.584049132667419
+    raytrace_range: 2.6287119621526536
+  results:
+  - error: 0.03508905717144806
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Rrd6Ukhl4T8=
+    success: true
+    time: 22.204
+    type: normal
+    weight: 1.0
+  - error: 0.058984619277448476
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      j61YOvNS6D8=
+    success: true
+    time: 12.602
+    type: normal
+    weight: 1.0
+  - error: 0.035819271567698666
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      +oCMSzT84z8=
+    success: true
+    time: 23.405
+    type: normal
+    weight: 1.2
+  - error: 0.049418093032800606
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      mJXlOyr96z8=
+    success: true
+    time: 10.303
+    type: normal
+    weight: 1.0
+  - error: 0.0029369825786996965
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      l8XV9kSC7j8=
+    success: true
+    time: 11.503
+    type: narrow
+    weight: 1.3
+  - error: 0.008739093047211915
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      thplz6M65z8=
+    success: true
+    time: 29.202
+    type: normal
+    weight: 1.5
+  - error: 0.042676847556184845
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      /PLyxCOL5z8=
+    success: true
+    time: 14.804
+    type: normal
+    weight: 0.8
+  - error: 0.057174595946909275
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      pvPVzWpX5D8=
+    success: true
+    time: 26.002
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    AERys3MY6j8=
+  success_rate: 1.0
+  trial: 4
+- params:
+    controller_frequency: 14.558703250838834
+    cost_scaling_factor: 9.06482169931144
+    dwa_acc_lim_theta: 0.6612212872540044
+    dwa_acc_lim_x: 0.24618794589727583
+    dwa_acc_lim_y: 0.31590058116550723
+    dwa_goal_distance_bias: 46.23956494714922
+    dwa_max_vel_theta: 1.0288857969801342
+    dwa_max_vel_x: 0.29971689165954996
+    dwa_max_vel_y: 0.3231148769106889
+    dwa_min_vel_trans: 0.030591834894246023
+    dwa_occdist_scale: 0.011986281799901188
+    dwa_path_distance_bias: 15.597101766581076
+    dwa_sim_time: 1.4501056347656351
+    dwa_vtheta_samples: 35
+    dwa_vx_samples: 18
+    dwa_xy_goal_tolerance: 0.09367278871083158
+    dwa_yaw_goal_tolerance: 0.25203009489110423
+    inflation_radius: 0.25186003879101565
+    obstacle_range: 2.1360069499437278
+    planner_frequency: 2.4219850488181534
+    raytrace_range: 2.2201038490553535
+  results:
+  - error: 0.05902395135386942
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      1qer7acr4D8=
+    success: true
+    time: 24.601
+    type: normal
+    weight: 1.0
+  - error: 0.050487384424198936
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      6GDXc+nf6D8=
+    success: true
+    time: 12.303
+    type: normal
+    weight: 1.0
+  - error: 0.05879645710684358
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      cixe1OhX4z8=
+    success: true
+    time: 23.703
+    type: normal
+    weight: 1.2
+  - error: 0.059753827063245904
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      pgbbAZv+6j8=
+    success: true
+    time: 10.903
+    type: normal
+    weight: 1.0
+  - error: 0.02479552854394971
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Ip45HNDy7D8=
+    success: true
+    time: 12.203
+    type: narrow
+    weight: 1.3
+  - error: 0.07172398034548098
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      +PGKaFC25D8=
+    success: true
+    time: 31.303
+    type: normal
+    weight: 1.5
+  - error: 0.021992792312416583
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      XUfrIeAn6D8=
+    success: true
+    time: 15.205
+    type: normal
+    weight: 0.8
+  - error: 0.03207029314126696
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      91ujXA845T8=
+    success: true
+    time: 25.307
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    lIAYFXGM6T8=
+  success_rate: 1.0
+  trial: 5
+- params:
+    controller_frequency: 10.737738947090655
+    cost_scaling_factor: 5.475236553031469
+    dwa_acc_lim_theta: 0.6198653673336828
+    dwa_acc_lim_x: 0.45044660188926744
+    dwa_acc_lim_y: 0.2888431241882921
+    dwa_goal_distance_bias: 49.012372895233625
+    dwa_max_vel_theta: 0.5048664913718335
+    dwa_max_vel_x: 0.5272059063689972
+    dwa_max_vel_y: 0.458219174976903
+    dwa_min_vel_trans: 0.05596725723198092
+    dwa_occdist_scale: 0.08411909465645724
+    dwa_path_distance_bias: 20.90888807137882
+    dwa_sim_time: 0.9848043980311328
+    dwa_vtheta_samples: 33
+    dwa_vx_samples: 13
+    dwa_xy_goal_tolerance: 0.04038536542632652
+    dwa_yaw_goal_tolerance: 0.2857274259781298
+    inflation_radius: 0.11294557395634104
+    obstacle_range: 2.101756619633539
+    planner_frequency: 3.243039502909536
+    raytrace_range: 2.5696809887549352
+  results:
+  - error: 0.013038829548304235
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      +OKr0n494j8=
+    success: true
+    time: 22.204
+    type: normal
+    weight: 1.0
+  - error: 0.06773126449204875
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      PLai+dmB6D8=
+    success: true
+    time: 11.804
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.2
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.0
+  - score: 0.0
+    success: false
+    type: narrow
+    weight: 1.3
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 1.5
+  - score: 0.0
+    success: false
+    type: normal
+    weight: 0.8
+  - score: 0.0
+    success: false
+    type: obstacle
+    weight: 1.0
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    0uiBR5Jc4T8=
+  success_rate: 0.25
+  trial: 6

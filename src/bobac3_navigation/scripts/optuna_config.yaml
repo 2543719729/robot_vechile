@@ -1,0 +1,165 @@
+# Optuna 导航参数优化配置文件
+# 根据你的仿真环境修改此文件
+
+# ============== 优化设置 ==============
+optimization:
+  n_trials: 1000                  # 总优化次数
+  n_startup_trials: 10            # 前N次使用随机采样 (之后才用TPE)
+  timeout_per_goal: 60.0          # 单个目标点超时时间(秒)
+  seed: 42                        # 随机种子，保证可复现
+  
+  # 目标点访问策略
+  visit_all_goals: true           # 每次trial访问所有目标点
+  randomize_goal_order: true      # 随机化目标点访问顺序
+  return_to_start: true           # 完成所有目标后返回起始点
+
+# ============== 评分权重 ==============
+# 权重总和应为1.0
+weights:
+  time: 0.25                      # 时间效率权重 (越快越好)
+  precision: 0.25                 # 到达精度权重 (越准越好)
+  stability: 0.20                 # 运动稳定性权重 (振荡越少越好)
+  narrow_passage: 0.15            # 窄通道通过能力权重
+  safety: 0.15                    # 安全距离权重
+
+# ============== 卡顿检测配置 ==============
+# 用于检测和惩罚导航过程中的卡顿行为
+stuck_detection:
+  enabled: true                   # 是否启用卡顿检测
+  
+  # 检测阈值
+  low_speed_threshold: 0.02       # 低速阈值 (m/s)，低于此速度视为低速
+  progress_threshold: 0.01        # 进度阈值 (m)，位移小于此值视为无进展
+  cmd_vel_mismatch_threshold: 0.1 # cmd_vel与实际速度差距阈值
+  
+  # 惩罚权重 (各项权重总和=1.0)
+  penalty_weights:
+    low_speed: 0.25               # 低速时间比例惩罚权重
+    no_progress: 0.25             # 无进展时间比例惩罚权重
+    cmd_mismatch: 0.15            # 速度命令不匹配惩罚权重
+    oscillation: 0.15             # 振荡事件惩罚权重
+    abnormal_motion: 0.10         # 倒车+原地旋转惩罚权重
+    sudden_stop: 0.10             # 急停惩罚权重
+  
+  # 场景类型的卡顿惩罚乘数
+  scenario_multipliers:
+    normal: 0.15                  # 普通场景卡顿惩罚乘数
+    narrow: 0.25                  # 窄通道卡顿惩罚乘数 (更严格)
+    obstacle: 0.20                # 障碍绕行卡顿惩罚乘数
+
+# ============== 测试场景 ==============
+# 来自语音导航 voice_nav.cpp 的真实目标点
+# goal: [x, y, yaw]  (yaw从四元数z,w计算: yaw = 2*atan2(z,w))
+# type: normal/narrow/obstacle
+# weight: 场景权重, 越高越重要
+
+test_scenarios:
+  # ========== 5个目标馆 (每次trial随机顺序访问) ==========
+  - name: "深圳馆"
+    goal: [1.055, 1.109, -0.024]   # z=-0.012, w=1.000
+    type: normal
+    weight: 1.0
+    description: "深圳是中国的科创中心"
+    
+  - name: "北京馆"
+    goal: [2.53, 0.155, 0.06]      # z=0.03, w=0.99
+    type: normal
+    weight: 1.2
+    description: "北京是中国的首都，政治中心"
+    
+  - name: "广州馆"
+    goal: [2.49, 1.150, -0.052]    # z=-0.026, w=1.000
+    type: normal
+    weight: 1.0
+    description: "广州自古都是我国的商业之都"
+
+  - name: "上海馆"
+    goal: [1.055, 2.120, 0.026]    # z=0.013, w=1.000
+    type: normal
+    weight: 1.0
+    description: "上海是中国的金融中心"
+    
+  - name: "吉林馆"
+    goal: [2.48, 2.120, -0.064]    # z=-0.032, w=0.999
+    type: narrow
+    weight: 1.3
+    description: "吉林是东北重工业基地"
+
+# ============== 起始点/返回点 ==============
+# 机器人的起始位置，也是完成所有目标后返回的位置
+start_point:
+  name: "充电点/起始点"
+  goal: [0.0, 0.0, 0.0]
+  type: normal
+  weight: 1.5
+  description: "机器人充电位置，每次trial的起点和终点"
+
+# ============== 参数搜索范围 ==============
+# TEB 局部规划器参数 (对应 teb_local_planner_params.yaml)
+# 可以根据经验调整搜索范围，缩小范围可加快收敛
+
+search_space:
+  # TEB 速度参数 (限制最大速度，提高安全性)
+  teb_max_vel_x: [0.15, 0.35]  # 降低速度范围，更稳定
+  teb_max_vel_x_backwards: [0.1, 0.3]
+  teb_max_vel_y: [0.2, 0.5]
+  teb_max_vel_theta: [0.3, 0.8]
+  
+  # TEB 加速度参数
+  teb_acc_lim_x: [0.15, 0.5]
+  teb_acc_lim_y: [0.15, 0.5]
+  teb_acc_lim_theta: [0.2, 0.6]
+  
+  # TEB 目标容差 (精度优先)
+  teb_xy_goal_tolerance: [0.02, 0.08]
+  teb_yaw_goal_tolerance: [0.08, 0.25]
+  
+  # TEB 轨迹参数
+  teb_dt_ref: [0.15, 0.4]
+  teb_max_global_plan_lookahead_dist: [2.0, 5.0]
+  teb_global_plan_viapoint_sep: [0.1, 0.3]
+  
+  # TEB 障碍物处理 (缩小范围，避免卡住)
+  teb_min_obstacle_dist: [0.25, 0.35]  # 提高下限，降低上限
+  teb_inflation_dist: [0.25, 0.45]     # 提高下限
+  teb_obstacle_poses_affected: [15, 30]
+  
+  # TEB 优化迭代
+  teb_no_inner_iterations: [4, 10]
+  teb_no_outer_iterations: [3, 8]
+  
+  # TEB 权重配置 (缩小范围，避免过度避障)
+  teb_weight_obstacle: [5.0, 30.0]    # 降低上限，避免过度避障导致卡住
+  teb_weight_inflation: [0.02, 0.15]
+  teb_weight_viapoint: [5.0, 35.0]    # 降低上限
+  teb_weight_optimaltime: [0.1, 1.0]
+  teb_weight_acc_lim_x: [1.0, 5.0]
+  teb_weight_acc_lim_theta: [1.0, 5.0]
+  
+  # Costmap 膨胀参数 (缩小范围，避免卡住)
+  inflation_radius: [0.10, 0.28]  # 缩小范围，避免太大导致通道变窄
+  cost_scaling_factor: [4.0, 8.0]  # 缩小范围
+  
+  # 障碍物检测范围
+  obstacle_range: [1.5, 3.5]
+  raytrace_range: [2.0, 4.0]
+  
+  # Costmap 频率
+  global_update_frequency: [0.5, 3.0]
+  local_update_frequency: [3.0, 10.0]
+  
+  # Local Costmap 尺寸
+  local_width: [1.5, 3.5]
+  local_height: [1.5, 3.5]
+  
+  # Move Base 频率
+  controller_frequency: [10.0, 25.0]
+  planner_frequency: [0.5, 3.0]
+
+# ============== 初始位置 ==============
+# 如果需要每次测试前重置机器人位置
+initial_pose:
+  enabled: true                  # 是否启用位置重置
+  x: 0.0
+  y: 0.0
+  yaw: 0.0
