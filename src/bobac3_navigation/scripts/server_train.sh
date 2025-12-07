@@ -90,8 +90,14 @@ export OGRE_RESOURCE_PATH=/usr/lib/x86_64-linux-gnu/OGRE-1.9.0
 ROS_MASTER_PORT=$((11311 + WORKER_ID))
 GAZEBO_PORT=$((11345 + WORKER_ID))
 
-export ROS_MASTER_URI="http://localhost:$ROS_MASTER_PORT"
-export GAZEBO_MASTER_URI="http://localhost:$GAZEBO_PORT"
+export ROS_MASTER_URI="http://127.0.0.1:$ROS_MASTER_PORT"
+export GAZEBO_MASTER_URI="http://127.0.0.1:$GAZEBO_PORT"
+
+# 单机多Worker模式：强制使用 localhost，禁用多播
+export ROS_IP=127.0.0.1
+export ROS_HOSTNAME=127.0.0.1
+export IGN_IP=127.0.0.1
+export GAZEBO_IP=127.0.0.1
 
 echo ""
 echo "ROS_MASTER_URI: $ROS_MASTER_URI"

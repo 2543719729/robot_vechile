@@ -1,7 +1,7 @@
 TebLocalPlannerROS:
-  acc_lim_theta: 0.2499079092237008
-  acc_lim_x: 0.4587251065221528
-  acc_lim_y: 0.21330162438058595
+  acc_lim_theta: 0.49607761869296385
+  acc_lim_x: 0.3051609329882485
+  acc_lim_y: 0.4068566620612494
   allow_init_with_backwards_motion: true
   complete_global_plan: true
   costmap_converter_plugin: ''
@@ -10,7 +10,7 @@ TebLocalPlannerROS:
   costmap_obstacles_behind_robot_dist: 1.5
   delete_detours_backwards: true
   dt_hysteresis: 0.1
-  dt_ref: 0.38545551609215545
+  dt_ref: 0.2615946074785134
   dynamic_obstacle_inflation_dist: 0.3
   enable_homotopy_class_planning: false
   enable_multithreading: true
@@ -21,27 +21,27 @@ TebLocalPlannerROS:
   free_goal_vel: false
   global_plan_overwrite_orientation: true
   global_plan_prune_distance: 1.0
-  global_plan_viapoint_sep: 0.24149646126814767
+  global_plan_viapoint_sep: 0.258273132239449
   h_signature_prescaler: 0.5
   h_signature_threshold: 0.1
   include_costmap_obstacles: true
   include_dynamic_obstacles: true
-  inflation_dist: 0.39060083299455206
-  max_global_plan_lookahead_dist: 2.0267086859137087
+  inflation_dist: 0.3886222448362552
+  max_global_plan_lookahead_dist: 3.8372392029065603
   max_number_classes: 4
   max_ratio_detours_duration_best_duration: 3.0
   max_samples: 500
-  max_vel_theta: 0.5115169329168251
-  max_vel_x: 0.3448430820192621
-  max_vel_x_backwards: 0.27600543849931525
-  max_vel_y: 0.48015497222509335
-  min_obstacle_dist: 0.27114832571086744
+  max_vel_theta: 0.6203028139837852
+  max_vel_x: 0.3261749518611097
+  max_vel_x_backwards: 0.25876165360662756
+  max_vel_y: 0.21486738320815454
+  min_obstacle_dist: 0.2664585735981937
   min_turning_radius: 0.0
-  no_inner_iterations: 4
+  no_inner_iterations: 9
   no_outer_iterations: 6
   obstacle_cost_exponent: 2
   obstacle_heading_threshold: 0.45
-  obstacle_poses_affected: 18
+  obstacle_poses_affected: 28
   odom_topic: odom
   optimization_activate: true
   optimization_verbose: false
@@ -66,20 +66,20 @@ TebLocalPlannerROS:
   viapoints_all_candidates: true
   visualize_hc_graph: false
   visualize_with_time_as_z_axis_scale: false
-  weight_acc_lim_theta: 4.340822175029967
-  weight_acc_lim_x: 2.514102843412231
+  weight_acc_lim_theta: 3.432469403114892
+  weight_acc_lim_x: 1.9983335515226712
   weight_adapt_factor: 2
   weight_dynamic_obstacle: 10
   weight_dynamic_obstacle_inflation: 0.05
-  weight_inflation: 0.06125499484217999
+  weight_inflation: 0.14502325453255538
   weight_kinematics_forward_drive: 1
   weight_kinematics_nh: 1000
   weight_kinematics_turning_radius: 1
   weight_max_vel_theta: 1
   weight_max_vel_x: 2
-  weight_obstacle: 15.73329993951511
-  weight_optimaltime: 0.6027763469415899
+  weight_obstacle: 16.56660140637385
+  weight_optimaltime: 0.44506683380628154
   weight_shortest_path: 0
-  weight_viapoint: 19.70677224236236
-  xy_goal_tolerance: 0.040858496140818226
-  yaw_goal_tolerance: 0.1762232817914555
+  weight_viapoint: 7.902850136658062
+  xy_goal_tolerance: 0.0514357159402549
+  yaw_goal_tolerance: 0.08178893500106632

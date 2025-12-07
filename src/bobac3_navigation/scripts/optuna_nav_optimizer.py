@@ -38,10 +38,28 @@ try:
 except ImportError:
     DYNRECONF_AVAILABLE = False
 
+
+def safe_load_yaml(file_path, required_key=None, max_retries=3):
+    """安全读取 YAML 文件，带重试机制"""
+    config = None
+    for attempt in range(max_retries):
+        try:
+            with open(file_path, 'r') as f:
+                config = yaml.safe_load(f)
+            if config is not None:
+                if required_key is None or required_key in config:
+                    return config
+        except Exception as e:
+            pass
+        time.sleep(0.1)
+    
+    raise RuntimeError(f"无法读取有效的 YAML 配置: {file_path}")
+
 # ============== 配置区域 ==============
 class Config:
-    # 参数文件路径
-    PARAM_DIR = pathlib.Path("/home/liyaxin075/Documents/robot_learning/src/bobac3_navigation/param/sim")
+    # 参数文件路径 (原始模板目录)
+    PARAM_DIR_TEMPLATE = pathlib.Path("/home/liyaxin075/Documents/robot_learning/src/bobac3_navigation/param/sim")
+    PARAM_DIR = PARAM_DIR_TEMPLATE  # 会被 worker 专用目录覆盖
     CONFIG_FILE = pathlib.Path(__file__).parent / "optuna_config.yaml"
     
     # 分布式训练配置
@@ -49,6 +67,32 @@ class Config:
     STORAGE_URL = "sqlite:///optuna_study.db"
     WORKER_ID = 0
     N_WORKERS = 1
+    
+    @classmethod
+    def setup_worker_param_dir(cls):
+        """为当前 worker 创建独立的参数目录，避免分布式训练时的写冲突"""
+        import shutil
+        
+        if cls.N_WORKERS <= 1:
+            # 单 worker 模式，直接使用原始目录
+            cls.PARAM_DIR = cls.PARAM_DIR_TEMPLATE
+            return
+        
+        # 多 worker 模式，创建独立目录
+        worker_dir = pathlib.Path(f"/tmp/optuna_worker_{cls.WORKER_ID}_params")
+        
+        # 清理并重新创建
+        if worker_dir.exists():
+            shutil.rmtree(worker_dir)
+        worker_dir.mkdir(parents=True)
+        
+        # 复制所有配置文件
+        for yaml_file in cls.PARAM_DIR_TEMPLATE.glob("*.yaml"):
+            shutil.copy(yaml_file, worker_dir / yaml_file.name)
+        
+        cls.PARAM_DIR = worker_dir
+        rospy.loginfo(f"Worker {cls.WORKER_ID}: 使用独立参数目录 {worker_dir}")
+    
     ROS_NAMESPACE = ""
     GAZEBO_PORT_OFFSET = 0
     
@@ -188,6 +232,9 @@ class Config:
                         cls.DISTRIBUTED_ENABLED = os.environ['OPTUNA_DISTRIBUTED'].lower() == 'true'
                     
                     rospy.loginfo(f"分布式训练: enabled={cls.DISTRIBUTED_ENABLED}, workers={cls.N_WORKERS}")
+                    
+                    # 为当前 worker 设置独立的参数目录
+                    cls.setup_worker_param_dir()
                 
                 rospy.loginfo(f"已从配置文件加载 {len(cls.TEST_SCENARIOS)} 个目标馆")
                 rospy.loginfo(f"目标点策略: 随机顺序={cls.RANDOMIZE_GOAL_ORDER}, 返回起点={cls.RETURN_TO_START}")
@@ -774,9 +821,7 @@ class OptunaNavigationOptimizer:
         
         # 1. 更新 TEB 局部规划器参数
         teb_file = self.config.PARAM_DIR / "teb_local_planner_params.yaml"
-        with open(teb_file, 'r') as f:
-            teb_config = yaml.safe_load(f)
-        
+        teb_config = safe_load_yaml(teb_file, required_key='TebLocalPlannerROS')
         teb = teb_config['TebLocalPlannerROS']
         
         # 速度参数
@@ -821,8 +866,7 @@ class OptunaNavigationOptimizer:
         
         # 2. 更新 Global Costmap 参数
         global_costmap_file = self.config.PARAM_DIR / "global_costmap_params.yaml"
-        with open(global_costmap_file, 'r') as f:
-            gc_config = yaml.safe_load(f)
+        gc_config = safe_load_yaml(global_costmap_file, required_key='global_costmap')
         
         gc_config['global_costmap']['inflation_layer']['inflation_radius'] = params['inflation_radius']
         gc_config['global_costmap']['inflation_layer']['cost_scaling_factor'] = params['cost_scaling_factor']
@@ -833,8 +877,7 @@ class OptunaNavigationOptimizer:
         
         # 3. 更新 Local Costmap 参数
         local_costmap_file = self.config.PARAM_DIR / "local_costmap_params.yaml"
-        with open(local_costmap_file, 'r') as f:
-            lc_config = yaml.safe_load(f)
+        lc_config = safe_load_yaml(local_costmap_file, required_key='local_costmap')
         
         lc_config['local_costmap']['inflation_layer']['inflation_radius'] = params['inflation_radius']
         lc_config['local_costmap']['inflation_layer']['cost_scaling_factor'] = params['cost_scaling_factor']
@@ -847,8 +890,7 @@ class OptunaNavigationOptimizer:
         
         # 4. 更新 Costmap Common 参数
         common_file = self.config.PARAM_DIR / "costmap_common_params.yaml"
-        with open(common_file, 'r') as f:
-            common_config = yaml.safe_load(f)
+        common_config = safe_load_yaml(common_file, required_key='obstacle_layer')
         
         common_config['obstacle_layer']['obstacle_range'] = params['obstacle_range']
         common_config['obstacle_layer']['raytrace_range'] = params['raytrace_range']
@@ -858,8 +900,7 @@ class OptunaNavigationOptimizer:
         
         # 5. 更新 Move Base 参数
         move_base_file = self.config.PARAM_DIR / "move_base_params.yaml"
-        with open(move_base_file, 'r') as f:
-            mb_config = yaml.safe_load(f)
+        mb_config = safe_load_yaml(move_base_file)
         
         mb_config['controller_frequency'] = params['controller_frequency']
         mb_config['planner_frequency'] = params['planner_frequency']

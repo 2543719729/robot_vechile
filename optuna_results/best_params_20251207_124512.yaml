@@ -1,0 +1,52 @@
+params:
+  controller_frequency: 21.527005732710446
+  cost_scaling_factor: 7.9514262988171005
+  global_update_frequency: 0.7785115862526559
+  inflation_radius: 0.11287164493131638
+  local_height: 1.8425607254137004
+  local_update_frequency: 3.2576456661258932
+  local_width: 2.684325939856541
+  obstacle_range: 2.9281773921995313
+  planner_frequency: 1.3394205322664194
+  raytrace_range: 3.545702288342023
+  teb_acc_lim_theta: 0.2499079092237008
+  teb_acc_lim_x: 0.4587251065221528
+  teb_acc_lim_y: 0.21330162438058595
+  teb_dt_ref: 0.38545551609215545
+  teb_global_plan_viapoint_sep: 0.24149646126814767
+  teb_inflation_dist: 0.39060083299455206
+  teb_max_global_plan_lookahead_dist: 2.0267086859137087
+  teb_max_vel_theta: 0.5115169329168251
+  teb_max_vel_x: 0.3448430820192621
+  teb_max_vel_x_backwards: 0.27600543849931525
+  teb_max_vel_y: 0.48015497222509335
+  teb_min_obstacle_dist: 0.27114832571086744
+  teb_no_inner_iterations: 4
+  teb_no_outer_iterations: 6
+  teb_obstacle_poses_affected: 18
+  teb_weight_acc_lim_theta: 4.340822175029967
+  teb_weight_acc_lim_x: 2.514102843412231
+  teb_weight_inflation: 0.06125499484217999
+  teb_weight_obstacle: 15.73329993951511
+  teb_weight_optimaltime: 0.6027763469415899
+  teb_weight_viapoint: 19.70677224236236
+  teb_xy_goal_tolerance: 0.040858496140818226
+  teb_yaw_goal_tolerance: 0.1762232817914555
+score: !!python/object/apply:numpy.core.multiarray.scalar
+- !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  78nIKnJd3D8=
+timestamp: '20251207_124512'

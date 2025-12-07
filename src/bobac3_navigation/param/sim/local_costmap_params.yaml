@@ -1,10 +1,10 @@
 local_costmap:
   global_frame: odom
-  height: 1.8425607254137004
+  height: 2.6394708304937438
   inflation_layer:
-    cost_scaling_factor: 7.9514262988171005
+    cost_scaling_factor: 5.75956164908697
     enabled: true
-    inflation_radius: 0.11287164493131638
+    inflation_radius: 0.1460821647980663
   plugins:
   - name: obstacle_layer
     type: costmap_2d::ObstacleLayer
@@ -15,5 +15,5 @@ local_costmap:
   robot_base_frame: base_footprint
   rolling_window: true
   transform_tolerance: 0.5
-  update_frequency: 3.2576456661258932
-  width: 2.684325939856541
+  update_frequency: 4.2254674332073705
+  width: 3.4354746451021008
