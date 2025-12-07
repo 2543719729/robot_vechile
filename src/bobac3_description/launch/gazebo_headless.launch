@@ -1,0 +1,39 @@
+<launch>
+  <!-- 
+    Headless Gazebo 启动文件 - 用于服务器训练（无GUI）
+    使用方法: roslaunch bobac3_description gazebo_headless.launch
+  -->
+  
+  <!-- 参数 -->
+  <arg name="world_name" default="$(find bobac3_description)/world/reinovo_raicom.world"/>
+  <arg name="gui" default="false"/>  <!-- 默认关闭GUI -->
+  <arg name="headless" default="true"/>  <!-- 启用headless模式 -->
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  
+  <!-- 启动 Gazebo (headless模式) -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="headless" value="$(arg headless)" />
+    <arg name="paused" value="$(arg paused)" />
+    <arg name="use_sim_time" value="$(arg use_sim_time)" />
+  </include>
+  
+  <!-- 加载机器人描述 -->
+  <param name="robot_description" 
+    command="$(find xacro)/xacro $(find bobac3_description)/xacro/bobac3_serverbot.xacro sim:=1"/>
+  
+  <!-- 生成机器人模型 -->
+  <node name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-param robot_description -urdf -model bobac3_serverbot"
+    output="screen" />
+  
+  <!-- 机器人状态发布 -->
+  <node name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+    
+</launch>

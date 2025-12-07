@@ -1,0 +1,1563 @@
+- params:
+    controller_frequency: 20.231607816680093
+    cost_scaling_factor: 5.952372751528326
+    global_update_frequency: 1.007013002778957
+    inflation_radius: 0.15328261672671248
+    local_height: 3.3463906902462863
+    local_update_frequency: 4.45563727483299
+    local_width: 1.586081676537942
+    obstacle_range: 2.316305529907678
+    planner_frequency: 2.694376769570666
+    raytrace_range: 2.816081625485452
+    teb_acc_lim_theta: 0.3626418205380727
+    teb_acc_lim_x: 0.4829234619587381
+    teb_acc_lim_y: 0.15627523737869706
+    teb_dt_ref: 0.19459912479480743
+    teb_global_plan_viapoint_sep: 0.14091518326638164
+    teb_inflation_dist: 0.3867457284594739
+    teb_max_global_plan_lookahead_dist: 3.8750193538632964
+    teb_max_vel_theta: 0.45925772374464374
+    teb_max_vel_x: 0.2927272642359904
+    teb_max_vel_x_backwards: 0.2501319000113338
+    teb_max_vel_y: 0.4819574362412858
+    teb_min_obstacle_dist: 0.2820029994478991
+    teb_no_inner_iterations: 5
+    teb_no_outer_iterations: 8
+    teb_obstacle_poses_affected: 28
+    teb_weight_acc_lim_theta: 4.3588224476906134
+    teb_weight_acc_lim_x: 3.166697995245579
+    teb_weight_inflation: 0.13693883462140083
+    teb_weight_obstacle: 7.720074237813479
+    teb_weight_optimaltime: 0.9503105621602289
+    teb_weight_viapoint: 15.970895340954257
+    teb_xy_goal_tolerance: 0.03594679979587813
+    teb_yaw_goal_tolerance: 0.13764320189025075
+  results:
+  - error: 0.039127844789075154
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - &id001 !!python/object/apply:numpy.dtype
+      args:
+      - f8
+      - 0
+      - 1
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 0
+    - !!binary |
+      qU+vhG1I5j8=
+    stuck_metrics:
+      backward_motion_time: 1.990000000000009
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.20299999999997453
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.10099999999999909
+      sudden_stop_count: 1
+      zero_progress_duration: 1.2989999999999213
+    stuck_penalty: 0.11806003159557565
+    success: true
+    time: 15.825
+    type: normal
+    weight: 1.0
+  - error: 0.05414265830384011
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ASieg2Z43j8=
+    stuck_metrics:
+      backward_motion_time: 8.92599999999993
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 1.1709999999999354
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.76299999999992
+      sudden_stop_count: 1
+      zero_progress_duration: 5.937999999999818
+    stuck_penalty: 0.2708009436516176
+    success: true
+    time: 25.857
+    type: normal
+    weight: 1.0
+  - error: 0.04430578345845363
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      7gSYD36O4T8=
+    stuck_metrics:
+      backward_motion_time: 22.078000000000088
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 2.4629999999998518
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 2.3029999999998836
+      sudden_stop_count: 1
+      zero_progress_duration: 6.707999999999856
+    stuck_penalty: 0.314093707042317
+    success: true
+    time: 27.401
+    type: normal
+    weight: 1.2
+  - error: 0.03463569060278766
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      BxbtPdr24D8=
+    stuck_metrics:
+      backward_motion_time: 14.586000000000013
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.10199999999997544
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.05099999999993088
+      sudden_stop_count: 1
+      zero_progress_duration: 3.9279999999999973
+    stuck_penalty: 0.25207228442349167
+    success: true
+    time: 16.97
+    type: normal
+    weight: 1.0
+  - error: 0.006270088730129925
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ygnPnSsf6D8=
+    stuck_metrics:
+      backward_motion_time: 4.234000000000037
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.4079999999999018
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.05099999999993088
+      sudden_stop_count: 1
+      zero_progress_duration: 3.36850000000004
+    stuck_penalty: 0.16803115185467962
+    success: true
+    time: 23.562
+    type: narrow
+    weight: 1.3
+  - error: 0.07081690762873401
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      aw3oJ/rr4T8=
+    stuck_metrics:
+      backward_motion_time: 10.617000000000075
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 1.8869999999999436
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 1.6820000000000164
+      sudden_stop_count: 1
+      zero_progress_duration: 4.283999999999821
+    stuck_penalty: 0.26722590423345216
+    success: true
+    time: 25.951999999999998
+    type: normal
+    weight: 1.5
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    tgPkSSYX3D8=
+  success_rate: 1.0
+  trial: 234
+- params:
+    controller_frequency: 16.7439069961123
+    cost_scaling_factor: 7.573734753665004
+    global_update_frequency: 0.60292896364104
+    inflation_radius: 0.15593733765378442
+    local_height: 3.0020920897637673
+    local_update_frequency: 3.3818740915964116
+    local_width: 1.934112161260951
+    obstacle_range: 3.481071955406094
+    planner_frequency: 2.767775738728429
+    raytrace_range: 3.9927545784981873
+    teb_acc_lim_theta: 0.44261719734800004
+    teb_acc_lim_x: 0.4147359699063235
+    teb_acc_lim_y: 0.15890147891780018
+    teb_dt_ref: 0.2635369512334576
+    teb_global_plan_viapoint_sep: 0.2650803175546854
+    teb_inflation_dist: 0.4369362274466191
+    teb_max_global_plan_lookahead_dist: 3.1591430232583857
+    teb_max_vel_theta: 0.4869458308994443
+    teb_max_vel_x: 0.21661985324350155
+    teb_max_vel_x_backwards: 0.25748575125546386
+    teb_max_vel_y: 0.4002084177323312
+    teb_min_obstacle_dist: 0.25768172100201253
+    teb_no_inner_iterations: 4
+    teb_no_outer_iterations: 4
+    teb_obstacle_poses_affected: 17
+    teb_weight_acc_lim_theta: 3.260291882459509
+    teb_weight_acc_lim_x: 4.810413833828047
+    teb_weight_inflation: 0.09569431528674385
+    teb_weight_obstacle: 14.30789356677747
+    teb_weight_optimaltime: 0.7474115547417417
+    teb_weight_viapoint: 5.599547238308595
+    teb_xy_goal_tolerance: 0.03592026322518094
+    teb_yaw_goal_tolerance: 0.13702292805727703
+  results:
+  - error: 0.014845119000974249
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      t500xGWx6T8=
+    stuck_metrics:
+      backward_motion_time: 0.0
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 0.05200000000002092
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.0
+      sudden_stop_count: 0
+      zero_progress_duration: 0.2524999999999409
+    stuck_penalty: 0.02487802504379296
+    success: true
+    time: 15.413
+    type: normal
+    weight: 1.0
+  - error: 0.016836218689367806
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      JuTpUNhB4z8=
+    stuck_metrics:
+      backward_motion_time: 7.3969999999999345
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.30799999999987904
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.2039999999999509
+      sudden_stop_count: 0
+      zero_progress_duration: 5.940999999999917
+    stuck_penalty: 0.21985925232883963
+    success: true
+    time: 24.583
+    type: normal
+    weight: 1.0
+  - error: 0.04864596594438748
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      B4/Qr2WQ4j8=
+    stuck_metrics:
+      backward_motion_time: 17.645999999999958
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.3570000000000846
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.20300000000008822
+      sudden_stop_count: 1
+      zero_progress_duration: 4.437000000000012
+    stuck_penalty: 0.2417703385357784
+    success: true
+    time: 22.105
+    type: normal
+    weight: 1.2
+  - error: 0.0316000947944992
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      SzDigZnR3z8=
+    stuck_metrics:
+      backward_motion_time: 14.58199999999988
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 0.8720000000000709
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.7670000000000528
+      sudden_stop_count: 1
+      zero_progress_duration: 4.32650000000001
+    stuck_penalty: 0.27457656326932656
+    success: true
+    time: 20.31
+    type: normal
+    weight: 1.0
+  - error: 0.031145211254371495
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      JnWXVhy64z8=
+    stuck_metrics:
+      backward_motion_time: 3.1629999999998972
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 0.4059999999998354
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.15199999999992997
+      sudden_stop_count: 1
+      zero_progress_duration: 4.56699999999995
+    stuck_penalty: 0.18254832407978003
+    success: true
+    time: 25.936
+    type: narrow
+    weight: 1.3
+  - error: 0.025962001599124457
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      7aU+/gyh5T8=
+    stuck_metrics:
+      backward_motion_time: 13.61200000000008
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.9060000000000628
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.8540000000000418
+      sudden_stop_count: 1
+      zero_progress_duration: 3.41700000000003
+    stuck_penalty: 0.22470936377087491
+    success: true
+    time: 23.655
+    type: normal
+    weight: 1.5
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    ALhP+6Tw3D8=
+  success_rate: 1.0
+  trial: 244
+- params:
+    controller_frequency: 17.732539724709312
+    cost_scaling_factor: 6.8398521432519646
+    global_update_frequency: 1.5931201091003766
+    inflation_radius: 0.18311439457512593
+    local_height: 2.735257047827779
+    local_update_frequency: 4.418919662244897
+    local_width: 2.7079189746840657
+    obstacle_range: 2.177277140288172
+    planner_frequency: 2.7292642808746006
+    raytrace_range: 3.7606033591293495
+    teb_acc_lim_theta: 0.3222660637093938
+    teb_acc_lim_x: 0.33773824892225135
+    teb_acc_lim_y: 0.2517131933136694
+    teb_dt_ref: 0.27611761213914243
+    teb_global_plan_viapoint_sep: 0.20430693450147105
+    teb_inflation_dist: 0.4388390254419911
+    teb_max_global_plan_lookahead_dist: 2.447033449257179
+    teb_max_vel_theta: 0.47531074437948956
+    teb_max_vel_x: 0.253107843381714
+    teb_max_vel_x_backwards: 0.2728396798864213
+    teb_max_vel_y: 0.34811249845362324
+    teb_min_obstacle_dist: 0.26411130573984726
+    teb_no_inner_iterations: 4
+    teb_no_outer_iterations: 5
+    teb_obstacle_poses_affected: 18
+    teb_weight_acc_lim_theta: 3.314770764959913
+    teb_weight_acc_lim_x: 3.9367748616532103
+    teb_weight_inflation: 0.10108282073678368
+    teb_weight_obstacle: 5.41567724653266
+    teb_weight_optimaltime: 0.8459377757747997
+    teb_weight_viapoint: 20.331606646459868
+    teb_xy_goal_tolerance: 0.03215355380627323
+    teb_yaw_goal_tolerance: 0.10391615032042335
+  results:
+  - error: 0.0628525034489535
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      0A7AMftA4T8=
+    stuck_metrics:
+      backward_motion_time: 0.8669999999999618
+      cmd_vel_mismatch_count: 2
+      low_speed_duration: 0.4519999999999982
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.0949999999999136
+      sudden_stop_count: 3
+      zero_progress_duration: 0.971499999999935
+    stuck_penalty: 0.18326110105419707
+    success: true
+    time: 18.782
+    type: narrow
+    weight: 1.3
+  - error: 0.031071348107738858
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      6+oCd90C5j8=
+    stuck_metrics:
+      backward_motion_time: 4.796000000000049
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 0.5599999999999454
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.35799999999994725
+      sudden_stop_count: 0
+      zero_progress_duration: 2.7545000000000073
+    stuck_penalty: 0.2250358541929471
+    success: true
+    time: 15.061
+    type: normal
+    weight: 1.2
+  - error: 0.026930121608188792
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      zl4NRdz24z8=
+    stuck_metrics:
+      backward_motion_time: 4.4909999999999854
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.30600000000004
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.25099999999997635
+      sudden_stop_count: 1
+      zero_progress_duration: 3.548499999999933
+    stuck_penalty: 0.19922497895310132
+    success: true
+    time: 20.193
+    type: normal
+    weight: 1.0
+  - error: 0.011862933550423248
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      bKyW7OVt5j8=
+    stuck_metrics:
+      backward_motion_time: 7.192000000000007
+      cmd_vel_mismatch_count: 2
+      low_speed_duration: 0.3549999999999045
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.20499999999981355
+      sudden_stop_count: 1
+      zero_progress_duration: 2.243500000000097
+    stuck_penalty: 0.2898179517133957
+    success: true
+    time: 10.272
+    type: normal
+    weight: 1.0
+  - error: 0.023979260842479266
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      uELLbKZs5D8=
+    stuck_metrics:
+      backward_motion_time: 10.05099999999993
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 2.4950000000000045
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 2.3910000000000764
+      sudden_stop_count: 1
+      zero_progress_duration: 4.814499999999896
+    stuck_penalty: 0.31199595480124565
+    success: true
+    time: 22.331
+    type: normal
+    weight: 1.0
+  - error: 0.03443742214121567
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Li/O6qmw4z8=
+    stuck_metrics:
+      backward_motion_time: 7.848999999999933
+      cmd_vel_mismatch_count: 3
+      low_speed_duration: 2.4950000000003456
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 2.044000000000324
+      sudden_stop_count: 6
+      zero_progress_duration: 4.5060000000000855
+    stuck_penalty: 0.40248155479576275
+    success: true
+    time: 22.228
+    type: normal
+    weight: 1.5
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    oMgGys7v3D8=
+  success_rate: 1.0
+  trial: 254
+- params:
+    controller_frequency: 24.048565737226877
+    cost_scaling_factor: 4.4276259007340215
+    global_update_frequency: 1.0624667674398416
+    inflation_radius: 0.10593596521594706
+    local_height: 2.954413769812359
+    local_update_frequency: 5.524912623139228
+    local_width: 3.144704178970025
+    obstacle_range: 2.2978781629063634
+    planner_frequency: 0.9859490728290402
+    raytrace_range: 2.872159859884973
+    teb_acc_lim_theta: 0.505068022774446
+    teb_acc_lim_x: 0.1852945476031713
+    teb_acc_lim_y: 0.44330237105094944
+    teb_dt_ref: 0.3081001232231402
+    teb_global_plan_viapoint_sep: 0.2102948474803754
+    teb_inflation_dist: 0.4202259195105947
+    teb_max_global_plan_lookahead_dist: 4.491856139037406
+    teb_max_vel_theta: 0.6002968713292257
+    teb_max_vel_x: 0.2666756198514838
+    teb_max_vel_x_backwards: 0.2625185361405591
+    teb_max_vel_y: 0.35793129332360957
+    teb_min_obstacle_dist: 0.2906615454819165
+    teb_no_inner_iterations: 8
+    teb_no_outer_iterations: 4
+    teb_obstacle_poses_affected: 17
+    teb_weight_acc_lim_theta: 3.1869485306710845
+    teb_weight_acc_lim_x: 1.7172925054741173
+    teb_weight_inflation: 0.05478782169507125
+    teb_weight_obstacle: 15.798354617981254
+    teb_weight_optimaltime: 0.6646299785472831
+    teb_weight_viapoint: 9.158706086267498
+    teb_xy_goal_tolerance: 0.06940575535370834
+    teb_yaw_goal_tolerance: 0.10921564908899031
+  results:
+  - error: 0.05613623559041854
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      RMXFf+5U5z8=
+    stuck_metrics:
+      backward_motion_time: 0.0
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.15399999999999636
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.10200000000008913
+      sudden_stop_count: 1
+      zero_progress_duration: 0.4335000000000946
+    stuck_penalty: 0.06285458572252713
+    success: true
+    time: 10.987
+    type: normal
+    weight: 1.0
+  - error: 0.019829769010892083
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      RUMrVNVS5j8=
+    stuck_metrics:
+      backward_motion_time: 6.375
+      cmd_vel_mismatch_count: 2
+      low_speed_duration: 0.45999999999958163
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.306999999999789
+      sudden_stop_count: 2
+      zero_progress_duration: 4.341499999999542
+    stuck_penalty: 0.2769920862327534
+    success: true
+    time: 24.43
+    type: narrow
+    weight: 1.3
+  - error: 0.06609666253723713
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      R4A1dCaM5T8=
+    stuck_metrics:
+      backward_motion_time: 6.52800000000002
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.20400000000017826
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.15300000000002
+      sudden_stop_count: 1
+      zero_progress_duration: 2.0605000000000473
+    stuck_penalty: 0.21786745308845598
+    success: true
+    time: 13.394
+    type: normal
+    weight: 1.2
+  - error: 0.054843749896971467
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      pgadF+U74D8=
+    stuck_metrics:
+      backward_motion_time: 11.07100000000014
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.40399999999999636
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.3569999999999709
+      sudden_stop_count: 1
+      zero_progress_duration: 2.572999999999979
+    stuck_penalty: 0.24109413837206406
+    success: true
+    time: 13.813
+    type: normal
+    weight: 1.0
+  - error: 0.045785235309077243
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      CVCihkWn5T8=
+    stuck_metrics:
+      backward_motion_time: 2.091000000000122
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.6639999999999873
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.5109999999999673
+      sudden_stop_count: 0
+      zero_progress_duration: 3.084500000000048
+    stuck_penalty: 0.1594408744219593
+    success: true
+    time: 16.651
+    type: normal
+    weight: 1.0
+  - error: 0.0532830106302281
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      yzXLjoc34z8=
+    stuck_metrics:
+      backward_motion_time: 12.13799999999992
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.10200000000008913
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.0
+      sudden_stop_count: 1
+      zero_progress_duration: 0.07649999999989632
+    stuck_penalty: 0.14060539395420785
+    success: true
+    time: 12.273
+    type: normal
+    weight: 1.5
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    stHwb85c3T8=
+  success_rate: 1.0
+  trial: 265
+- params:
+    controller_frequency: 14.72213067140527
+    cost_scaling_factor: 7.506046503988458
+    global_update_frequency: 0.5934077940387933
+    inflation_radius: 0.1518813388340844
+    local_height: 3.4455081941591024
+    local_update_frequency: 4.345217397004633
+    local_width: 2.4349844456370806
+    obstacle_range: 2.95476187932689
+    planner_frequency: 1.0360450333959044
+    raytrace_range: 3.3185592731585922
+    teb_acc_lim_theta: 0.5353884361795965
+    teb_acc_lim_x: 0.37867432997559713
+    teb_acc_lim_y: 0.19043064608181157
+    teb_dt_ref: 0.16294584243632287
+    teb_global_plan_viapoint_sep: 0.15172249563527726
+    teb_inflation_dist: 0.32308729337450925
+    teb_max_global_plan_lookahead_dist: 3.740871811877269
+    teb_max_vel_theta: 0.6497474551946903
+    teb_max_vel_x: 0.25012652266176594
+    teb_max_vel_x_backwards: 0.2972735968241957
+    teb_max_vel_y: 0.49865337468610343
+    teb_min_obstacle_dist: 0.2707828716524246
+    teb_no_inner_iterations: 4
+    teb_no_outer_iterations: 6
+    teb_obstacle_poses_affected: 27
+    teb_weight_acc_lim_theta: 1.5497779353402599
+    teb_weight_acc_lim_x: 4.289852583076762
+    teb_weight_inflation: 0.10808772843506526
+    teb_weight_obstacle: 10.408812172859298
+    teb_weight_optimaltime: 0.8998115904708688
+    teb_weight_viapoint: 11.287948935099788
+    teb_xy_goal_tolerance: 0.05271086165334591
+    teb_yaw_goal_tolerance: 0.1604627292860416
+  results:
+  - error: 0.06401270349152785
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      2eNlZMEi5T8=
+    stuck_metrics:
+      backward_motion_time: 0.40800000000012915
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.5080000000002656
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.35400000000004184
+      sudden_stop_count: 0
+      zero_progress_duration: 0.9434999999999718
+    stuck_penalty: 0.0688613897106696
+    success: true
+    time: 13.859
+    type: normal
+    weight: 1.0
+  - error: 0.01861998360148638
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      OAKFQ9JY5j8=
+    stuck_metrics:
+      backward_motion_time: 8.77099999999973
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 2.3899999999998727
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 2.2369999999998527
+      sudden_stop_count: 1
+      zero_progress_duration: 3.2134999999999536
+    stuck_penalty: 0.36065584854630806
+    success: true
+    time: 12.325
+    type: normal
+    weight: 1.0
+  - error: 0.033095693656418915
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      rdZ1/lAm4T8=
+    stuck_metrics:
+      backward_motion_time: 22.284999999999854
+      cmd_vel_mismatch_count: 2
+      low_speed_duration: 2.5449999999993906
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 2.2899999999992815
+      sudden_stop_count: 1
+      zero_progress_duration: 10.073499999999854
+    stuck_penalty: 0.36065155069063193
+    success: true
+    time: 31.975
+    type: normal
+    weight: 1.0
+  - error: 0.03020477515384663
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Quy2CUhA5T8=
+    stuck_metrics:
+      backward_motion_time: 8.628000000000384
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 1.7760000000000673
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 1.5279999999997926
+      sudden_stop_count: 1
+      zero_progress_duration: 3.259999999999991
+    stuck_penalty: 0.3471217524197681
+    success: true
+    time: 11.778
+    type: narrow
+    weight: 1.3
+  - error: 0.026799121103584695
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      KdWaCrqL6D8=
+    stuck_metrics:
+      backward_motion_time: 11.116999999999962
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.46899999999982356
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.2039999999999509
+      sudden_stop_count: 1
+      zero_progress_duration: 2.0130000000000337
+    stuck_penalty: 0.22506221203833213
+    success: true
+    time: 13.529
+    type: normal
+    weight: 1.2
+  - error: 0.040164500993317
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      CgrE5U8N5T8=
+    stuck_metrics:
+      backward_motion_time: 10.506999999999834
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.15200000000027103
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.0
+      sudden_stop_count: 1
+      zero_progress_duration: 0.15350000000000819
+    stuck_penalty: 0.1475558659218007
+    success: true
+    time: 10.74
+    type: normal
+    weight: 1.5
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    XzoIvqbc3T8=
+  success_rate: 1.0
+  trial: 274
+- params:
+    controller_frequency: 20.206889627137954
+    cost_scaling_factor: 5.941974443055731
+    global_update_frequency: 0.7448769847926957
+    inflation_radius: 0.19429527589353038
+    local_height: 2.72119593273961
+    local_update_frequency: 5.006373498759258
+    local_width: 1.953103208993506
+    obstacle_range: 3.380909986229909
+    planner_frequency: 2.101294461137205
+    raytrace_range: 2.566948648331195
+    teb_acc_lim_theta: 0.3483078839738295
+    teb_acc_lim_x: 0.33429350843882844
+    teb_acc_lim_y: 0.4558423836015456
+    teb_dt_ref: 0.27646535695626817
+    teb_global_plan_viapoint_sep: 0.11215799831714911
+    teb_inflation_dist: 0.4433381977305319
+    teb_max_global_plan_lookahead_dist: 3.4172262552623667
+    teb_max_vel_theta: 0.5083169516987756
+    teb_max_vel_x: 0.33349907460441813
+    teb_max_vel_x_backwards: 0.298046877745001
+    teb_max_vel_y: 0.419720725122205
+    teb_min_obstacle_dist: 0.27008443488865247
+    teb_no_inner_iterations: 9
+    teb_no_outer_iterations: 6
+    teb_obstacle_poses_affected: 28
+    teb_weight_acc_lim_theta: 4.652004028722777
+    teb_weight_acc_lim_x: 1.9972610689706356
+    teb_weight_inflation: 0.05720261935081784
+    teb_weight_obstacle: 13.39222227477961
+    teb_weight_optimaltime: 0.6874393872952382
+    teb_weight_viapoint: 11.197229282287326
+    teb_xy_goal_tolerance: 0.02687808704732135
+    teb_yaw_goal_tolerance: 0.13157592847813293
+  results:
+  - error: 0.014556384360557261
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      eyXuNM0I7z8=
+    stuck_metrics:
+      backward_motion_time: 0.0
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.05099999999993088
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.0
+      sudden_stop_count: 0
+      zero_progress_duration: 0.05050000000005639
+    stuck_penalty: 0.005818619582663796
+    success: true
+    time: 8.722
+    type: normal
+    weight: 1.2
+  - error: 0.026925033219807316
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      +yrxYQVd7D8=
+    stuck_metrics:
+      backward_motion_time: 7.189999999999827
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.25300000000015643
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.15200000000004366
+      sudden_stop_count: 1
+      zero_progress_duration: 2.3724999999998317
+    stuck_penalty: 0.27134321558732766
+    success: true
+    time: 9.512
+    type: normal
+    weight: 1.0
+  - error: 0.008952538299377578
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      zRfCwF386T8=
+    stuck_metrics:
+      backward_motion_time: 6.730000000000018
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.15499999999997272
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.052000000000134605
+      sudden_stop_count: 1
+      zero_progress_duration: 2.299999999999841
+    stuck_penalty: 0.26662685054474683
+    success: true
+    time: 9.209
+    type: narrow
+    weight: 1.3
+  - error: 0.022692557935797494
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      o9+xHP8k4j8=
+    stuck_metrics:
+      backward_motion_time: 7.191000000000031
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 0.41099999999983083
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.20899999999983265
+      sudden_stop_count: 0
+      zero_progress_duration: 4.842500000000086
+    stuck_penalty: 0.22587242437527116
+    success: true
+    time: 22.81
+    type: normal
+    weight: 1.0
+  - error: 0.04779405797808877
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      yzRY2yf25T8=
+    stuck_metrics:
+      backward_motion_time: 6.120000000000118
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.2030000000002019
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.10100000000011278
+      sudden_stop_count: 1
+      zero_progress_duration: 1.6065000000003238
+    stuck_penalty: 0.23712477534322926
+    success: true
+    time: 8.717
+    type: normal
+    weight: 1.0
+  - error: 0.0476992954747324
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      XZrF+ACV5D8=
+    stuck_metrics:
+      backward_motion_time: 7.089000000000169
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.05099999999993088
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.0
+      sudden_stop_count: 1
+      zero_progress_duration: 0.8389999999998281
+    stuck_penalty: 0.18885423164897644
+    success: true
+    time: 8.015
+    type: normal
+    weight: 1.5
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    xuoH2Zki4D8=
+  success_rate: 1.0
+  trial: 293
+- params:
+    controller_frequency: 10.284836797283972
+    cost_scaling_factor: 5.104109555732764
+    global_update_frequency: 1.0235157528535828
+    inflation_radius: 0.10040096963359602
+    local_height: 1.7752496805244113
+    local_update_frequency: 3.34884669012201
+    local_width: 2.3510688125431454
+    obstacle_range: 3.040444775890183
+    planner_frequency: 1.9349756177340742
+    raytrace_range: 2.3423270229675044
+    teb_acc_lim_theta: 0.2667119845220607
+    teb_acc_lim_x: 0.1929880899938924
+    teb_acc_lim_y: 0.4412312237842741
+    teb_dt_ref: 0.293571390341882
+    teb_global_plan_viapoint_sep: 0.11666019104227525
+    teb_inflation_dist: 0.3551467444357272
+    teb_max_global_plan_lookahead_dist: 4.074836435606949
+    teb_max_vel_theta: 0.5495542250945448
+    teb_max_vel_x: 0.3109010505163108
+    teb_max_vel_x_backwards: 0.2617917449869472
+    teb_max_vel_y: 0.4885850059282878
+    teb_min_obstacle_dist: 0.25788939744508976
+    teb_no_inner_iterations: 9
+    teb_no_outer_iterations: 4
+    teb_obstacle_poses_affected: 30
+    teb_weight_acc_lim_theta: 3.9667489712411967
+    teb_weight_acc_lim_x: 1.7491426345636782
+    teb_weight_inflation: 0.03705464193536663
+    teb_weight_obstacle: 13.52154074643326
+    teb_weight_optimaltime: 0.8030594334150303
+    teb_weight_viapoint: 18.41213127334095
+    teb_xy_goal_tolerance: 0.051274319368988706
+    teb_yaw_goal_tolerance: 0.12745005375726276
+  results:
+  - error: 0.04604600382507736
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      aV4yJhEr7D8=
+    stuck_metrics:
+      backward_motion_time: 0.0
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 0.21500000000014552
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.0
+      sudden_stop_count: 1
+      zero_progress_duration: 0.08150000000000546
+    stuck_penalty: 0.06072644947146424
+    success: true
+    time: 9.239
+    type: normal
+    weight: 1.2
+  - error: 0.04508950715574727
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      qtCYLNUB5D8=
+    stuck_metrics:
+      backward_motion_time: 7.394999999999982
+      cmd_vel_mismatch_count: 2
+      low_speed_duration: 1.2179999999998472
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.9629999999999654
+      sudden_stop_count: 2
+      zero_progress_duration: 4.334500000000048
+    stuck_penalty: 0.3666030074881117
+    success: true
+    time: 16.337
+    type: narrow
+    weight: 1.3
+  - error: 0.018088341429910698
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      fB+A/VTX6z8=
+    stuck_metrics:
+      backward_motion_time: 7.499999999999773
+      cmd_vel_mismatch_count: 2
+      low_speed_duration: 0.9780000000002929
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.6720000000002528
+      sudden_stop_count: 1
+      zero_progress_duration: 2.805500000000052
+    stuck_penalty: 0.3417329938388192
+    success: true
+    time: 10.604
+    type: normal
+    weight: 1.0
+  - error: 0.022867131212649782
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      M3SMmO+R4D8=
+    stuck_metrics:
+      backward_motion_time: 4.94399999999996
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 4.504999999999882
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.5119999999999436
+      sudden_stop_count: 5
+      zero_progress_duration: 6.885500000000093
+    stuck_penalty: 0.41946538277199064
+    success: true
+    time: 22.951
+    type: normal
+    weight: 1.0
+  - error: 0.07270829987701787
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      WtBIaWYn5z8=
+    stuck_metrics:
+      backward_motion_time: 6.988000000000056
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.34999999999990905
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.15299999999979264
+      sudden_stop_count: 1
+      zero_progress_duration: 2.063000000000102
+    stuck_penalty: 0.2585928848283505
+    success: true
+    time: 9.632
+    type: normal
+    weight: 1.0
+  - error: 0.028024568639578935
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      zicIxNBj5T8=
+    stuck_metrics:
+      backward_motion_time: 8.826999999999998
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.9649999999996908
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.656999999999698
+      sudden_stop_count: 2
+      zero_progress_duration: 3.2150000000001455
+    stuck_penalty: 0.2953295575802297
+    success: true
+    time: 16.244
+    type: normal
+    weight: 1.5
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    CM//dy0G3z8=
+  success_rate: 1.0
+  trial: 298
+- params:
+    controller_frequency: 11.55987260978589
+    cost_scaling_factor: 4.134245937073365
+    global_update_frequency: 0.9025224754998984
+    inflation_radius: 0.12183291027730427
+    local_height: 1.8128787207623331
+    local_update_frequency: 4.0248531616958845
+    local_width: 2.495428684738054
+    obstacle_range: 3.0595341876515674
+    planner_frequency: 2.3060881340797
+    raytrace_range: 2.7329039761280183
+    teb_acc_lim_theta: 0.28403376147011505
+    teb_acc_lim_x: 0.16058775585378474
+    teb_acc_lim_y: 0.4518490325455698
+    teb_dt_ref: 0.22314695258900674
+    teb_global_plan_viapoint_sep: 0.10582296722257922
+    teb_inflation_dist: 0.33986157086431934
+    teb_max_global_plan_lookahead_dist: 3.5710158758703665
+    teb_max_vel_theta: 0.5700499752770241
+    teb_max_vel_x: 0.29494237761554903
+    teb_max_vel_x_backwards: 0.29561235453370205
+    teb_max_vel_y: 0.4752975068059062
+    teb_min_obstacle_dist: 0.2716753861760122
+    teb_no_inner_iterations: 10
+    teb_no_outer_iterations: 4
+    teb_obstacle_poses_affected: 28
+    teb_weight_acc_lim_theta: 4.532859782306903
+    teb_weight_acc_lim_x: 2.3171123834813216
+    teb_weight_inflation: 0.06461108565230211
+    teb_weight_obstacle: 16.49980340944067
+    teb_weight_optimaltime: 0.8087364722284637
+    teb_weight_viapoint: 26.423853959392467
+    teb_xy_goal_tolerance: 0.056924892758811775
+    teb_yaw_goal_tolerance: 0.11244848870634888
+  results:
+  - error: 0.01650122528705323
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      PGaxlrIi6z8=
+    stuck_metrics:
+      backward_motion_time: 0.2539999999999054
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.35799999999994725
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.25499999999988177
+      sudden_stop_count: 0
+      zero_progress_duration: 0.7140000000000555
+    stuck_penalty: 0.05378367825067845
+    success: true
+    time: 12.805
+    type: normal
+    weight: 1.0
+  - error: 0.043446210919001166
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      8u6Hqjv05T8=
+    stuck_metrics:
+      backward_motion_time: 7.649000000000115
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.4639999999999418
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.15300000000002
+      sudden_stop_count: 1
+      zero_progress_duration: 3.0095000000000027
+    stuck_penalty: 0.29779829545454284
+    success: true
+    time: 10.56
+    type: narrow
+    weight: 1.3
+  - error: 0.05927350809425086
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      rHBOE0kC3D8=
+    stuck_metrics:
+      backward_motion_time: 8.057999999999993
+      cmd_vel_mismatch_count: 2
+      low_speed_duration: 2.6030000000000655
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 1.4770000000003165
+      sudden_stop_count: 4
+      zero_progress_duration: 8.848999999999819
+    stuck_penalty: 0.416006928252616
+    success: true
+    time: 30.022
+    type: normal
+    weight: 1.0
+  - error: 0.07584437877145644
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      6/x0jlmW4z8=
+    stuck_metrics:
+      backward_motion_time: 6.936999999999898
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.45899999999983265
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.20499999999992724
+      sudden_stop_count: 1
+      zero_progress_duration: 2.247000000000071
+    stuck_penalty: 0.2754850458779805
+    success: true
+    time: 9.518
+    type: normal
+    weight: 1.0
+  - error: 0.03730250354514631
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Ium0qO/a4z8=
+    stuck_metrics:
+      backward_motion_time: 10.761000000000422
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.9149999999990541
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.4589999999993779
+      sudden_stop_count: 2
+      zero_progress_duration: 5.6099999999999
+    stuck_penalty: 0.3388666033287313
+    success: true
+    time: 18.946
+    type: normal
+    weight: 1.2
+  - error: 0.04389888581834916
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      32njwFUU5D8=
+    stuck_metrics:
+      backward_motion_time: 8.312999999999647
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 1.1749999999997272
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.9710000000000036
+      sudden_stop_count: 0
+      zero_progress_duration: 4.102499999999964
+    stuck_penalty: 0.2431846546204268
+    success: true
+    time: 18.429
+    type: normal
+    weight: 1.5
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    DetGW80q3T8=
+  success_rate: 1.0
+  trial: 325
+- params:
+    controller_frequency: 14.122910069411775
+    cost_scaling_factor: 6.229639540963351
+    global_update_frequency: 1.0847974169192653
+    inflation_radius: 0.11642587243153382
+    local_height: 2.8018807130773715
+    local_update_frequency: 8.040491278889201
+    local_width: 3.271496753439982
+    obstacle_range: 3.13513264005578
+    planner_frequency: 0.5650979923979573
+    raytrace_range: 2.4537411705921954
+    teb_acc_lim_theta: 0.44399018113469535
+    teb_acc_lim_x: 0.2953736594496812
+    teb_acc_lim_y: 0.34638520959363484
+    teb_dt_ref: 0.18744955554425005
+    teb_global_plan_viapoint_sep: 0.22067763479211036
+    teb_inflation_dist: 0.36633368621724155
+    teb_max_global_plan_lookahead_dist: 4.114513281584529
+    teb_max_vel_theta: 0.5401871169986674
+    teb_max_vel_x: 0.1973686080150039
+    teb_max_vel_x_backwards: 0.23757238707997022
+    teb_max_vel_y: 0.24023756643323818
+    teb_min_obstacle_dist: 0.2695581634101552
+    teb_no_inner_iterations: 7
+    teb_no_outer_iterations: 4
+    teb_obstacle_poses_affected: 23
+    teb_weight_acc_lim_theta: 3.468359773979094
+    teb_weight_acc_lim_x: 1.1626395353223633
+    teb_weight_inflation: 0.10461109017266547
+    teb_weight_obstacle: 16.354129072905145
+    teb_weight_optimaltime: 0.5160885561386412
+    teb_weight_viapoint: 18.89188208159011
+    teb_xy_goal_tolerance: 0.053646466057352495
+    teb_yaw_goal_tolerance: 0.10191485012515558
+  results:
+  - error: 0.07055222570122663
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      i6eo/rN64j8=
+    stuck_metrics:
+      backward_motion_time: 1.0190000000002328
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 1.223000000000411
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.8190000000004147
+      sudden_stop_count: 1
+      zero_progress_duration: 2.24550000000022
+    stuck_penalty: 0.16379179929495805
+    success: true
+    time: 19.478
+    type: normal
+    weight: 1.0
+  - error: 0.011725585638879503
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      n2XjkGtG5j8=
+    stuck_metrics:
+      backward_motion_time: 9.592999999999392
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 1.429000000000542
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 1.2250000000003638
+      sudden_stop_count: 0
+      zero_progress_duration: 8.518000000000029
+    stuck_penalty: 0.2262414666373104
+    success: true
+    time: 36.328
+    type: narrow
+    weight: 1.3
+  - error: 0.03395298219173025
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      hIq4Q+uY6D8=
+    stuck_metrics:
+      backward_motion_time: 1.7849999999998545
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 1.7299999999991087
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 1.5819999999994252
+      sudden_stop_count: 1
+      zero_progress_duration: 2.5474999999999
+    stuck_penalty: 0.2846121779355136
+    success: true
+    time: 12.394
+    type: normal
+    weight: 1.0
+  - error: 0.04564939842820905
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Sz4z2x4n6T8=
+    stuck_metrics:
+      backward_motion_time: 2.14200000000028
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.3079999999999927
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.20499999999992724
+      sudden_stop_count: 1
+      zero_progress_duration: 1.4549999999999272
+    stuck_penalty: 0.1732433306861986
+    success: true
+    time: 11.333
+    type: normal
+    weight: 1.2
+  - error: 0.06314347251810051
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      CKEK3fL43T8=
+    stuck_metrics:
+      backward_motion_time: 15.197000000000116
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 0.31300000000010186
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.10099999999965803
+      sudden_stop_count: 1
+      zero_progress_duration: 3.6974999999997635
+    stuck_penalty: 0.26238463580176313
+    success: true
+    time: 17.582
+    type: normal
+    weight: 1.0
+  - error: 0.02568995914687188
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      c5FzLhja5T8=
+    stuck_metrics:
+      backward_motion_time: 9.177999999999884
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 0.8609999999998763
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.6630000000000109
+      sudden_stop_count: 0
+      zero_progress_duration: 1.0959999999997763
+    stuck_penalty: 0.19866895230410672
+    success: true
+    time: 9.917
+    type: normal
+    weight: 1.5
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    y4IGbdbw3T8=
+  success_rate: 1.0
+  trial: 330
+- params:
+    controller_frequency: 16.1076606341348
+    cost_scaling_factor: 6.659982745421691
+    global_update_frequency: 0.6646052662402352
+    inflation_radius: 0.1709896517129354
+    local_height: 3.18949667114053
+    local_update_frequency: 5.55597320727871
+    local_width: 1.5846097217863997
+    obstacle_range: 2.2612073128552295
+    planner_frequency: 1.9151833312312274
+    raytrace_range: 3.6633958161632756
+    teb_acc_lim_theta: 0.390299429628801
+    teb_acc_lim_x: 0.4552659541736701
+    teb_acc_lim_y: 0.18258177398780714
+    teb_dt_ref: 0.25529969297931726
+    teb_global_plan_viapoint_sep: 0.2682529542620744
+    teb_inflation_dist: 0.4032507273182378
+    teb_max_global_plan_lookahead_dist: 2.8416966717447067
+    teb_max_vel_theta: 0.5133454770444517
+    teb_max_vel_x: 0.2602556284266665
+    teb_max_vel_x_backwards: 0.29601917674014755
+    teb_max_vel_y: 0.47549745609962957
+    teb_min_obstacle_dist: 0.2549178713455799
+    teb_no_inner_iterations: 4
+    teb_no_outer_iterations: 5
+    teb_obstacle_poses_affected: 30
+    teb_weight_acc_lim_theta: 3.1138740616056615
+    teb_weight_acc_lim_x: 4.993584883210949
+    teb_weight_inflation: 0.10593467059237194
+    teb_weight_obstacle: 8.089039969895584
+    teb_weight_optimaltime: 0.4926001489351228
+    teb_weight_viapoint: 6.929235064810316
+    teb_xy_goal_tolerance: 0.022434549125162902
+    teb_yaw_goal_tolerance: 0.12477738170618002
+  results:
+  - error: 0.03482932476441336
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      4BQri4FR5D8=
+    stuck_metrics:
+      backward_motion_time: 1.2269999999998618
+      cmd_vel_mismatch_count: 3
+      low_speed_duration: 1.1230000000000473
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.25500000000010914
+      sudden_stop_count: 6
+      zero_progress_duration: 1.3494999999995798
+    stuck_penalty: 0.22698868347884518
+    success: true
+    time: 20.501
+    type: narrow
+    weight: 1.3
+  - error: 0.023146786477662457
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      g48RIQdM3T8=
+    stuck_metrics:
+      backward_motion_time: 24.78800000000092
+      cmd_vel_mismatch_count: 4
+      low_speed_duration: 3.729000000000724
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 2.1570000000010623
+      sudden_stop_count: 5
+      zero_progress_duration: 12.341499999999996
+    stuck_penalty: 0.48164372603647587
+    success: true
+    time: 36.253
+    type: normal
+    weight: 1.0
+  - error: 0.015201385717452326
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      mb5grg6d5j8=
+    stuck_metrics:
+      backward_motion_time: 2.5489999999995234
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 0.3070000000006985
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.205000000000382
+      sudden_stop_count: 1
+      zero_progress_duration: 4.2544999999995525
+    stuck_penalty: 0.2175475599669042
+    success: true
+    time: 18.135
+    type: normal
+    weight: 1.0
+  - error: 0.04142986202908516
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      6klzy74C5z8=
+    stuck_metrics:
+      backward_motion_time: 6.329999999999927
+      cmd_vel_mismatch_count: 0
+      low_speed_duration: 3.4710000000000036
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 3.213999999999942
+      sudden_stop_count: 1
+      zero_progress_duration: 3.4265000000004875
+    stuck_penalty: 0.38389639639641426
+    success: true
+    time: 13.764
+    type: normal
+    weight: 1.2
+  - error: 0.0036474646514460577
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      0qAyDuxX5D8=
+    stuck_metrics:
+      backward_motion_time: 6.329999999999927
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 2.1890000000007603
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 1.9880000000007385
+      sudden_stop_count: 0
+      zero_progress_duration: 5.051000000000158
+    stuck_penalty: 0.2761800683576312
+    success: true
+    time: 22.236
+    type: normal
+    weight: 1.0
+  - error: 0.06258996687276272
+    score: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      kgWIuWuB4j8=
+    stuck_metrics:
+      backward_motion_time: 10.70699999999988
+      cmd_vel_mismatch_count: 1
+      low_speed_duration: 0.2019999999997708
+      oscillation_events: 0
+      recovery_triggered: 0
+      rotation_in_place_time: 0.046000000000276486
+      sudden_stop_count: 2
+      zero_progress_duration: 0.8434999999997217
+    stuck_penalty: 0.22455239365644186
+    success: true
+    time: 11.245
+    type: normal
+    weight: 1.5
+  score: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    cLlsAfi63D8=
+  success_rate: 1.0
+  trial: 341

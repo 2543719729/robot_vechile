@@ -1,9 +1,9 @@
 global_costmap:
   global_frame: map
   inflation_layer:
-    cost_scaling_factor: 6.045767169762518
+    cost_scaling_factor: 7.9514262988171005
     enabled: true
-    inflation_radius: 0.12479621640520763
+    inflation_radius: 0.11287164493131638
   plugins:
   - name: static_layer
     type: costmap_2d::StaticLayer
@@ -14,4 +14,4 @@ global_costmap:
   publish_frequency: 1.0
   robot_base_frame: base_footprint
   transform_tolerance: 0.5
-  update_frequency: 2.1533566916562115
+  update_frequency: 0.7785115862526559

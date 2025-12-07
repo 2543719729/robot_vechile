@@ -1,7 +1,7 @@
 TebLocalPlannerROS:
-  acc_lim_theta: 0.2604876344348513
-  acc_lim_x: 0.4321224524585252
-  acc_lim_y: 0.18093061599213942
+  acc_lim_theta: 0.2499079092237008
+  acc_lim_x: 0.4587251065221528
+  acc_lim_y: 0.21330162438058595
   allow_init_with_backwards_motion: true
   complete_global_plan: true
   costmap_converter_plugin: ''
@@ -10,7 +10,7 @@ TebLocalPlannerROS:
   costmap_obstacles_behind_robot_dist: 1.5
   delete_detours_backwards: true
   dt_hysteresis: 0.1
-  dt_ref: 0.2702847222452194
+  dt_ref: 0.38545551609215545
   dynamic_obstacle_inflation_dist: 0.3
   enable_homotopy_class_planning: false
   enable_multithreading: true
@@ -21,27 +21,27 @@ TebLocalPlannerROS:
   free_goal_vel: false
   global_plan_overwrite_orientation: true
   global_plan_prune_distance: 1.0
-  global_plan_viapoint_sep: 0.19297482672892524
+  global_plan_viapoint_sep: 0.24149646126814767
   h_signature_prescaler: 0.5
   h_signature_threshold: 0.1
   include_costmap_obstacles: true
   include_dynamic_obstacles: true
-  inflation_dist: 0.33673262837166457
-  max_global_plan_lookahead_dist: 2.348436497969979
+  inflation_dist: 0.39060083299455206
+  max_global_plan_lookahead_dist: 2.0267086859137087
   max_number_classes: 4
   max_ratio_detours_duration_best_duration: 3.0
   max_samples: 500
-  max_vel_theta: 0.49451916537584795
-  max_vel_x: 0.19632685120256285
-  max_vel_x_backwards: 0.29434523550479275
-  max_vel_y: 0.3018598247233205
-  min_obstacle_dist: 0.2516302516230667
+  max_vel_theta: 0.5115169329168251
+  max_vel_x: 0.3448430820192621
+  max_vel_x_backwards: 0.27600543849931525
+  max_vel_y: 0.48015497222509335
+  min_obstacle_dist: 0.27114832571086744
   min_turning_radius: 0.0
-  no_inner_iterations: 5
-  no_outer_iterations: 3
+  no_inner_iterations: 4
+  no_outer_iterations: 6
   obstacle_cost_exponent: 2
   obstacle_heading_threshold: 0.45
-  obstacle_poses_affected: 30
+  obstacle_poses_affected: 18
   odom_topic: odom
   optimization_activate: true
   optimization_verbose: false
@@ -66,20 +66,20 @@ TebLocalPlannerROS:
   viapoints_all_candidates: true
   visualize_hc_graph: false
   visualize_with_time_as_z_axis_scale: false
-  weight_acc_lim_theta: 3.2664903905207865
-  weight_acc_lim_x: 4.420491694926488
+  weight_acc_lim_theta: 4.340822175029967
+  weight_acc_lim_x: 2.514102843412231
   weight_adapt_factor: 2
   weight_dynamic_obstacle: 10
   weight_dynamic_obstacle_inflation: 0.05
-  weight_inflation: 0.07042286549856247
+  weight_inflation: 0.06125499484217999
   weight_kinematics_forward_drive: 1
   weight_kinematics_nh: 1000
   weight_kinematics_turning_radius: 1
   weight_max_vel_theta: 1
   weight_max_vel_x: 2
-  weight_obstacle: 23.0523516653964
-  weight_optimaltime: 0.9081601553777625
+  weight_obstacle: 15.73329993951511
+  weight_optimaltime: 0.6027763469415899
   weight_shortest_path: 0
-  weight_viapoint: 30.847575994606952
-  xy_goal_tolerance: 0.020086400738328108
-  yaw_goal_tolerance: 0.15623361363712637
+  weight_viapoint: 19.70677224236236
+  xy_goal_tolerance: 0.040858496140818226
+  yaw_goal_tolerance: 0.1762232817914555

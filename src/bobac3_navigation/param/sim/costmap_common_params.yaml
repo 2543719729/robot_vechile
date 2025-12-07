@@ -4,8 +4,8 @@ obstacle_layer:
   footprint_clearing_enabled: true
   max_obstacle_height: 1.0
   observation_sources: scan
-  obstacle_range: 2.9760211066329694
-  raytrace_range: 3.445245422149572
+  obstacle_range: 2.9281773921995313
+  raytrace_range: 3.545702288342023
   scan:
     clearing: true
     data_type: LaserScan

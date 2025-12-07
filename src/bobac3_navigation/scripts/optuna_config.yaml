@@ -3,7 +3,7 @@
 
 # ============== 优化设置 ==============
 optimization:
-  n_trials: 1000                  # 总优化次数
+  n_trials: 10000                  # 总优化次数
   n_startup_trials: 10            # 前N次使用随机采样 (之后才用TPE)
   timeout_per_goal: 60.0          # 单个目标点超时时间(秒)
   seed: 42                        # 随机种子，保证可复现
@@ -12,6 +12,25 @@ optimization:
   visit_all_goals: true           # 每次trial访问所有目标点
   randomize_goal_order: true      # 随机化目标点访问顺序
   return_to_start: true           # 完成所有目标后返回起始点
+
+# ============== 分布式训练配置 ==============
+# 支持多Worker并行训练（需要MySQL或PostgreSQL）
+distributed:
+  enabled: true                    # 是否启用分布式训练
+  
+  # 数据库配置 (选择一种)
+  # SQLite (单机，不支持并行): sqlite:///optuna_study.db
+  # MySQL: mysql+pymysql://user:password@host:3306/optuna_db
+  # PostgreSQL: postgresql://user:password@host:5432/optuna_db
+  storage_url: "mysql+pymysql://optuna:optuna123@localhost:3307/optuna_db"
+  
+  # Worker配置
+  worker_id: 1
+  n_workers: 4
+  
+  # ROS命名空间 (多Worker时每个Worker使用不同命名空间)
+  ros_namespace: ""                # 留空表示使用默认命名空间
+  gazebo_port_offset: 0            # Gazebo端口偏移 (Worker 0用11345, Worker 1用11346...)
 
 # ============== 评分权重 ==============
 # 权重总和应为1.0

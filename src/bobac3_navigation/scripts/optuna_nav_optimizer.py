@@ -22,7 +22,7 @@ import actionlib
 from geometry_msgs.msg import PoseStamped, Twist, PoseWithCovarianceStamped
 from nav_msgs.msg import Odometry, Path as NavPath  # 重命名避免冲突
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
-from actionlib_msgs.msg import GoalStatus
+from actionlib_msgs.msg import GoalStatus, GoalStatusArray
 from std_srvs.srv import Empty
 from gazebo_msgs.srv import SetModelState
 from gazebo_msgs.msg import ModelState
@@ -43,6 +43,14 @@ class Config:
     # 参数文件路径
     PARAM_DIR = pathlib.Path("/home/liyaxin075/Documents/robot_learning/src/bobac3_navigation/param/sim")
     CONFIG_FILE = pathlib.Path(__file__).parent / "optuna_config.yaml"
+    
+    # 分布式训练配置
+    DISTRIBUTED_ENABLED = False
+    STORAGE_URL = "sqlite:///optuna_study.db"
+    WORKER_ID = 0
+    N_WORKERS = 1
+    ROS_NAMESPACE = ""
+    GAZEBO_PORT_OFFSET = 0
     
     # 测试场景：来自语音导航 voice_nav.cpp 的真实目标点
     # 场景类型: 'normal', 'narrow', 'obstacle'
@@ -161,6 +169,26 @@ class Config:
                         cls.STUCK_DETECTION['scenario_multipliers'].update(sd['scenario_multipliers'])
                     rospy.loginfo(f"卡顿检测: 已启用={cls.STUCK_DETECTION['enabled']}")
                 
+                # 加载分布式训练配置
+                if 'distributed' in cfg:
+                    dist = cfg['distributed']
+                    cls.DISTRIBUTED_ENABLED = dist.get('enabled', False)
+                    cls.STORAGE_URL = dist.get('storage_url', cls.STORAGE_URL)
+                    cls.WORKER_ID = dist.get('worker_id', 0)
+                    cls.N_WORKERS = dist.get('n_workers', 1)
+                    cls.ROS_NAMESPACE = dist.get('ros_namespace', '')
+                    cls.GAZEBO_PORT_OFFSET = dist.get('gazebo_port_offset', 0)
+                    
+                    # 环境变量覆盖（用于分布式训练时避免配置文件冲突）
+                    if os.environ.get('OPTUNA_WORKER_ID'):
+                        cls.WORKER_ID = int(os.environ['OPTUNA_WORKER_ID'])
+                    if os.environ.get('OPTUNA_N_WORKERS'):
+                        cls.N_WORKERS = int(os.environ['OPTUNA_N_WORKERS'])
+                    if os.environ.get('OPTUNA_DISTRIBUTED'):
+                        cls.DISTRIBUTED_ENABLED = os.environ['OPTUNA_DISTRIBUTED'].lower() == 'true'
+                    
+                    rospy.loginfo(f"分布式训练: enabled={cls.DISTRIBUTED_ENABLED}, workers={cls.N_WORKERS}")
+                
                 rospy.loginfo(f"已从配置文件加载 {len(cls.TEST_SCENARIOS)} 个目标馆")
                 rospy.loginfo(f"目标点策略: 随机顺序={cls.RANDOMIZE_GOAL_ORDER}, 返回起点={cls.RETURN_TO_START}")
             except Exception as e:
@@ -212,9 +240,10 @@ class NavigationEvaluator:
         self.cmd_vel_sub = rospy.Subscriber('/cmd_vel', Twist, self.cmd_vel_callback)
         
         # 订阅 move_base 状态用于检测恢复行为
+        # 注意: /move_base_node/status 的消息类型是 GoalStatusArray，不是 GoalStatus
         self.move_base_status_sub = rospy.Subscriber(
             '/move_base_node/status', 
-            GoalStatus, 
+            GoalStatusArray, 
             self.move_base_status_callback,
             queue_size=1
         )
@@ -242,8 +271,12 @@ class NavigationEvaluator:
     
     def move_base_status_callback(self, msg):
         """move_base 状态回调 - 用于检测恢复行为"""
+        # GoalStatusArray 包含 status_list，每个元素是 GoalStatus
         # GoalStatus: PENDING=0, ACTIVE=1, PREEMPTED=2, SUCCEEDED=3, ABORTED=4, REJECTED=5, PREEMPTING=6, RECALLING=7, RECALLED=8, LOST=9
-        self.move_base_status = msg.status if hasattr(msg, 'status') else None
+        if msg.status_list:
+            self.move_base_status = msg.status_list[-1].status  # 获取最新状态
+        else:
+            self.move_base_status = None
     
     def odom_callback(self, msg):
         """里程计回调 - 增强版，包含卡顿检测"""
@@ -1206,23 +1239,9 @@ class OptunaNavigationOptimizer:
                 rospy.loginfo(f"Trial {trial.number + 1} 在场景 {scenario['name']} 失败，强制剪枝 (得分 {interim_score:.4f}, 卡住{stuck_count}次)")
                 raise optuna.TrialPruned()
 
-            # ========== 剪枝：根据当前已经完成的场景计算一个临时得分 ==========
-            if total_weight_success > 0:
-                base_score_partial = weighted_score / total_weight_success
-            else:
-                base_score_partial = 0.0
-
-            success_rate_partial = sum(1 for r in results if r['success']) / len(results)
-            normalized_failure_partial = failure_penalty_weight / max(total_weight_all, 1e-6)
-            # 更高层次惩罚：失败场景（尤其是高权重场景）显著拉低总分
-            stuck_penalty = stuck_count * 0.15
-            interim_score = base_score_partial * 0.4 + success_rate_partial * 0.2 - normalized_failure_partial * 0.8 - stuck_penalty
-
-            # 向 Optuna 报告中间结果，并检查是否需要剪枝
-            trial.report(interim_score, step=idx)
-            if trial.should_prune():
-                rospy.loginfo(f"Trial {trial.number + 1} 在场景 {scenario['name']} 被剪枝，中间得分 {interim_score:.4f}")
-                raise optuna.TrialPruned()
+            # ========== 中间剪枝已禁用 ==========
+            # 只保留失败场景的强制剪枝，不再对成功场景进行中间剪枝
+            # 这样可以避免错过那些早期得分较低但整体表现良好的参数组合
         
         # 5. 计算最终得分
         if total_weight_success > 0:
@@ -1324,9 +1343,17 @@ class OptunaNavigationOptimizer:
             interval_steps=1       # 每完成 1 个场景检查一次
         )
         
-        # 使用 SQLite 存储，让 study 有"记忆"
-        db_path = self.result_dir / "optuna_study.db"
-        storage = f"sqlite:///{db_path}"
+        # 根据配置选择存储后端
+        if self.config.DISTRIBUTED_ENABLED:
+            # 分布式模式: 使用配置的数据库URL
+            storage = self.config.STORAGE_URL
+            rospy.loginfo(f"分布式模式: Worker {self.config.WORKER_ID}/{self.config.N_WORKERS}")
+            rospy.loginfo(f"存储后端: {storage.split('@')[0]}@***")  # 隐藏密码
+        else:
+            # 单机模式: 使用本地SQLite
+            db_path = self.result_dir / "optuna_study.db"
+            storage = f"sqlite:///{db_path}"
+            rospy.loginfo(f"单机模式: 使用本地SQLite存储")
         
         # 尝试加载已有的 study，如果不存在则创建新的
         try:
