@@ -1,37 +1,37 @@
 params:
-  controller_frequency: 18.235284542591945
-  cost_scaling_factor: 4.66355312374469
-  global_update_frequency: 0.7870361605860687
-  inflation_radius: 0.12988330122849043
-  local_height: 2.7093334966808666
-  local_update_frequency: 5.023401340664179
-  local_width: 1.8008200576320703
-  obstacle_range: 2.296608664523297
-  planner_frequency: 2.2998373051175633
-  raytrace_range: 3.514023892260922
-  teb_acc_lim_theta: 0.3699695063990383
-  teb_acc_lim_x: 0.19668325969491765
-  teb_acc_lim_y: 0.45170477501428524
-  teb_dt_ref: 0.23736271761302968
-  teb_global_plan_viapoint_sep: 0.23276727540484748
-  teb_inflation_dist: 0.43959059238421483
-  teb_max_global_plan_lookahead_dist: 2.7620542960425727
-  teb_max_vel_theta: 0.6159255125424361
-  teb_max_vel_x: 0.2572504713386087
-  teb_max_vel_x_backwards: 0.23495788455867095
-  teb_max_vel_y: 0.40211482766191786
-  teb_min_obstacle_dist: 0.26359906132829447
+  controller_frequency: 14.664543329820026
+  cost_scaling_factor: 4.630947154961313
+  global_update_frequency: 1.332753794258287
+  inflation_radius: 0.12614143126433103
+  local_height: 1.7079801049664727
+  local_update_frequency: 6.024454079216667
+  local_width: 1.5453533130546413
+  obstacle_range: 2.2458750563306014
+  planner_frequency: 1.7929386864837515
+  raytrace_range: 3.518031988864778
+  teb_acc_lim_theta: 0.4468343839017714
+  teb_acc_lim_x: 0.17531567247139251
+  teb_acc_lim_y: 0.4551567022590272
+  teb_dt_ref: 0.32594909244614445
+  teb_global_plan_viapoint_sep: 0.12142294677132646
+  teb_inflation_dist: 0.44631886761366496
+  teb_max_global_plan_lookahead_dist: 3.4799694230792033
+  teb_max_vel_theta: 0.4824086304252797
+  teb_max_vel_x: 0.33369559703031426
+  teb_max_vel_x_backwards: 0.2594966645641049
+  teb_max_vel_y: 0.3947480917226668
+  teb_min_obstacle_dist: 0.27001121253825855
   teb_no_inner_iterations: 10
-  teb_no_outer_iterations: 6
-  teb_obstacle_poses_affected: 28
-  teb_weight_acc_lim_theta: 4.258528491000638
-  teb_weight_acc_lim_x: 2.0506249657900892
-  teb_weight_inflation: 0.1008642095606582
-  teb_weight_obstacle: 6.441083007735262
-  teb_weight_optimaltime: 0.8143687874674433
-  teb_weight_viapoint: 8.86714025967031
-  teb_xy_goal_tolerance: 0.0277147237637747
-  teb_yaw_goal_tolerance: 0.13896238470979344
+  teb_no_outer_iterations: 7
+  teb_obstacle_poses_affected: 25
+  teb_weight_acc_lim_theta: 4.1551009830586665
+  teb_weight_acc_lim_x: 2.821771778761804
+  teb_weight_inflation: 0.11722712251931003
+  teb_weight_obstacle: 8.868295751618973
+  teb_weight_optimaltime: 0.7294817832293936
+  teb_weight_viapoint: 16.6177196224848
+  teb_xy_goal_tolerance: 0.03303916988922304
+  teb_yaw_goal_tolerance: 0.08654774411628413
 score: !!python/object/apply:numpy.core.multiarray.scalar
 - !!python/object/apply:numpy.dtype
   args:
@@ -48,5 +48,5 @@ score: !!python/object/apply:numpy.core.multiarray.scalar
   - -1
   - 0
 - !!binary |
-  4fiw6FXU3j8=
-timestamp: '20251207_154220'
+  UqpQ4cam3z8=
+timestamp: '20251207_160556'
