@@ -13,7 +13,7 @@ python scripts/audit_bags.py --check
 
 静态检查覆盖生成文件清理、61 份包清单/launch XML 语法、17 张地图的相对路径、catkin 入口、服务命名空间和主线参数 YAML 语法。单元测试使用明确标为 synthetic 的临时内存数据，检查统计错误、数据缺失和超时处理；**这些测试不是机器人实验成果**。
 
-`audit_bags.py --check` 实际读取仓库的两份历史 bag 并复算 [已发布证据](RESULTS.md)。CI 配置还包含 Noetic 容器中不依赖语音 SDK 的 `nav_goal` 客户端构建；构建结果以 Actions 记录为准。CI 不运行导航任务或 Gazebo，不据此生成导航成功率。
+`audit_bags.py --check` 实际读取仓库的两份历史 bag 并复算 [已发布证据](RESULTS.md)。Noetic 容器中不依赖语音 SDK 的三个 `nav_goal` 客户端已实际编译通过，离线检查亦通过：[CI 运行记录](https://github.com/2543719729/robot_vechile/actions/runs/39634005142)，对应代码提交 `e65215fd6fe791a2b77d523d1a68546e1ec634f4`，机器可读范围见 `benchmarks/results/ci_verification.json`。后续提交状态以各自的 Actions 记录为准。CI 不运行导航任务或 Gazebo，不据此生成导航成功率。
 
 ## 2. ROS / Gazebo 冒烟验证
 

@@ -52,7 +52,7 @@ flowchart TD
 
 | 用途 | 目标环境 | 验证范围 |
 |---|---|---|
-| 复现历史 ROS 工程 | Ubuntu 20.04、ROS Noetic、Gazebo Classic 11、C++11 | 源码和旧路径指向 Noetic；本次未完成 ROS 编译/仿真运行 |
+| 复现历史 ROS 工程 | Ubuntu 20.04、ROS Noetic、Gazebo Classic 11、C++11 | 3 个 nav_goal 客户端已通过 Noetic 容器编译；完整导航工程与仿真尚未验证 |
 | 离线 bag 审计与视频生成 | Python 3.10+；本次使用 Ubuntu 24.04 / Python 3.12；视频需 FFmpeg | 已实际运行 |
 | 可选语音 | AIUI 配置、有效服务权限、ALSA；现存 SDK 库为 x86-64 | 本次仅核对文件来源线索及消息命名空间，未验证云服务 |
 

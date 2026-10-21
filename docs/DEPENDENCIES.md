@@ -2,7 +2,7 @@
 
 ## 当前可复现范围
 
-离线审计可在 Python 3.10+ 独立运行。ROS 工程的历史复现目标是 Ubuntu 20.04 / ROS Noetic / Gazebo Classic 11；本次工作环境没有 `roscore`、`roslaunch`、Gazebo 或 Docker，因此没有宣称完成 C++ 构建、在线定位或仿真导航。
+离线审计可在 Python 3.10+ 独立运行。ROS 工程的历史复现目标是 Ubuntu 20.04 / ROS Noetic / Gazebo Classic 11；本地工作环境没有 `roscore`、`roslaunch`、Gazebo 或 Docker。GitHub Actions 另在 Noetic 容器构建不依赖语音的 `nav_goal` 客户端，三个客户端已通过构建，证据见 [CI 记录](https://github.com/2543719729/robot_vechile/actions/runs/39634005142)；这不覆盖完整导航工程、在线定位或仿真导航。
 
 ## 外部资源清单
 
