@@ -1,0 +1,34 @@
+{
+  "source_commit": "d5d19750f362dd5f7eb48ef47e431bdf5e6b0cf4",
+  "removed_tracked_files": 2711,
+  "removed_worktree_bytes": 71840523,
+  "categories": {
+    ".catkin_workspace": {
+      "files": 1,
+      "bytes": 98
+    },
+    "AIUI": {
+      "files": 4,
+      "bytes": 8942209
+    },
+    "AIUI_backup": {
+      "files": 12,
+      "bytes": 5474504
+    },
+    "build": {
+      "files": 2349,
+      "bytes": 35186735
+    },
+    "devel": {
+      "files": 341,
+      "bytes": 17601319
+    },
+    "src": {
+      "files": 4,
+      "bytes": 4635658
+    }
+  },
+  "git_history_rewritten": false,
+  "vendor_runtime_libraries_preserved": true,
+  "sdk_logger_configuration_preserved": true
+}

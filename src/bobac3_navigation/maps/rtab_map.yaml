@@ -1,4 +1,4 @@
-image: /home/bobac3/ros_workspace/src/bobac3_navigation/maps/rtab_map.pgm
+image: rtab_map.pgm
 resolution: 0.050000
 origin: [-22.877892, -26.803354, 0.000000]
 negate: 0

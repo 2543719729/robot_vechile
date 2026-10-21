@@ -1,0 +1,4 @@
+# Offline bag analysis: Python 3.10+ (separate from ROS Noetic's Python 3.8).
+rosbags==0.11.9
+matplotlib==3.10.8
+PyYAML==6.0.3

@@ -54,19 +54,18 @@
   <build_depend>move_base_msgs</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>rospy</build_depend>
-  <build_depend>bobac3_audio</build_depend>
+  <depend>tf</depend>
+  <!-- bobac3_audio is optional: configure -DNAV_GOAL_WITH_AUDIO=ON to use it. -->
   <build_export_depend>actionlib</build_export_depend>
   <build_export_depend>geometry_msgs</build_export_depend>
   <build_export_depend>move_base_msgs</build_export_depend>
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>rospy</build_export_depend>
-  <build_export_depend>bobac3_audio</build_export_depend>
   <exec_depend>actionlib</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>move_base_msgs</exec_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
-  <exec_depend>bobac3_audio</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

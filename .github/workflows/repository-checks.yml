@@ -1,0 +1,32 @@
+name: Repository and recorded-evidence checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  offline-checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-audit.txt
+      - run: python -m pip install -r requirements-audit.txt
+      - run: python scripts/check_workspace.py
+      - run: python -m unittest discover -s tests -v
+      - run: python scripts/audit_bags.py --check
+  ros-navigation-client-build:
+    runs-on: ubuntu-24.04
+    container: ros:noetic-ros-base-focal
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: apt-get update
+      - run: apt-get install -y --no-install-recommends ros-noetic-actionlib ros-noetic-move-base-msgs ros-noetic-tf
+      - name: Build the navigation clients without the voice SDK
+        shell: bash
+        run: |
+          source /opt/ros/noetic/setup.bash
+          catkin_make -DCATKIN_WHITELIST_PACKAGES=nav_goal -DNAV_GOAL_WITH_AUDIO=OFF

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "scope": "CI build and offline verification; no navigation task execution",
+  "head_sha": "e65215fd6fe791a2b77d523d1a68546e1ec634f4",
+  "workflow_run_id": 39634005142,
+  "workflow_url": "https://github.com/2543719729/robot_vechile/actions/runs/39634005142",
+  "conclusion": "success",
+  "container": "ros:noetic-ros-base-focal",
+  "built_targets": [
+    "nav_goal_node",
+    "nav_multigoal_node",
+    "text_nav_node"
+  ],
+  "voice_sdk_enabled": false,
+  "offline_checks": "passed",
+  "full_navigation_or_gazebo_executed": false,
+  "core_build_job_id": 119339479162
+}

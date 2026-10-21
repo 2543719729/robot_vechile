@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "scope": "runtime_preflight",
+  "passed": false,
+  "checks": [
+    {
+      "check": "tracked_generated_outputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "package_and_launch_xml_syntax",
+      "passed": true,
+      "detail": {
+        "files": 61,
+        "errors": []
+      }
+    },
+    {
+      "check": "portable_map_images",
+      "passed": true,
+      "detail": {
+        "maps": 17,
+        "broken": []
+      }
+    },
+    {
+      "check": "portable_catkin_entry",
+      "passed": true,
+      "detail": "regular CMake file required"
+    },
+    {
+      "check": "generated_service_namespace",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "active_sim_parameter_yaml_syntax",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "runtime_executable:roscore",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "check": "runtime_executable:roslaunch",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "check": "runtime_executable:catkin_make",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "check": "runtime_executable:gazebo",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "check": "runtime_executable:rospack",
+      "passed": false,
+      "detail": null
+    }
+  ],
+  "known_limits": [
+    "Does not build C++ or run Gazebo/navigation.",
+    "Third-party license gaps are documented in THIRD_PARTY_NOTICES.md."
+  ]
+}

@@ -1,0 +1,26 @@
+# Catkin outputs are local to each machine.
+/build/
+/devel/
+/install/
+/log/
+/logs/
+/.catkin_tools/
+/.catkin_workspace
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+
+# SDK runtime output. Vendor libraries/resources remain tracked.
+**/AIUI/msc/*
+!**/AIUI/msc/msc.cfg
+**/AIUI/audio/tts.wav
+/AIUI_backup/
+
+# New recordings belong in external storage; the two historical bags stay tracked.
+*.bag
+*.bag.active
+/benchmarks/runs/
+*.swp
+*.swo
+*~

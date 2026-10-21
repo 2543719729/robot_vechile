@@ -1,6 +1,6 @@
 global_costmap:
 # ============================================================
-# 全局代价地图 - 全面优化版
+# 全局代价地图 - 历史配置候选，待实测
 # 与局部costmap保持一致
 # ============================================================
   global_frame: map
@@ -8,12 +8,12 @@ global_costmap:
   update_frequency: 2.0
   publish_frequency: 1.0
   transform_tolerance: 0.5
-  
+
   # 膨胀层配置 - 与局部costmap一致
   inflation_layer:
     enabled: true
     cost_scaling_factor: 3.0         # 较快衰减
-    inflation_radius: 0.05           # 5cm膨胀
+    inflation_radius: 0.05           # 历史值 5cm；需验证与机体 footprint 的一致性
 
   plugins:
     - {name: static_layer,           type: "costmap_2d::StaticLayer"}

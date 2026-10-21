@@ -2,15 +2,15 @@
 #include <vector>
 #include <thread>
 #include "ros/ros.h"
-#include "robot_audio/Nav.h"
-#include "robot_audio/robot_tts.h"
-#include "robot_audio/robot_iat.h"
+#include "bobac3_audio/Nav.h"
+#include "bobac3_audio/robot_tts.h"
+#include "bobac3_audio/robot_iat.h"
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
 
-using namespace std; 
+using namespace std;
 
-class VoiceNav 
+class VoiceNav
 {
 public:
 	VoiceNav();
@@ -22,7 +22,7 @@ public:
 	void nav_cancel();
 	void state_detection();
 	void tarvel();
-        
+
     bool flag;
 	bool send_flag;
 	bool cancel_flag;
@@ -35,15 +35,15 @@ public:
 	vector<double> orientation_w;
 	vector<string> position_introduction;
 
-	void position_read();	
-	 
+	void position_read();
+
 	ros::ServiceServer voice_nav_service;
 	ros::ServiceClient tts_client;
-	robot_audio::robot_tts tts_srv;
+	bobac3_audio::robot_tts tts_srv;
 	move_base_msgs::MoveBaseGoal goal;
 	ros::Publisher pub;
 	int goal_current_serial;
-	bool voice_nav_deal(robot_audio::Nav::Request &req,robot_audio::Nav::Response &res);
+	bool voice_nav_deal(bobac3_audio::Nav::Request &req,bobac3_audio::Nav::Response &res);
 	actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> *ac;
 	typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> AC;
 	void turn();

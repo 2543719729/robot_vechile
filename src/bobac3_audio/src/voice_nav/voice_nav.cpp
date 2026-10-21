@@ -4,11 +4,11 @@ VoiceNav::VoiceNav():cancel_flag(false),travel_flag(true),send_flag(false),goal_
 {
 
     position_read();
-    
+
     voice_nav_service = m_handle.advertiseService("voice_nav",&VoiceNav::voice_nav_deal,this);
-    tts_client = m_handle.serviceClient<robot_audio::robot_tts>("voice_tts");
+    tts_client = m_handle.serviceClient<bobac3_audio::robot_tts>("voice_tts");
     ac = new AC("move_base", true);
-    
+
 }
 VoiceNav::~VoiceNav()
 {
@@ -27,10 +27,10 @@ void VoiceNav::position_read()
     if(!fp){
         cout<<"open position info  file  erro"<<endl;
     }
-    while(1){	
+    while(1){
         if(fscanf(fp, "%s", str) == EOF)
             break;
-        
+
         position_name.push_back(str);
 
         if(fscanf(fp,"%lf",&tmp) == EOF)
@@ -64,9 +64,9 @@ void VoiceNav::nav_cancel(){
 void VoiceNav::send_goal(int pnum){
     goal.target_pose.header.frame_id = "map";
     goal.target_pose.header.stamp = ros::Time::now();
-    
+
     goal.target_pose.pose.position.x = position_x[pnum];
-    goal.target_pose.pose.position.y = position_y[pnum];	
+    goal.target_pose.pose.position.y = position_y[pnum];
 
     goal.target_pose.pose.orientation.z = orientation_z[pnum];
     goal.target_pose.pose.orientation.w = orientation_w[pnum];
@@ -97,7 +97,7 @@ void VoiceNav::state_detection(){
         cout << ac->getState().toString() <<endl;
         ac->getResult();
         }
-        
+
         rate.sleep();
     }
 }
@@ -118,7 +118,7 @@ tflag:
     flag = true;
     cancel_flag = false;
 }
-bool VoiceNav::voice_nav_deal(robot_audio::Nav::Request &req,robot_audio::Nav::Response &res)
+bool VoiceNav::voice_nav_deal(bobac3_audio::Nav::Request &req,bobac3_audio::Nav::Response &res)
 {
     cancel_flag = false;
     int position_count;
@@ -128,7 +128,7 @@ bool VoiceNav::voice_nav_deal(robot_audio::Nav::Request &req,robot_audio::Nav::R
         tts_client.call(tts_srv);
         send_goal(position_name.size()-1);
         goto flag;
-    } 
+    }
     else if(req.nav_order.find("取消导航") != string::npos){
         res.position = "取消导航";
         nav_cancel();
@@ -147,10 +147,10 @@ bool VoiceNav::voice_nav_deal(robot_audio::Nav::Request &req,robot_audio::Nav::R
         else
             travel_thread = thread(&VoiceNav::tarvel, this);
         while(!flag){
-	
+
         }
         goto flag;
-    } 
+    }
     else{
         for(int i=0;i<position_name.size();i++){
             if(req.nav_order == position_name[i]){
@@ -165,7 +165,7 @@ bool VoiceNav::voice_nav_deal(robot_audio::Nav::Request &req,robot_audio::Nav::R
         res.position = req.nav_order;
         tts_srv.request.text = "不好意思，我不知道"+req.nav_order+"在哪儿";
     }
-flag:	
+flag:
     return true;
 }
 int main(int argc,char** argv)

@@ -1,0 +1,22 @@
+{
+  "chronology_verified": false,
+  "performance_comparison_available": false,
+  "profiles": {
+    "baseline": {
+      "source_commit": "d5d19750f362dd5f7eb48ef47e431bdf5e6b0cf4",
+      "source_path": "param/sim/teb_local_planner_params.yaml",
+      "snapshot_sha256": "fe1b28bac73b51d964d88ec291af00a7771b9fea052f79214cac9a598ca6bdf5",
+      "meaning": "historical configuration candidate, not measured performance",
+      "source_sha256": "e535ee55b023a783332fa16a8da54722764180d4de8f4000479e8a739d2a2f57",
+      "normalization": "trailing whitespace only; parsed YAML values match source"
+    },
+    "tuned": {
+      "source_commit": "d5d19750f362dd5f7eb48ef47e431bdf5e6b0cf4",
+      "source_path": "src/bobac3_navigation/param/sim/teb_local_planner_params.yaml",
+      "snapshot_sha256": "f6aaa057c279fafa84829cee9b6cc45dcae270e3084ed3b34cbf0c716aa4164b",
+      "meaning": "historical configuration candidate, not measured performance",
+      "source_sha256": "f9f5d276fe658acbb9e8a0d84b8e01ee2be9382d4b4f4fc736ad6da9fc428312",
+      "normalization": "trailing whitespace only; parsed YAML values match source"
+    }
+  }
+}
