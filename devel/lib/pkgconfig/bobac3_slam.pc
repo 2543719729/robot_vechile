@@ -1,8 +1,0 @@
-prefix=/home/liyaxin075/Documents/robot_learning/devel
-
-Name: bobac3_slam
-Description: Description of bobac3_slam
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

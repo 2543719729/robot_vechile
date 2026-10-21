@@ -1,8 +1,0 @@
-prefix=/home/liyaxin075/Documents/robot_learning/devel
-
-Name: oryxbot_navigation
-Description: Description of oryxbot_navigation
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
