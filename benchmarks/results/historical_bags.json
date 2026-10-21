@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "evidence_type": "historical_recording_inspection",
+  "bags": [
+    {
+      "path": "2025-11-26-20-20-02.bag",
+      "sha256": "6c3707e682c29e53c11b6c63f9911b654169e0396c4ccf4d21101b2fa5f2d8ec",
+      "size_bytes": 6051246,
+      "duration_s": 67.442,
+      "messages_read": 5128,
+      "topics": {
+        "/amcl_pose": {
+          "type": "geometry_msgs/msg/PoseWithCovarianceStamped",
+          "messages": 3,
+          "observed_rate_hz": 0.175423
+        },
+        "/cmd_vel": {
+          "type": "geometry_msgs/msg/Twist",
+          "messages": 832,
+          "observed_rate_hz": 14.714475
+        },
+        "/move_base_node/NavfnROS/plan": {
+          "type": "nav_msgs/msg/Path",
+          "messages": 1628,
+          "observed_rate_hz": 28.86031
+        },
+        "/move_base_node/global_costmap/costmap": {
+          "type": "nav_msgs/msg/OccupancyGrid",
+          "messages": 1,
+          "observed_rate_hz": null
+        },
+        "/move_base_node/local_costmap/costmap": {
+          "type": "nav_msgs/msg/OccupancyGrid",
+          "messages": 1,
+          "observed_rate_hz": null
+        },
+        "/tf": {
+          "type": "tf2_msgs/msg/TFMessage",
+          "messages": 2663,
+          "observed_rate_hz": 39.603077
+        }
+      },
+      "odometry": null,
+      "command_velocity": {
+        "samples": 832,
+        "vx_m_s": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "vy_m_s": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "wz_rad_s": {
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "patrol_success_rate": null,
+      "teb_performance_change": null,
+      "limitations": [
+        "No trial boundaries or paired baseline/tuned parameter snapshots are recorded.",
+        "Recorded motion and topic rates do not establish task success or collision avoidance.",
+        "Historical simulation/hardware provenance is not independently established by the bag filename.",
+        "Navigation action goal topic is missing.",
+        "Navigation action result topic is missing."
+      ]
+    },
+    {
+      "path": "src/bobac3_slam/bobac3_gazebo_macth.bag",
+      "sha256": "8149268753cca03f0bcd61ced83622d92f3281db6731a1c58e9f7e29070b8cb0",
+      "size_bytes": 10185888,
+      "duration_s": 86.9,
+      "messages_read": 13838,
+      "topics": {
+        "/imu": {
+          "type": "sensor_msgs/msg/Imu",
+          "messages": 8691,
+          "observed_rate_hz": 100.0
+        },
+        "/odom": {
+          "type": "nav_msgs/msg/Odometry",
+          "messages": 1704,
+          "observed_rate_hz": 19.607843
+        },
+        "/scan": {
+          "type": "sensor_msgs/msg/LaserScan",
+          "messages": 1738,
+          "observed_rate_hz": 19.998158
+        },
+        "/tf": {
+          "type": "tf2_msgs/msg/TFMessage",
+          "messages": 1704,
+          "observed_rate_hz": 19.607843
+        },
+        "/tf_static": {
+          "type": "tf2_msgs/msg/TFMessage",
+          "messages": 1,
+          "observed_rate_hz": null
+        }
+      },
+      "odometry": {
+        "samples": 1704,
+        "coordinate_frame": "odom",
+        "path_length_m": 13.894689197,
+        "net_displacement_m": 0.491783586,
+        "max_reported_planar_speed_m_s": 0.398631743,
+        "measurement": "sum of consecutive recorded /odom positions; not ground truth"
+      },
+      "command_velocity": null,
+      "patrol_success_rate": null,
+      "teb_performance_change": null,
+      "limitations": [
+        "No trial boundaries or paired baseline/tuned parameter snapshots are recorded.",
+        "Recorded motion and topic rates do not establish task success or collision avoidance.",
+        "Historical simulation/hardware provenance is not independently established by the bag filename.",
+        "Navigation action goal topic is missing.",
+        "Navigation action result topic is missing."
+      ]
+    }
+  ]
+}

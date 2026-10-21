@@ -1,0 +1,8 @@
+{
+  "os": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "scope": "offline repository checks and historical bag inspection",
+  "ros_and_gazebo_available": false,
+  "live_navigation_executed": false,
+  "unit_test_fixture_data_are_robot_results": false
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "scope": "repository_static_checks",
+  "passed": true,
+  "checks": [
+    {
+      "check": "tracked_generated_outputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "package_and_launch_xml_syntax",
+      "passed": true,
+      "detail": {
+        "files": 61,
+        "errors": []
+      }
+    },
+    {
+      "check": "portable_map_images",
+      "passed": true,
+      "detail": {
+        "maps": 17,
+        "broken": []
+      }
+    },
+    {
+      "check": "portable_catkin_entry",
+      "passed": true,
+      "detail": "regular CMake file required"
+    },
+    {
+      "check": "generated_service_namespace",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "active_sim_parameter_yaml_syntax",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "known_limits": [
+    "Does not build C++ or run Gazebo/navigation.",
+    "Third-party license gaps are documented in THIRD_PARTY_NOTICES.md."
+  ]
+}

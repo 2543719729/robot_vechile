@@ -1,0 +1,86 @@
+{
+  "source_commit": "d5d19750f362dd5f7eb48ef47e431bdf5e6b0cf4",
+  "uniform_repository_license_confirmed": false,
+  "package_licenses": {
+    "bobac3_audio": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "bobac3_msgs": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "bobac3_navigation": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "bobac3_slam": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "my_pkg": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "nav_goal": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "oryxbot_navigation": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "oryxbot_slam": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "robot_bringup": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "robot_control": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "subscribe_pkg": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "test_pkg": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    },
+    "third_pkg": {
+      "declaration": "TODO",
+      "status": "unresolved"
+    }
+  },
+  "bundled_vendor_libraries": [
+    {
+      "path": "src/bobac3_audio/libs/libaiui.so",
+      "sha256": "a7ee8cb5a770c202e95cdd70cae92888322d07a30e4158ca0ff15f07a87a3c4d",
+      "architecture": "x86-64 ELF",
+      "license_status": "SDK authorization file missing; confirm with rights holder"
+    },
+    {
+      "path": "src/bobac3_audio/libs/libmsc.so",
+      "sha256": "06cb71998a4f2fbb96c9f4d19a2ace0011f0ddc6805cdd63abeaf2f1e44f0b6f",
+      "architecture": "x86-64 ELF",
+      "license_status": "SDK authorization file missing; confirm with rights holder"
+    },
+    {
+      "path": "src/bobac3_audio/libs/libvtn_mic1.so",
+      "sha256": "a98ab6c584f2ebb4c2b6a5aadd323ae5e8c79ac1ec7304be31957e6c331e7f3d",
+      "architecture": "x86-64 ELF",
+      "license_status": "SDK authorization file missing; confirm with rights holder"
+    }
+  ],
+  "jsoncpp_license": {
+    "path": "LICENSES/JsonCpp-0.7.0.txt",
+    "sha256": "c459cd7ea2bbbc0e9a765f2176e13f6e2eb4031127d42d999545695659473d05",
+    "source": "https://github.com/open-source-parsers/jsoncpp/blob/0.7.0/LICENSE",
+    "local_version_header": "0.7.0",
+    "all_files_identical_to_upstream_verified": false,
+    "normalization": "trailing whitespace only"
+  }
+}

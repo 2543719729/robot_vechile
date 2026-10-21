@@ -1,0 +1,25 @@
+# Historical city coordinates; verify against the actual map before executing.
+frame_id: map
+source: src/nav_goal/src/text_nav.cpp at d5d19750f362dd5f7eb48ef47e431bdf5e6b0cf4
+validated_in_current_world: false
+goals:
+- name: 深圳
+  x: 1.035
+  y: 1.109
+  yaw: -0.023998848
+- name: 上海
+  x: 1.063
+  y: 2.12
+  yaw: 0.025998535
+- name: 北京
+  x: 2.52
+  y: 0.15
+  yaw: 0.06058752
+- name: 广州
+  x: 2.48
+  y: 1.15
+  yaw: -0.051988287
+- name: 吉林
+  x: 2.48
+  y: 2.12
+  yaw: -0.064042167
