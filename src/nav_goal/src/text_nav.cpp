@@ -1,7 +1,9 @@
 #include <ros/ros.h>
 #include <actionlib/client/simple_action_client.h>
 #include <move_base_msgs/MoveBaseAction.h>
-#include <robot_audio/robot_tts.h>
+#ifdef NAV_GOAL_WITH_AUDIO
+#include <bobac3_audio/robot_tts.h>
+#endif
 #include <tf/transform_listener.h>
 #include <iostream>
 #include <string>
@@ -47,24 +49,30 @@ double distanceToGoal(double curr_x, double curr_y, double goal_x, double goal_y
 }
 
 bool speakDescription(ros::ServiceClient& tts_client, const std::string& text) {
-    robot_audio::robot_tts srv;
+#ifdef NAV_GOAL_WITH_AUDIO
+    if (!tts_client.isValid()) return true;
+    bobac3_audio::robot_tts srv;
     srv.request.text = text;
     srv.request.play = true;
     if (!tts_client.call(srv)) {
         ROS_WARN("调用 voice_tts 服务失败");
         return false;
     }
+#else
+    (void)tts_client;
+    (void)text;
+#endif
     return true;
 }
 
 // 导航到目标点，并在成功后计算与目标的距离
-bool navigateToPoint(actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction>& ac, 
+bool navigateToPoint(actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction>& ac,
                      ros::ServiceClient& tts_client,
                      tf::TransformListener& tf_listener,
                      const Point& point) {
     ROS_INFO("========================================");
     ROS_INFO("导航目标：%s (%.2f, %.2f)", point.name.c_str(), point.x, point.y);
-    
+
     move_base_msgs::MoveBaseGoal goal;
     goal.target_pose.header.frame_id = "map";
     goal.target_pose.header.stamp = ros::Time::now();
@@ -72,12 +80,12 @@ bool navigateToPoint(actionlib::SimpleActionClient<move_base_msgs::MoveBaseActio
     goal.target_pose.pose.position.y = point.y;
     goal.target_pose.pose.orientation.z = point.z;
     goal.target_pose.pose.orientation.w = point.w;
-    
+
     ac.sendGoal(goal);
-    
+
     // 等待60秒超时
     bool success = ac.waitForResult(ros::Duration(60.0));
-    
+
     if (success && ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {
         double curr_x, curr_y;
         if (getCurrentPosition(tf_listener, curr_x, curr_y)) {
@@ -106,7 +114,7 @@ void showAvailablePoints() {
     cout << "\n可用的导航点：" << endl;
     cout << "----------------------------------------" << endl;
     for (int i = 0; i < 5; i++) {
-        cout << (i+1) << ". " << nav_points[i].name 
+        cout << (i+1) << ". " << nav_points[i].name
              << " - 坐标(" << nav_points[i].x << ", " << nav_points[i].y << ")" << endl;
     }
     cout << "----------------------------------------" << endl;
@@ -115,22 +123,29 @@ void showAvailablePoints() {
 int main(int argc, char** argv) {
     ros::init(argc, argv, "text_nav");
     ros::NodeHandle nh;
-    ros::ServiceClient tts_client = nh.serviceClient<robot_audio::robot_tts>("voice_tts");
-    ros::service::waitForService("voice_tts");
-    
+    ros::ServiceClient tts_client;
+#ifdef NAV_GOAL_WITH_AUDIO
+    ros::NodeHandle private_nh("~");
+    bool enable_tts = false;
+    private_nh.param("enable_tts", enable_tts, false);
+    if (enable_tts) {
+        tts_client = nh.serviceClient<bobac3_audio::robot_tts>("voice_tts");
+    }
+#endif
+
     actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> ac("move_base", true);
     tf::TransformListener tf_listener;
-    
+
     cout << "\n========================================" << endl;
     cout << "    文本导航系统 - Text Navigation    " << endl;
     cout << "========================================" << endl;
-    
+
     ROS_INFO("等待 move_base 服务器启动...");
     ac.waitForServer();
     ROS_INFO("move_base 服务器已连接！");
-    
+
     showAvailablePoints();
-    
+
     while (ros::ok()) {
         cout << "\n请输入导航目标：" << endl;
         cout << "  - 输入地点名称（深圳/上海/北京/广州/吉林）" << endl;
@@ -138,33 +153,33 @@ int main(int argc, char** argv) {
         cout << "  - 输入 'list' 查看所有地点" << endl;
         cout << "  - 输入 'quit' 退出程序" << endl;
         cout << ">>> ";
-        
+
         string input;
-        getline(cin, input);
-        
+        if (!getline(cin, input)) break;
+
         // 去除首尾空格
         input.erase(0, input.find_first_not_of(" \t\r\n"));
         input.erase(input.find_last_not_of(" \t\r\n") + 1);
-        
+
         if (input.empty()) {
             continue;
         }
-        
+
         // 退出命令
         if (input == "quit" || input == "exit" || input == "q") {
             cout << "\n退出文本导航系统。再见！" << endl;
             break;
         }
-        
+
         // 显示列表
         if (input == "list" || input == "ls") {
             showAvailablePoints();
             continue;
         }
-        
+
         // 查找匹配的导航点
         bool found = false;
-        
+
         // 先尝试数字索引
         if (input.length() == 1 && input[0] >= '1' && input[0] <= '5') {
             int index = input[0] - '1';
@@ -180,14 +195,14 @@ int main(int argc, char** argv) {
                 }
             }
         }
-        
+
         if (!found) {
             cout << "❌ 未找到匹配的导航点：\"" << input << "\"" << endl;
             cout << "提示：请输入完整的地点名称或数字编号。" << endl;
         }
-        
+
         ros::spinOnce();
     }
-    
+
     return 0;
 }

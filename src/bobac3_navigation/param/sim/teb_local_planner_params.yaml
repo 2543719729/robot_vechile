@@ -1,11 +1,11 @@
 TebLocalPlannerROS:
   # ============================================================
-  # TEB局部规划器 - 全面优化版
-  # 策略：TEB使用point模型，完全依赖costmap做碰撞检测
+  # TEB局部规划器 - 历史候选（性能待实测）
+  # TEB优化使用point近似；轨迹可行性与costmap footprint仍需独立验证
   # ============================================================
-  
+
   odom_topic: odom
-  
+
   # ========== 轨迹参数 ==========
   teb_autosize: True
   dt_ref: 0.25                             # 进一步减小→轨迹超密集→末端高精度
@@ -19,7 +19,7 @@ TebLocalPlannerROS:
   exact_arc_length: False
   feasibility_check_no_poses: 5            # 增大，减少误判
   publish_feedback: False
-  
+
   # ========== 机器人运动学参数 ==========
   max_vel_x: 0.3                           # 适中速度
   max_vel_x_backwards: 0.2
@@ -29,19 +29,19 @@ TebLocalPlannerROS:
   acc_lim_y: 0.25
   acc_lim_theta: 0.4
   min_turning_radius: 0.0                  # 全向机器人
-  
+
   # ========== 足迹模型 ==========
   # 使用point模型，让costmap的robot_radius负责碰撞检测
-  # 这样避免TEB和costmap双重碰撞检测导致的冲突
+  # 该近似不能替代真实机体几何与接触测试
   footprint_model:
     type: "point"
-  
+
   # ========== 目标容差 ==========
   xy_goal_tolerance: 0.05                  # 收紧到5cm→逼迫精确到达
   yaw_goal_tolerance: 0.15                 # ~8.6度
   free_goal_vel: False                     # 到达目标必须停止
   complete_global_plan: True
-  
+
   # ========== 障碍物处理 ==========
   # 关键：使用point模型时，min_obstacle_dist需要≥robot_radius
   # 这样TEB规划的轨迹点不会进入costmap的障碍区
@@ -52,11 +52,11 @@ TebLocalPlannerROS:
   obstacle_poses_affected: 20
   dynamic_obstacle_inflation_dist: 0.3
   include_dynamic_obstacles: True
-  
+
   costmap_converter_plugin: ""
   costmap_converter_spin_thread: True
   costmap_converter_rate: 5
-  
+
   # ========== 优化参数 ==========
   no_inner_iterations: 7                   # 增加→更充分优化→提高精度
   no_outer_iterations: 6                   # 增加→轨迹更平滑→末端更稳定
@@ -81,7 +81,7 @@ TebLocalPlannerROS:
   weight_dynamic_obstacle_inflation: 0.05
   weight_viapoint: 15                      # 大幅提升→目标吸引力压制障碑物推力
   weight_adapt_factor: 2
-  
+
   # ========== 多拓扑路径规划 ==========
   enable_homotopy_class_planning: False    # 关闭多拓扑→提高稳定性，避免路径切换
   enable_multithreading: True
@@ -90,7 +90,7 @@ TebLocalPlannerROS:
   selection_prefer_initial_plan: 0.95      # 提高→减少路径切换→提高稳定性
   selection_obst_cost_scale: 30.0          # 降低障碍物选择代价
   selection_alternative_time_cost: False
-  
+
   roadmap_graph_no_samples: 15
   roadmap_graph_area_width: 5
   roadmap_graph_area_length_scale: 1.0
@@ -103,7 +103,7 @@ TebLocalPlannerROS:
   max_ratio_detours_duration_best_duration: 3.0
   visualize_hc_graph: False
   visualize_with_time_as_z_axis_scale: False
-  
+
   # ========== 恢复行为 ==========
   shrink_horizon_backup: True
   shrink_horizon_min_duration: 10

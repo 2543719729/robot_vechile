@@ -1,18 +1,18 @@
 #include<ros/ros.h>
 #include"reinovo_voice.h"
-#include"robot_audio/robot_iat.h"
-#include"robot_audio/robot_semanteme.h"
-#include"robot_audio/robot_tts.h"
-#include"robot_audio/up_sync.h"
+#include"bobac3_audio/robot_iat.h"
+#include"bobac3_audio/robot_semanteme.h"
+#include"bobac3_audio/robot_tts.h"
+#include"bobac3_audio/up_sync.h"
 using namespace reinovo;
 MyTalker m_talker;
-bool audio_sync_cb(robot_audio::up_sync::Request  &req,robot_audio::up_sync::Response &res)
+bool audio_sync_cb(bobac3_audio::up_sync::Request  &req,bobac3_audio::up_sync::Response &res)
 {
    m_talker.UP_SYNC();
    res.result = 1;
    return 1;
 }
-bool audio_tts_cb(robot_audio::robot_tts::Request &req,robot_audio::robot_tts::Response &res)
+bool audio_tts_cb(bobac3_audio::robot_tts::Request &req,bobac3_audio::robot_tts::Response &res)
 {
   m_talker.wakeup();
   int temp = m_talker.testTTs("./AIUI/audio/tts.wav",req.text);
@@ -26,7 +26,7 @@ bool audio_tts_cb(robot_audio::robot_tts::Request &req,robot_audio::robot_tts::R
     }
     return 0;
 }
-bool audio_iat_cb(robot_audio::robot_iat::Request &req,robot_audio::robot_iat::Response &res)
+bool audio_iat_cb(bobac3_audio::robot_iat::Request &req,bobac3_audio::robot_iat::Response &res)
 {
   Json::Value m_semanteme;
   m_talker.wakeup();
@@ -38,7 +38,7 @@ bool audio_iat_cb(robot_audio::robot_iat::Request &req,robot_audio::robot_iat::R
    }
    return 0;
 }
-bool audio_semanteme_cb(robot_audio::robot_semanteme::Request &req,robot_audio::robot_semanteme::Response &res)
+bool audio_semanteme_cb(bobac3_audio::robot_semanteme::Request &req,bobac3_audio::robot_semanteme::Response &res)
 {
   int temp = 0;
   Json::Value m_semanteme;

@@ -4,25 +4,26 @@
   <!-- Move Base 导航节点 - TEB局部规划器配置                        -->
   <!-- 高稳定性精确到达方案                                          -->
   <!-- ============================================================ -->
-  
+
   <arg name="odom_topic" default="odom" />
   <arg name="vel_topic" default="cmd_vel" />
+  <arg name="teb_config" default="$(find bobac3_navigation)/param/sim/teb_local_planner_params.yaml" />
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base_node" output="screen">
     <!-- 代价地图公共参数 -->
     <rosparam file="$(find bobac3_navigation)/param/sim/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find bobac3_navigation)/param/sim/costmap_common_params.yaml" command="load" ns="local_costmap" />   
-    
+    <rosparam file="$(find bobac3_navigation)/param/sim/costmap_common_params.yaml" command="load" ns="local_costmap" />
+
     <!-- 局部和全局代价地图 -->
-    <rosparam file="$(find bobac3_navigation)/param/sim/local_costmap_params.yaml" command="load" />   
+    <rosparam file="$(find bobac3_navigation)/param/sim/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find bobac3_navigation)/param/sim/global_costmap_params.yaml" command="load" />
-    
+
     <!-- TEB局部规划器（精确到达 + 稳定避障） -->
-    <rosparam file="$(find bobac3_navigation)/param/sim/teb_local_planner_params.yaml" command="load" />
-    
+    <rosparam file="$(arg teb_config)" command="load" />
+
     <!-- Move Base 主配置 -->
     <rosparam file="$(find bobac3_navigation)/param/sim/move_base_params.yaml" command="load" />
-    
+
     <!-- 全局规划器 -->
     <rosparam file="$(find bobac3_navigation)/param/sim/navfn_global_planner_params.yaml" command="load" />
 

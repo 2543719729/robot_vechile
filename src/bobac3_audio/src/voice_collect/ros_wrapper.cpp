@@ -13,9 +13,9 @@ Work::~Work()
 {
 
 
-} 
+}
 
-bool Work::collect_control(robot_audio::Collect::Request &req,robot_audio::Collect::Response &res)
+bool Work::collect_control(bobac3_audio::Collect::Request &req,bobac3_audio::Collect::Response &res)
 {
     if(req.collect_flag) {
         voice = audio.get_voice();

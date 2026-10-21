@@ -1,4 +1,4 @@
-image: /home/bobac3/bobac3_ws/src/bobac3_navigation/maps/test.pgm
+image: test.pgm
 resolution: 0.05
 origin: [-6.8019, -5.10824, 0.0]
 negate: 0

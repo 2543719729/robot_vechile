@@ -1,6 +1,6 @@
 #include "audio_collect.h"
 #include <vector>
-#include "robot_audio/Collect.h"
+#include "bobac3_audio/Collect.h"
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 
@@ -19,7 +19,7 @@ public:
 
     ros::NodeHandle m_handle;
     ros::ServiceServer collect_service;
-    bool collect_control(robot_audio::Collect::Request &req,robot_audio::Collect::Response &res);
+    bool collect_control(bobac3_audio::Collect::Request &req,bobac3_audio::Collect::Response &res);
 
     void run();
     //ros::Publisher m_voice_pub;

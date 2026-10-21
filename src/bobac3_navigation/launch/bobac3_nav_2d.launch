@@ -1,7 +1,7 @@
 <launch>
   <arg name="open_nav_rviz" default="true"/>
   <arg name="map_file_name" default="test"/>
-	<arg name="location_method" default="amcl" 
+	<arg name="location_method" default="amcl"
 				doc="location type [amcl, cartographer]"/>
 	<!--bobac3 model description-->
   <include file="$(find bobac3_description)/launch/display.launch">
@@ -21,9 +21,9 @@
 	<include file="$(find bobac3_navigation)/launch/$(arg location_method).launch">
 	 <arg name="map_file" value="$(arg map_file_name)"/>
 	</include>
-	
+
 	<!--  **************** Visualisation ****************  -->
-  <group if="$(arg open_slam_rviz)"> 
+  <group if="$(arg open_nav_rviz)">
     <node pkg="rviz" type="rviz" name="rviz"
           args="-d $(find bobac3_navigation)/rviz/robot_navigation.rviz"/>
   </group>
