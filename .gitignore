@@ -1,0 +1,20 @@
+# Catkin build outputs (generated locally)
+/build/
+/devel/
+install/
+.catkin_tools/
+
+# Runtime logs and temporary files
+logs/
+*.log
+*.bag.active
+*.tmp
+
+# Python/test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
