@@ -1,8 +1,0 @@
-prefix=/home/liyaxin075/Documents/robot_learning/install
-
-Name: bobac3_description
-Description: Description of bobac3_description
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
